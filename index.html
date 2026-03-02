@@ -1,114 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Huey Luey’s Kitchen Tablet</title>
+<title>Huey Luey’s Kitchen Pro</title>
 
 <style>
 body{
   margin:0;
-  font-family: Arial, sans-serif;
-  background:#f4f7f3;
-  color:#222;
+  font-family:Arial, sans-serif;
+  background:#ffffff;
+  color:#111;
 }
 
 header{
-  background:#1f5f36;
+  background:#f37021;
   color:white;
-  padding:20px;
+  padding:18px;
+  font-size:20px;
+  font-weight:bold;
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
 
-header h1{
-  margin:0;
-  font-size:22px;
-}
-
-button{
-  padding:10px 18px;
+.header-right button{
+  margin-left:10px;
+  padding:8px 12px;
   border:none;
   border-radius:6px;
   cursor:pointer;
-  font-weight:600;
-}
-
-.lang-btn{
-  background:#f26522;
-  color:white;
-}
-
-.categories{
-  display:flex;
-  gap:10px;
-  padding:20px;
-  flex-wrap:wrap;
-}
-
-.cat-btn{
-  background:white;
-  border:2px solid #1f5f36;
-  color:#1f5f36;
-}
-
-.cat-btn.active{
-  background:#1f5f36;
-  color:white;
 }
 
 .container{
-  padding:30px;
+  padding:20px;
 }
 
-.recipe-card{
-  background:white;
-  border-radius:14px;
-  padding:30px;
-  margin-bottom:40px;
-  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+button{
+  width:100%;
+  padding:18px;
+  margin:10px 0;
+  font-size:18px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  background:#e5e5e5;
 }
 
-.recipe-header h2{
-  margin-top:0;
-  color:#1f5f36;
+button:hover{
+  background:#d4d4d4;
 }
 
-.recipe-body{
-  display:flex;
-  gap:40px;
+.back-btn{
+  background:#1e7f3f;
+  color:white;
 }
 
-.recipe-left{
-  flex:2;
+.recipe-title{
+  font-size:26px;
+  font-weight:bold;
+  margin-bottom:10px;
 }
 
-.recipe-right{
-  flex:1;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.section-title{
+  font-weight:bold;
+  margin-top:20px;
 }
 
-.recipe-right img{
-  max-width:100%;
-  border-radius:12px;
-}
-
-.meta{
-  margin-bottom:12px;
-  font-weight:600;
-  color:#2f6b3c;
-}
-
-h3{
-  margin-bottom:6px;
-  color:#f26522;
-}
-
-ul,ol{
+ul{
   padding-left:20px;
+}
+
+img{
+  width:100%;
+  border-radius:8px;
+  margin-top:15px;
+}
+
+input, textarea{
+  width:100%;
+  padding:10px;
+  margin:6px 0;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+.search{
+  padding:12px;
+  font-size:16px;
+  margin-bottom:10px;
 }
 </style>
 </head>
@@ -116,100 +96,232 @@ ul,ol{
 <body>
 
 <header>
-  <h1>Huey Luey’s Kitchen Tablet</h1>
-  <button class="lang-btn" id="langToggle">ES</button>
+  Huey Luey’s Kitchen Pro
+  <div class="header-right">
+    <button onclick="toggleLanguage()">EN/ES</button>
+    <button onclick="unlockEdit()">Edit</button>
+  </div>
 </header>
 
-<div class="categories">
-  <button class="cat-btn" data-file="items_sides.json">Items & Sides</button>
-  <button class="cat-btn" data-file="food_prepped.json">Food Prepped</button>
-  <button class="cat-btn" data-file="sauces_spices.json">Sauces & Spices</button>
-  <button class="cat-btn" data-file="desserts.json">Desserts</button>
-  <button class="cat-btn" data-file="brunch.json">Brunch</button>
-</div>
-
-<div class="container" id="recipeContainer"></div>
+<div class="container" id="app"></div>
 
 <script>
-let currentLang = "en";
-let currentFile = null;
 
-const container = document.getElementById("recipeContainer");
-const langToggle = document.getElementById("langToggle");
-const catButtons = document.querySelectorAll(".cat-btn");
+let currentLanguage = "en"
+let editMode = false
+let historyStack = []
+let currentCategoryFile = ""
+let loadedData = []
 
-langToggle.addEventListener("click", ()=>{
-  currentLang = currentLang === "en" ? "es" : "en";
-  langToggle.textContent = currentLang === "en" ? "ES" : "EN";
-  if(currentFile) loadCategory(currentFile);
-});
+const PASSWORD = "hueys2026"  // change this
 
-catButtons.forEach(btn=>{
-  btn.addEventListener("click", ()=>{
-    catButtons.forEach(b=>b.classList.remove("active"));
-    btn.classList.add("active");
-    currentFile = btn.dataset.file;
-    loadCategory(currentFile);
-  });
-});
+const categories = [
+  {name:"Items & Sides", file:"items_sides.json"},
+  {name:"Dressings", file:"dressings.json"},
+  {name:"Sauces & Spices", file:"sauces_spices.json"},
+  {name:"Food Prepped", file:"food_prepped.json"},
+  {name:"Desserts", file:"desserts.json"},
+  {name:"Brunch", file:"brunch.json"}
+]
 
-function loadCategory(file){
-  fetch(file + "?v=" + Date.now())
-    .then(res=>res.json())
-    .then(data=>{
-      container.innerHTML = "";
-      data.forEach(recipe=>{
-        container.innerHTML += renderRecipe(recipe);
-      });
-    });
+function toggleLanguage(){
+  currentLanguage = currentLanguage === "en" ? "es" : "en"
+  renderCategories()
 }
 
-function renderRecipe(recipe){
-
-  const name = recipe["name_"+currentLang] || "";
-  const yieldText = recipe["yield_"+currentLang] || "";
-  const time = recipe["time_"+currentLang] || "";
-  const holding = recipe["holding_"+currentLang] || "";
-  const ingredients = recipe["ingredients_"+currentLang] || [];
-  const procedure = recipe["procedure_"+currentLang] || [];
-  const image = recipe["image"] || "";
-
-  return `
-  <div class="recipe-card">
-
-    <div class="recipe-header">
-      <h2>${name}</h2>
-    </div>
-
-    <div class="recipe-body">
-
-      <div class="recipe-left">
-
-        ${yieldText ? `<div class="meta"><strong>${currentLang==="en"?"Yield":"Rendimiento"}:</strong> ${yieldText}</div>`:""}
-        ${time ? `<div class="meta"><strong>${currentLang==="en"?"Time":"Tiempo"}:</strong> ${time}</div>`:""}
-        ${holding ? `<div class="meta"><strong>${currentLang==="en"?"Holding":"Conservación"}:</strong> ${holding}</div>`:""}
-
-        <h3>${currentLang==="en"?"Ingredients":"Ingredientes"}</h3>
-        <ul>
-          ${ingredients.map(i=>`<li>${i}</li>`).join("")}
-        </ul>
-
-        <h3>${currentLang==="en"?"Procedure":"Procedimiento"}</h3>
-        <ol>
-          ${procedure.map(p=>`<li>${p}</li>`).join("")}
-        </ol>
-
-      </div>
-
-      <div class="recipe-right">
-        ${image ? `<img src="${image}" alt="${name}">` : ""}
-      </div>
-
-    </div>
-
-  </div>
-  `;
+function unlockEdit(){
+  const input = prompt("Enter password")
+  if(input === PASSWORD){
+    editMode = true
+    alert("Edit Mode Enabled")
+  } else {
+    alert("Wrong password")
+  }
 }
+
+function renderCategories(){
+  const app = document.getElementById("app")
+  app.innerHTML = ""
+  historyStack = []
+
+  categories.forEach(cat=>{
+    const btn = document.createElement("button")
+    btn.innerText = cat.name
+    btn.onclick = ()=> loadCategory(cat)
+    app.appendChild(btn)
+  })
+}
+
+async function loadCategory(category){
+  currentCategoryFile = category.file
+  historyStack.push(renderCategories)
+
+  const response = await fetch(category.file)
+  const originalData = await response.json()
+
+  const stored = localStorage.getItem(category.file)
+  loadedData = stored ? JSON.parse(stored) : originalData
+
+  const app = document.getElementById("app")
+  app.innerHTML = ""
+
+  const back = document.createElement("button")
+  back.className = "back-btn"
+  back.innerText = "← Back"
+  back.onclick = ()=> goBack()
+  app.appendChild(back)
+
+  const search = document.createElement("input")
+  search.className = "search"
+  search.placeholder = "Search..."
+  search.oninput = ()=> renderRecipeList(search.value)
+  app.appendChild(search)
+
+  renderRecipeList("")
+}
+
+function renderRecipeList(filter){
+  const app = document.getElementById("app")
+
+  const oldButtons = Array.from(app.querySelectorAll(".recipe-btn"))
+  oldButtons.forEach(btn=>btn.remove())
+
+  loadedData
+    .filter(r => r["name_"+currentLanguage].toLowerCase().includes(filter.toLowerCase()))
+    .forEach(recipe=>{
+      const btn = document.createElement("button")
+      btn.className = "recipe-btn"
+      btn.innerText = recipe["name_"+currentLanguage]
+      btn.onclick = ()=> showRecipe(recipe)
+      app.appendChild(btn)
+    })
+}
+
+function showRecipe(recipe){
+  historyStack.push(()=> loadCategory({file:currentCategoryFile}))
+
+  const app = document.getElementById("app")
+  app.innerHTML = ""
+
+  const back = document.createElement("button")
+  back.className = "back-btn"
+  back.innerText = "← Back"
+  back.onclick = ()=> goBack()
+  app.appendChild(back)
+
+  const title = document.createElement("div")
+  title.className = "recipe-title"
+  title.innerText = recipe["name_"+currentLanguage]
+  app.appendChild(title)
+
+  if(recipe.image){
+    const img = document.createElement("img")
+    img.src = recipe.image
+    app.appendChild(img)
+  }
+
+  addSection("Yield", recipe["yield_"+currentLanguage])
+  addSection("Time", recipe["time_"+currentLanguage])
+  addSection("Holding", recipe["holding_"+currentLanguage])
+  addListSection("Ingredients", recipe["ingredients_"+currentLanguage])
+  addListSection("Procedure", recipe["procedure_detailed_"+currentLanguage])
+
+  if(editMode){
+    addEditForm(recipe)
+  }
+}
+
+function addEditForm(recipe){
+  const app = document.getElementById("app")
+
+  const hr = document.createElement("hr")
+  app.appendChild(hr)
+
+  const title = document.createElement("div")
+  title.className = "section-title"
+  title.innerText = "Edit Recipe"
+  app.appendChild(title)
+
+  const nameInput = createInput("Name EN", recipe.name_en)
+  const yieldInput = createInput("Yield EN", recipe.yield_en)
+  const timeInput = createInput("Time EN", recipe.time_en)
+  const holdingInput = createInput("Holding EN", recipe.holding_en)
+
+  const imageInput = document.createElement("input")
+  imageInput.type = "file"
+  imageInput.accept = "image/*"
+
+  imageInput.onchange = e=>{
+    const reader = new FileReader()
+    reader.onload = function(event){
+      recipe.image = event.target.result
+    }
+    reader.readAsDataURL(e.target.files[0])
+  }
+
+  const saveBtn = document.createElement("button")
+  saveBtn.innerText = "Save Changes"
+  saveBtn.onclick = ()=>{
+    recipe.name_en = nameInput.value
+    recipe.yield_en = yieldInput.value
+    recipe.time_en = timeInput.value
+    recipe.holding_en = holdingInput.value
+
+    localStorage.setItem(currentCategoryFile, JSON.stringify(loadedData))
+    alert("Saved")
+  }
+
+  app.appendChild(nameInput)
+  app.appendChild(yieldInput)
+  app.appendChild(timeInput)
+  app.appendChild(holdingInput)
+  app.appendChild(imageInput)
+  app.appendChild(saveBtn)
+}
+
+function createInput(label,value){
+  const input = document.createElement("input")
+  input.placeholder = label
+  input.value = value || ""
+  return input
+}
+
+function addSection(title, content){
+  if(!content) return
+  const app = document.getElementById("app")
+  const sectionTitle = document.createElement("div")
+  sectionTitle.className = "section-title"
+  sectionTitle.innerText = title
+  app.appendChild(sectionTitle)
+
+  const p = document.createElement("div")
+  p.innerText = content
+  app.appendChild(p)
+}
+
+function addListSection(title, items){
+  if(!items) return
+  const app = document.getElementById("app")
+  const sectionTitle = document.createElement("div")
+  sectionTitle.className = "section-title"
+  sectionTitle.innerText = title
+  app.appendChild(sectionTitle)
+
+  const ul = document.createElement("ul")
+  items.forEach(item=>{
+    const li = document.createElement("li")
+    li.innerText = item
+    ul.appendChild(li)
+  })
+  app.appendChild(ul)
+}
+
+function goBack(){
+  const last = historyStack.pop()
+  if(last) last()
+}
+
+renderCategories()
 </script>
 
 </body>
