@@ -3,169 +3,269 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Huey Luey's Kitchen Recipe Hub</title>
+<title>Huey Luey's Kitchen Hub</title>
 
 <style>
+
+:root{
+--orange:#f37021;
+--green:#2e7d32;
+--light:#f7f9fc;
+--card:#ffffff;
+--border:#e5e5e5;
+--shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
 body{
 margin:0;
-font-family:Arial, sans-serif;
-background:#ffffff;
+font-family: 'Segoe UI', sans-serif;
+background:var(--light);
 color:#222;
 }
 
 header{
-background:#f37021;
+background:var(--orange);
 color:white;
-padding:15px;
+padding:20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+box-shadow:var(--shadow);
+}
+
+header h1{
+margin:0;
+font-size:22px;
+}
+
+.controls{
+display:flex;
+gap:10px;
 }
 
 button{
-padding:8px 14px;
-border:none;
-background:#2e7d32;
+background:var(--green);
 color:white;
-border-radius:6px;
+border:none;
+padding:12px 18px;
+border-radius:10px;
+font-weight:600;
 cursor:pointer;
-font-weight:bold;
+font-size:14px;
+transition:0.2s;
 }
 
 button:hover{
-opacity:.85;
+transform:scale(1.03);
+opacity:0.9;
 }
 
-.search{
+.search-bar{
 width:100%;
-padding:12px;
+padding:18px;
 border:none;
-border-bottom:2px solid #ddd;
+border-bottom:2px solid var(--border);
 font-size:16px;
+outline:none;
 }
 
 .container{
-padding:20px;
+padding:25px;
+max-width:1000px;
+margin:auto;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+gap:18px;
 }
 
 .card{
-background:#f9f9f9;
-padding:15px;
-margin:10px 0;
-border-radius:8px;
+background:var(--card);
+padding:20px;
+border-radius:14px;
+box-shadow:var(--shadow);
 cursor:pointer;
-border:1px solid #eee;
+transition:0.25s;
+border:1px solid var(--border);
 }
 
 .card:hover{
-background:#f0f0f0;
+transform:translateY(-4px);
 }
 
-.back-btn{
+.recipe-title{
+font-size:22px;
 margin-bottom:15px;
 }
 
-ul{
-padding-left:20px;
+.ingredients{
+font-size:16px;
+line-height:1.6;
 }
+
+.back-btn{
+margin-bottom:20px;
+}
+
+.fade{
+animation:fadeIn 0.25s ease-in-out;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(5px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+footer{
+text-align:center;
+padding:15px;
+font-size:12px;
+color:#777;
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<h2>Huey Luey's Recipe Hub</h2>
+<h1>Huey Luey's Kitchen Tablet</h1>
+<div class="controls">
 <button onclick="toggleLanguage()">EN / ES</button>
+</div>
 </header>
 
-<input class="search" placeholder="Search..." onkeyup="searchRecipes(this.value)">
-<div class="container" id="app"></div>
+<input class="search-bar" id="searchInput" placeholder="Search within category..." onkeyup="searchItems(this.value)">
+
+<div class="container fade" id="app"></div>
+
+<footer>
+Offline Enabled • Multi-Category System
+</footer>
 
 <script>
 
 let language="en";
 let currentCategory=null;
-let fullData=[];
+let categoryFiles={
+"Items & Sides":"items_sides.json",
+"Sauces & Spices":"sauces_spices.json",
+"Dressings":"dressings.json",
+"Food Prepped":"food_prepped.json",
+"Desserts":"desserts.json",
+"Brunch":"brunch.json"
+};
 
-async function loadData(){
-const response = await fetch("recipes.json");
-fullData = await response.json();
-renderCategories();
-}
+let currentData=[];
 
 function renderCategories(){
 currentCategory=null;
+document.getElementById("searchInput").value="";
 const app=document.getElementById("app");
 app.innerHTML="";
-fullData.forEach(cat=>{
+const grid=document.createElement("div");
+grid.className="grid";
+
+Object.keys(categoryFiles).forEach(cat=>{
 const div=document.createElement("div");
 div.className="card";
-div.innerText=cat.category;
-div.onclick=()=>renderItems(cat);
-app.appendChild(div);
+div.innerText=cat;
+div.onclick=()=>loadCategory(cat);
+grid.appendChild(div);
 });
+
+app.appendChild(grid);
 }
 
-function renderItems(cat){
-currentCategory=cat;
+async function loadCategory(category){
+currentCategory=category;
+document.getElementById("searchInput").value="";
+const response=await fetch(categoryFiles[category]);
+currentData=await response.json();
+renderItems();
+}
+
+function renderItems(){
 const app=document.getElementById("app");
-app.innerHTML='<button class="back-btn" onclick="renderCategories()">⬅ Back</button>';
-cat.items.forEach(item=>{
+app.innerHTML='<button class="back-btn" onclick="renderCategories()">⬅ Back to Categories</button>';
+
+const grid=document.createElement("div");
+grid.className="grid";
+
+currentData.forEach(item=>{
 const div=document.createElement("div");
 div.className="card";
 div.innerText=language==="en"?item.name_en:item.name_es;
 div.onclick=()=>renderRecipe(item);
-app.appendChild(div);
+grid.appendChild(div);
 });
+
+app.appendChild(grid);
 }
 
 function renderRecipe(item){
 const app=document.getElementById("app");
-app.innerHTML='<button class="back-btn" onclick="renderItems(currentCategory)">⬅ Back</button>';
-const title=document.createElement("h3");
-title.innerText=language==="en"?item.name_en:item.name_es;
-app.appendChild(title);
+app.innerHTML='<button class="back-btn" onclick="renderItems()">⬅ Back to Items</button>';
 
-const ul=document.createElement("ul");
+const title=document.createElement("div");
+title.className="recipe-title";
+title.innerText=language==="en"?item.name_en:item.name_es;
+
+const list=document.createElement("div");
+list.className="ingredients";
+
 const ingredients=language==="en"?item.ingredients_en:item.ingredients_es;
+
 ingredients.forEach(i=>{
-const li=document.createElement("li");
-li.innerText=i;
-ul.appendChild(li);
+const line=document.createElement("div");
+line.innerText="• "+i;
+list.appendChild(line);
 });
-app.appendChild(ul);
+
+app.appendChild(title);
+app.appendChild(list);
 }
 
 function toggleLanguage(){
 language=language==="en"?"es":"en";
 if(currentCategory){
-renderItems(currentCategory);
+renderItems();
 }else{
 renderCategories();
 }
 }
 
-function searchRecipes(term){
+function searchItems(term){
 if(!currentCategory) return;
 term=term.toLowerCase();
+const filtered=currentData.filter(item=>
+item.name_en.toLowerCase().includes(term)
+);
+
 const app=document.getElementById("app");
-app.innerHTML='<button class="back-btn" onclick="renderItems(currentCategory)">⬅ Back</button>';
-currentCategory.items
-.filter(item=>item.name_en.toLowerCase().includes(term))
-.forEach(item=>{
+app.innerHTML='<button class="back-btn" onclick="renderItems()">⬅ Back to Items</button>';
+
+const grid=document.createElement("div");
+grid.className="grid";
+
+filtered.forEach(item=>{
 const div=document.createElement("div");
 div.className="card";
 div.innerText=language==="en"?item.name_en:item.name_es;
 div.onclick=()=>renderRecipe(item);
-app.appendChild(div);
+grid.appendChild(div);
 });
+
+app.appendChild(grid);
 }
 
-if ('serviceWorker' in navigator) {
+if('serviceWorker' in navigator){
 navigator.serviceWorker.register('sw.js');
 }
 
-loadData();
+renderCategories();
 
 </script>
 
