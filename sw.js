@@ -1,4 +1,4 @@
-const CACHE_NAME = "hueys-recipes-v1";
+const CACHE_NAME = "hueys-recipes-v2"; // Change version when deploying
 
 const FILES_TO_CACHE = [
   "./",
@@ -11,18 +11,37 @@ const FILES_TO_CACHE = [
   "./brunch.json"
 ];
 
-self.addEventListener("install", e=>{
-  e.waitUntil(
-    caches.open(CACHE_NAME).then(cache=>{
-      return cache.addAll(FILES_TO_CACHE);
-    })
+// Install
+self.addEventListener("install", event => {
+  self.skipWaiting();
+  event.waitUntil(
+    caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE))
   );
 });
 
-self.addEventListener("fetch", e=>{
-  e.respondWith(
-    caches.match(e.request).then(response=>{
-      return response || fetch(e.request);
-    })
+// Activate & clear old caches
+self.addEventListener("activate", event => {
+  event.waitUntil(
+    caches.keys().then(keys =>
+      Promise.all(
+        keys.filter(key => key !== CACHE_NAME)
+            .map(key => caches.delete(key))
+      )
+    )
+  );
+  self.clients.claim();
+});
+
+// Network-first strategy (always try fresh first)
+self.addEventListener("fetch", event => {
+  event.respondWith(
+    fetch(event.request)
+      .then(response => {
+        return caches.open(CACHE_NAME).then(cache => {
+          cache.put(event.request, response.clone());
+          return response;
+        });
+      })
+      .catch(() => caches.match(event.request))
   );
 });
