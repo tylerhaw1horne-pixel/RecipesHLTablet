@@ -13,28 +13,32 @@ body{
   margin:0;
   font-family:'Segoe UI', sans-serif;
   background:#f8fafc;
-  color:#1f2937;
-  overflow-x:hidden;
+  color:#111;
+  transition:.3s;
+}
+
+body.kitchen-mode{
+  background:white;
+  color:black;
+  font-size:20px;
 }
 
 header{
   background:#f37021;
   color:white;
-  padding:16px 20px;
-  font-size:20px;
-  font-weight:600;
+  padding:14px 20px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  box-shadow:0 4px 12px rgba(0,0,0,.15);
+  font-weight:600;
 }
 
 .header-controls button{
   background:white;
   color:#f37021;
   border:none;
-  padding:6px 12px;
-  margin-left:10px;
+  padding:6px 10px;
+  margin-left:8px;
   border-radius:6px;
   font-weight:600;
   cursor:pointer;
@@ -44,38 +48,36 @@ header{
   padding:20px;
   max-width:900px;
   margin:auto;
-  transition:all .3s ease;
 }
 
-/* ===== BUTTONS ===== */
-
-.button-card{
+.card{
   background:white;
   padding:18px;
   margin:12px 0;
   border-radius:12px;
-  box-shadow:0 3px 10px rgba(0,0,0,.08);
-  font-size:18px;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
   cursor:pointer;
   transition:.2s;
 }
 
-.button-card:hover{
+body.kitchen-mode .card{
+  box-shadow:none;
+  border:2px solid #ddd;
+}
+
+.card:hover{
   transform:translateY(-2px);
-  box-shadow:0 6px 14px rgba(0,0,0,.12);
 }
 
 .back-btn{
   background:#1e7f3f;
   color:white;
-  padding:10px 14px;
+  padding:8px 14px;
   border-radius:8px;
-  cursor:pointer;
-  margin-bottom:15px;
   display:inline-block;
+  margin-bottom:15px;
+  cursor:pointer;
 }
-
-/* ===== RECIPE VIEW ===== */
 
 .recipe-title{
   font-size:28px;
@@ -86,8 +88,6 @@ header{
 .section-title{
   font-weight:700;
   margin-top:22px;
-  margin-bottom:6px;
-  font-size:16px;
   color:#f37021;
 }
 
@@ -96,74 +96,37 @@ ul{
   line-height:1.6;
 }
 
-img{
-  width:100%;
-  border-radius:12px;
-  margin-bottom:15px;
-  box-shadow:0 6px 16px rgba(0,0,0,.15);
-}
-
 .search{
   width:100%;
-  padding:12px;
+  padding:10px;
   border-radius:8px;
   border:1px solid #ddd;
   margin-bottom:15px;
 }
 
-/* ===== ANIMATIONS ===== */
-
-.fade-in{
-  animation:fade .3s ease;
+.scale-controls{
+  margin-top:20px;
 }
 
-@keyframes fade{
-  from{opacity:0; transform:translateY(10px)}
-  to{opacity:1; transform:translateY(0)}
+.scale-controls input{
+  width:80px;
+  padding:6px;
 }
 
-/* ===== EDIT PANEL ===== */
-
-.edit-overlay{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,.6);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-.edit-panel{
-  background:white;
-  width:90%;
-  max-width:500px;
-  padding:20px;
-  border-radius:12px;
-  max-height:80vh;
-  overflow-y:auto;
-}
-
-.edit-panel input,
-.edit-panel textarea{
-  width:100%;
-  padding:8px;
-  margin-bottom:10px;
-  border-radius:6px;
-  border:1px solid #ccc;
-}
-
-.save-btn{
+.print-btn{
   background:#f37021;
   color:white;
   padding:10px;
   border:none;
   border-radius:8px;
+  margin-top:20px;
   cursor:pointer;
-  width:100%;
-  font-weight:600;
+}
+
+@media print {
+  header, .back-btn, .search, .scale-controls, .print-btn {
+    display:none;
+  }
 }
 
 </style>
@@ -175,78 +138,63 @@ img{
   Huey Luey’s Kitchen Pro
   <div class="header-controls">
     <button id="langBtn">ES</button>
-    <button id="editBtn">Edit</button>
+    <button id="kitchenBtn">Kitchen</button>
   </div>
 </header>
 
-<div class="container fade-in" id="app"></div>
+<div class="container" id="app"></div>
 
 <script>
 
-/* ===== GLOBAL STATE ===== */
+/* ===== STATE ===== */
 
-let currentLanguage = "en"
-let currentView = "categories"
-let currentCategory = null
-let currentRecipe = null
-let loadedData = []
-let editUnlocked = false
+let currentLanguage="en"
+let currentView="categories"
+let currentCategory=null
+let currentRecipe=null
+let loadedData=[]
+let scaleMultiplier=1
 
-const PASSWORD = "hueys2026"
-
-const categories = [
-  {name_en:"Items & Sides", name_es:"Acompañamientos", file:"items_sides.json"},
-  {name_en:"Dressings", name_es:"Aderezos", file:"dressings.json"},
-  {name_en:"Sauces & Spices", name_es:"Salsas y Especias", file:"sauces_spices.json"},
-  {name_en:"Food Prepped", name_es:"Producción", file:"food_prepped.json"},
-  {name_en:"Desserts", name_es:"Postres", file:"desserts.json"},
-  {name_en:"Brunch", name_es:"Brunch", file:"brunch.json"}
+const categories=[
+  {name_en:"Items & Sides",name_es:"Acompañamientos",file:"items_sides.json"},
+  {name_en:"Dressings",name_es:"Aderezos",file:"dressings.json"},
+  {name_en:"Sauces & Spices",name_es:"Salsas y Especias",file:"sauces_spices.json"},
+  {name_en:"Food Prepped",name_es:"Producción",file:"food_prepped.json"},
+  {name_en:"Desserts",name_es:"Postres",file:"desserts.json"},
+  {name_en:"Brunch",name_es:"Brunch",file:"brunch.json"}
 ]
 
-/* ===== LANGUAGE TOGGLE ===== */
+/* ===== TOGGLES ===== */
 
-document.getElementById("langBtn").onclick = ()=>{
-  currentLanguage = currentLanguage === "en" ? "es" : "en"
-  document.getElementById("langBtn").innerText = currentLanguage === "en" ? "ES" : "EN"
+document.getElementById("langBtn").onclick=()=>{
+  currentLanguage=currentLanguage==="en"?"es":"en"
+  document.getElementById("langBtn").innerText=currentLanguage==="en"?"ES":"EN"
   refreshView()
 }
 
-/* ===== EDIT LOCK ===== */
-
-document.getElementById("editBtn").onclick = ()=>{
-  if(editUnlocked){
-    editUnlocked = false
-    alert("Edit Locked")
-  } else {
-    const input = prompt("Enter Password")
-    if(input === PASSWORD){
-      editUnlocked = true
-      alert("Edit Mode Enabled")
-    } else alert("Wrong Password")
-  }
+document.getElementById("kitchenBtn").onclick=()=>{
+  document.body.classList.toggle("kitchen-mode")
 }
 
 /* ===== VIEW CONTROL ===== */
 
 function refreshView(){
-  if(currentView === "categories") renderCategories()
-  if(currentView === "recipes") renderRecipeList()
-  if(currentView === "recipe") showRecipe(currentRecipe)
+  if(currentView==="categories") renderCategories()
+  if(currentView==="recipes") renderRecipeList()
+  if(currentView==="recipe") showRecipe(currentRecipe)
 }
 
-/* ===== CATEGORY VIEW ===== */
+/* ===== CATEGORY ===== */
 
 function renderCategories(){
-  currentView = "categories"
-  const app = document.getElementById("app")
-  app.innerHTML = ""
-  app.classList.add("fade-in")
-
+  currentView="categories"
+  const app=document.getElementById("app")
+  app.innerHTML=""
   categories.forEach(cat=>{
-    const div = document.createElement("div")
-    div.className = "button-card"
-    div.innerText = cat["name_"+currentLanguage]
-    div.onclick = ()=> loadCategory(cat)
+    const div=document.createElement("div")
+    div.className="card"
+    div.innerText=cat["name_"+currentLanguage]
+    div.onclick=()=>loadCategory(cat)
     app.appendChild(div)
   })
 }
@@ -254,52 +202,48 @@ function renderCategories(){
 /* ===== LOAD CATEGORY ===== */
 
 async function loadCategory(category){
-  currentCategory = category
-  currentView = "recipes"
-
-  const response = await fetch(category.file)
-  loadedData = await response.json()
-
+  currentCategory=category
+  currentView="recipes"
+  const response=await fetch(category.file)
+  loadedData=await response.json()
   renderRecipeList()
 }
 
 /* ===== RECIPE LIST ===== */
 
 function renderRecipeList(){
-  const app = document.getElementById("app")
-  app.innerHTML = ""
-  app.classList.add("fade-in")
+  const app=document.getElementById("app")
+  app.innerHTML=""
 
-  const back = document.createElement("div")
-  back.className = "back-btn"
-  back.innerText = "←"
-  back.onclick = renderCategories
+  const back=document.createElement("div")
+  back.className="back-btn"
+  back.innerText="←"
+  back.onclick=renderCategories
   app.appendChild(back)
 
-  const search = document.createElement("input")
-  search.className = "search"
-  search.placeholder = currentLanguage === "en" ? "Search..." : "Buscar..."
-  search.oninput = ()=> filterRecipes(search.value)
+  const search=document.createElement("input")
+  search.className="search"
+  search.placeholder=currentLanguage==="en"?"Search...":"Buscar..."
+  search.oninput=()=>filterRecipes(search.value)
   app.appendChild(search)
 
   displayRecipes(loadedData)
 }
 
 function filterRecipes(text){
-  const filtered = loadedData.filter(r =>
+  const filtered=loadedData.filter(r=>
     r["name_"+currentLanguage].toLowerCase().includes(text.toLowerCase())
   )
   displayRecipes(filtered)
 }
 
 function displayRecipes(data){
-  const app = document.getElementById("app")
-
+  const app=document.getElementById("app")
   data.forEach(recipe=>{
-    const div = document.createElement("div")
-    div.className = "button-card"
-    div.innerText = recipe["name_"+currentLanguage]
-    div.onclick = ()=> showRecipe(recipe)
+    const div=document.createElement("div")
+    div.className="card"
+    div.innerText=recipe["name_"+currentLanguage]
+    div.onclick=()=>showRecipe(recipe)
     app.appendChild(div)
   })
 }
@@ -307,144 +251,118 @@ function displayRecipes(data){
 /* ===== RECIPE VIEW ===== */
 
 function showRecipe(recipe){
-  currentRecipe = recipe
-  currentView = "recipe"
+  currentRecipe=recipe
+  currentView="recipe"
+  scaleMultiplier=1
 
-  const app = document.getElementById("app")
-  app.innerHTML = ""
-  app.classList.add("fade-in")
+  const app=document.getElementById("app")
+  app.innerHTML=""
 
-  const back = document.createElement("div")
-  back.className = "back-btn"
-  back.innerText = "←"
-  back.onclick = renderRecipeList
+  const back=document.createElement("div")
+  back.className="back-btn"
+  back.innerText="←"
+  back.onclick=renderRecipeList
   app.appendChild(back)
 
-  const title = document.createElement("div")
-  title.className = "recipe-title"
-  title.innerText = recipe["name_"+currentLanguage]
+  const title=document.createElement("div")
+  title.className="recipe-title"
+  title.innerText=recipe["name_"+currentLanguage]
   app.appendChild(title)
 
-  if(recipe.image){
-    const img = document.createElement("img")
-    img.src = recipe.image
-    app.appendChild(img)
-  }
+  addSection("Yield",recipe["yield_"+currentLanguage])
+  addSection("Time",recipe["time_"+currentLanguage])
+  addSection("Holding",recipe["holding_"+currentLanguage])
 
-  addSection("Yield", recipe["yield_"+currentLanguage])
-  addSection("Time", recipe["time_"+currentLanguage])
-  addSection("Holding", recipe["holding_"+currentLanguage])
-  addListSection("Ingredients", recipe["ingredients_"+currentLanguage])
-  addListSection("Procedure", recipe["procedure_detailed_"+currentLanguage])
+  renderIngredients(recipe)
 
-  if(editUnlocked){
-    addEditButton(recipe)
-  }
+  addListSection("Procedure",recipe["procedure_detailed_"+currentLanguage])
+
+  addScaleControls(recipe)
+
+  const printBtn=document.createElement("button")
+  printBtn.className="print-btn"
+  printBtn.innerText=currentLanguage==="en"?"Print Recipe":"Imprimir Receta"
+  printBtn.onclick=()=>window.print()
+  app.appendChild(printBtn)
 }
 
-/* ===== EDIT PANEL ===== */
+function renderIngredients(recipe){
+  const app=document.getElementById("app")
 
-function addEditButton(recipe){
-  const btn = document.createElement("div")
-  btn.className = "button-card"
-  btn.style.background = "#f37021"
-  btn.style.color = "white"
-  btn.innerText = "Edit Recipe"
-  btn.onclick = ()=> openEditPanel(recipe)
-  document.getElementById("app").appendChild(btn)
+  const section=document.createElement("div")
+  section.className="section-title"
+  section.innerText=currentLanguage==="en"?"Ingredients":"Ingredientes"
+  app.appendChild(section)
+
+  const ul=document.createElement("ul")
+  recipe["ingredients_"+currentLanguage].forEach(item=>{
+    const li=document.createElement("li")
+    li.innerText=item+"  x"+scaleMultiplier
+    ul.appendChild(li)
+  })
+  app.appendChild(ul)
 }
 
-function openEditPanel(recipe){
-  const overlay = document.createElement("div")
-  overlay.className = "edit-overlay"
+function addScaleControls(recipe){
+  const app=document.getElementById("app")
+  const div=document.createElement("div")
+  div.className="scale-controls"
 
-  const panel = document.createElement("div")
-  panel.className = "edit-panel"
+  div.innerHTML=`
+    <strong>${currentLanguage==="en"?"Scale Recipe":"Escalar Receta"}:</strong><br>
+    <button onclick="scale(0.5)">0.5x</button>
+    <button onclick="scale(2)">2x</button>
+    <button onclick="scale(3)">3x</button>
+    <input type="number" id="customScale" placeholder="x">
+    <button onclick="customScale()">Go</button>
+  `
 
-  const nameInput = createInput(recipe.name_en)
-  const yieldInput = createInput(recipe.yield_en)
-  const timeInput = createInput(recipe.time_en)
-  const holdingInput = createInput(recipe.holding_en)
-
-  const imgInput = document.createElement("input")
-  imgInput.type = "file"
-  imgInput.accept = "image/*"
-  imgInput.onchange = e=>{
-    const reader = new FileReader()
-    reader.onload = event=>{
-      recipe.image = event.target.result
-    }
-    reader.readAsDataURL(e.target.files[0])
-  }
-
-  const save = document.createElement("button")
-  save.className = "save-btn"
-  save.innerText = "Save"
-  save.onclick = ()=>{
-    recipe.name_en = nameInput.value
-    recipe.yield_en = yieldInput.value
-    recipe.time_en = timeInput.value
-    recipe.holding_en = holdingInput.value
-
-    localStorage.setItem(currentCategory.file, JSON.stringify(loadedData))
-    overlay.remove()
-    refreshView()
-  }
-
-  panel.appendChild(nameInput)
-  panel.appendChild(yieldInput)
-  panel.appendChild(timeInput)
-  panel.appendChild(holdingInput)
-  panel.appendChild(imgInput)
-  panel.appendChild(save)
-
-  overlay.appendChild(panel)
-  overlay.onclick = e=>{ if(e.target===overlay) overlay.remove() }
-
-  document.body.appendChild(overlay)
+  app.appendChild(div)
 }
 
-function createInput(val){
-  const input = document.createElement("input")
-  input.value = val || ""
-  return input
+function scale(mult){
+  scaleMultiplier=mult
+  showRecipe(currentRecipe)
+}
+
+function customScale(){
+  const val=document.getElementById("customScale").value
+  if(val>0){
+    scaleMultiplier=parseFloat(val)
+    showRecipe(currentRecipe)
+  }
 }
 
 /* ===== HELPERS ===== */
 
-function addSection(title, content){
+function addSection(title,content){
   if(!content) return
-  const app = document.getElementById("app")
-  const section = document.createElement("div")
-  section.className = "section-title"
-  section.innerText =
-    currentLanguage === "en" ? title :
+  const app=document.getElementById("app")
+  const sec=document.createElement("div")
+  sec.className="section-title"
+  sec.innerText=currentLanguage==="en"?title:
     title==="Yield"?"Rinde":
     title==="Time"?"Tiempo":
     title==="Holding"?"Conservación":title
+  app.appendChild(sec)
 
-  app.appendChild(section)
-
-  const p = document.createElement("div")
-  p.innerText = content
+  const p=document.createElement("div")
+  p.innerText=content
   app.appendChild(p)
 }
 
-function addListSection(title, items){
+function addListSection(title,items){
   if(!items) return
-  const app = document.getElementById("app")
-  const section = document.createElement("div")
-  section.className = "section-title"
-  section.innerText =
-    currentLanguage==="en"?title:
-    title==="Ingredients"?"Ingredientes":"Procedimiento"
+  const app=document.getElementById("app")
+  const sec=document.createElement("div")
+  sec.className="section-title"
+  sec.innerText=currentLanguage==="en"?title:"Procedimiento"
+  app.appendChild(sec)
 
-  app.appendChild(section)
-
-  const ul = document.createElement("ul")
+  const ul=document.createElement("ul")
   items.forEach(item=>{
-    const li = document.createElement("li")
-    li.innerText = item
+    const li=document.createElement("li")
+    li.innerText=item
     ul.appendChild(li)
   })
   app.appendChild(ul)
