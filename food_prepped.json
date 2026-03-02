@@ -1,0 +1,317 @@
+[
+  {
+    "name_en": "Bacon Wrapped Shrimp",
+    "name_es": "Camarón Envuelto en Tocino",
+    "ingredients_en": [
+      "Shrimp 16/20 (tail off)",
+      "Full Slice Bacon",
+      "White Cheese Slice",
+      "Jalapeño Slice"
+    ],
+    "ingredients_es": [
+      "Camarón 16/20 sin cola",
+      "Tocino entero",
+      "Queso blanco",
+      "Rodaja jalapeño"
+    ]
+  },
+  {
+    "name_en": "Poached Chicken",
+    "name_es": "Pollo Hervido",
+    "ingredients_en": [
+      "Chicken Thigh – 20 lb",
+      "Water – 20 qt",
+      "Salt – 2 oz",
+      "Garlic Powder – 1 oz"
+    ],
+    "ingredients_es": [
+      "Muslo pollo – 20 lb",
+      "Agua – 20 qt",
+      "Sal – 2 oz",
+      "Ajo en polvo – 1 oz"
+    ]
+  },
+  {
+    "name_en": "Ground Beef",
+    "name_es": "Carne Molida",
+    "ingredients_en": [
+      "Ground Beef – 10 lb",
+      "Tomato – 2 qt",
+      "Onion – 3 qt",
+      "Bell Pepper – 2 qt",
+      "Mixto Seasoning – 2 cups",
+      "Splash Water"
+    ],
+    "ingredients_es": [
+      "Carne molida – 10 lb",
+      "Tomate – 2 qt",
+      "Cebolla – 3 qt",
+      "Chile dulce – 2 qt",
+      "Sazón Mixto – 2 tazas",
+      "Agua (poco)"
+    ]
+  },
+  {
+    "name_en": "Regular Brisket",
+    "name_es": "Brisket Regular",
+    "ingredients_en": [
+      "Beef – 40 lb",
+      "Water – 16 qt",
+      "Beef Base – 2 cups",
+      "Oregano – 1 cup",
+      "Paprika – 1 cup",
+      "Flour – 3 cups",
+      "Chili Powder – 1.5 cups",
+      "Cumin – 1.5 cups",
+      "Garlic Powder – 1/4 cup",
+      "Salt – 1/4 cup",
+      "Onion – 2 qt",
+      "Bell Pepper – 2 qt",
+      "Oil – 4 cups"
+    ],
+    "ingredients_es": [
+      "Res – 40 lb",
+      "Agua – 16 qt",
+      "Base res – 2 tazas",
+      "Orégano – 1 taza",
+      "Paprika – 1 taza",
+      "Harina – 3 tazas",
+      "Chile en polvo – 1.5 tazas",
+      "Comino – 1.5 tazas",
+      "Ajo en polvo – 1/4 taza",
+      "Sal – 1/4 taza",
+      "Cebolla – 2 qt",
+      "Chile dulce – 2 qt",
+      "Aceite – 4 tazas"
+    ]
+  },
+  {
+    "name_en": "Coconut Shrimp",
+    "name_es": "Camarón Coco",
+    "ingredients_en": [
+      "Panko – 2 qt",
+      "Shredded Coconut – 2 cups",
+      "Lawry’s – 2 Tbsp",
+      "Chipotle Powder – 4 Tbsp",
+      "Coco Lopez – 2 cups",
+      "Lime Juice – 2 Tbsp",
+      "Eggs – 4",
+      "Milk – 1 cup",
+      "Shrimp – 4 lb"
+    ],
+    "ingredients_es": [
+      "Panko – 2 qt",
+      "Coco rallado – 2 tazas",
+      "Sazonador – 2 cdas",
+      "Chipotle polvo – 4 cdas",
+      "Coco López – 2 tazas",
+      "Jugo limón – 2 cdas",
+      "Huevos – 4",
+      "Leche – 1 taza",
+      "Camarón – 4 lb"
+    ]
+  },
+  {
+    "name_en": "Stuffed Chorizo Chicken",
+    "name_es": "Pollo Relleno de Chorizo",
+    "ingredients_en": [
+      "Chicken Breast – 36 ea",
+      "Chorizo – 4 lb",
+      "Shredded Cheese – 2 lb",
+      "Panko – 1 qt",
+      "Lawry’s – 1 Tbsp",
+      "Eggs – 9",
+      "Water – 2 cups"
+    ],
+    "ingredients_es": [
+      "Pechtuga pollo – 36",
+      "Chorizo – 4 lb",
+      "Queso rallado – 2 lb",
+      "Panko – 1 qt",
+      "Lawry’s – 1 cda",
+      "Huevos – 9",
+      "Agua – 2 tazas"
+    ]
+  },
+  {
+    "name_en": "Avocado Rolls",
+    "name_es": "Rollos de Aguacate",
+    "ingredients_en": [
+      "Avocado – 40 ea",
+      "Sundried Tomatoes – 10 oz",
+      "Red Onion – 6 oz",
+      "Cilantro – 1 cup",
+      "Black Pepper – 1 Tbsp",
+      "Salt – 2 Tbsp",
+      "Oil – 1/4 cup",
+      "Eggroll Wrappers – 45 ea"
+    ],
+    "ingredients_es": [
+      "Aguacate – 40",
+      "Tomate seco – 10 oz",
+      "Cebolla roja – 6 oz",
+      "Cilantro – 1 taza",
+      "Pimienta – 1 cda",
+      "Sal – 2 cdas",
+      "Aceite – 1/4 taza",
+      "Envoltura eggroll – 45"
+    ]
+  },
+  {
+    "name_en": "Birria Brisket",
+    "name_es": "Birria de Res",
+    "ingredients_en": [
+      "Beef Chuck – 20 lb",
+      "Tomato – 8 lb",
+      "Onion – 4 lb",
+      "Oregano – 4 Tbsp",
+      "Cumin – 4 Tbsp",
+      "Salt – 4 Tbsp",
+      "Chicken Base – 4 Tbsp",
+      "Black Pepper – 4 Tbsp",
+      "Guajillo – 32 ea",
+      "Ancho – 12 ea",
+      "Arbol – 10 ea",
+      "Vinegar – 8 Tbsp",
+      "Garlic – 40 cloves",
+      "Cinnamon – 1",
+      "Bay Leaf – 8 ea"
+    ],
+    "ingredients_es": [
+      "Res – 20 lb",
+      "Tomate – 8 lb",
+      "Cebolla – 4 lb",
+      "Orégano – 4 cdas",
+      "Comino – 4 cdas",
+      "Sal – 4 cdas",
+      "Base pollo – 4 cdas",
+      "Pimienta – 4 cdas",
+      "Guajillo – 32",
+      "Ancho – 12",
+      "Árbol – 10",
+      "Vinagre – 8 cdas",
+      "Ajo – 40",
+      "Canela – 1",
+      "Laurel – 8"
+    ]
+  },
+  {
+    "name_en": "Salsa Chicken",
+    "name_es": "Pollo en Salsa",
+    "ingredients_en": [
+      "Chicken Thigh – 20 lb",
+      "Poblano – 2 qt",
+      "Onion – 2 qt",
+      "Oil – 3 cups",
+      "Huey Salsa – 4 qt",
+      "Fuego Mix – 1 cup"
+    ],
+    "ingredients_es": [
+      "Muslo pollo – 20 lb",
+      "Poblano – 2 qt",
+      "Cebolla – 2 qt",
+      "Aceite – 3 tazas",
+      "Salsa Huey – 4 qt",
+      "Mezcla Fuego – 1 taza"
+    ]
+  },
+  {
+    "name_en": "Fried Breading",
+    "name_es": "Empanizado Frito",
+    "ingredients_en": [
+      "Panko – 1 cup",
+      "Huey Seasoning – 2 Tbsp"
+    ],
+    "ingredients_es": [
+      "Panko – 1 taza",
+      "Sazón Huey – 2 cdas"
+    ]
+  },
+  {
+    "name_en": "Fire Roasted Veggies",
+    "name_es": "Vegetales Asados",
+    "ingredients_en": [
+      "Squash – 6 ea",
+      "Zucchini – 6 ea",
+      "Poblano – 4 ea",
+      "Steak Marinade – 2 cups",
+      "Mushrooms (add to order)"
+    ],
+    "ingredients_es": [
+      "Calabacín – 6",
+      "Zucchini – 6",
+      "Poblano – 4",
+      "Marinada bistec – 2 tazas",
+      "Hongos (agregar al ordenar)"
+    ]
+  },
+  {
+    "name_en": "Salad Mix",
+    "name_es": "Mezcla de Ensalada",
+    "ingredients_en": [
+      "Squash – 6 ea",
+      "Zucchini – 6 ea",
+      "Poblano – 4 ea",
+      "Bell Pepper – 4 ea",
+      "Steak Marinade – 2 cups",
+      "Mushrooms (add to order)"
+    ],
+    "ingredients_es": [
+      "Calabacín – 6",
+      "Zucchini – 6",
+      "Poblano – 4",
+      "Chile dulce – 4",
+      "Marinada bistec – 2 tazas",
+      "Hongos (agregar al ordenar)"
+    ]
+  },
+  {
+    "name_en": "Poblano Fry Batter",
+    "name_es": "Mezcla para Poblanos Fritos",
+    "ingredients_en": [
+      "Eggs – 15 ea",
+      "Flour – 0.25 cup",
+      "Egg Yolks – 15 ea"
+    ],
+    "ingredients_es": [
+      "Huevos – 15",
+      "Harina – 0.25 taza",
+      "Yemas – 15"
+    ]
+  },
+  {
+    "name_en": "Mexican Turnip Greens",
+    "name_es": "Hojas de Nabo Mexicanas",
+    "ingredients_en": [
+      "Turnip Greens – 2.5 lb",
+      "Cumin – 1 Tbsp",
+      "Garlic Purée – 1 Tbsp",
+      "Huey Luey’s Hot Sauce – 3 Tbsp",
+      "Diced Tomatoes – 2 cups",
+      "Diced White Onion – 1 cup",
+      "Chicken Broth – 4 qt"
+    ],
+    "ingredients_es": [
+      "Hojas de nabo – 2.5 lb",
+      "Comino – 1 cda",
+      "Ajo puré – 1 cda",
+      "Salsa picante Huey Luey’s – 3 cdas",
+      "Tomate picado – 2 tazas",
+      "Cebolla blanca picada – 1 taza",
+      "Caldo de pollo – 4 qt"
+    ]
+  }
+]
+,
+{
+  "name_en": "Stuffed Chicken Chorizo Mix",
+  "name_es": "Mezcla de Chorizo para Pollo Relleno",
+  "ingredients_en": [
+    "Chorizo – 4 lb",
+    "Shredded Cheese – 2 lb"
+  ],
+  "ingredients_es": [
+    "Chorizo – 4 lb",
+    "Queso rallado – 2 lb"
+  ]
+}
