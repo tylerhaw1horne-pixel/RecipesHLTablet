@@ -1,0 +1,365 @@
+[
+  {
+    "name_en": "Chili Gravy",
+    "name_es": "Chili Gravy",
+    "ingredients_en": [
+      "Chorizo – 5 lbs",
+      "Ground Beef – 10 lbs",
+      "Salt – 1 Tbsp",
+      "Black Pepper – 1 Tbsp",
+      "Garlic Powder – 2.5 cups",
+      "Onion – 4 qt",
+      "Tomato – 4 qt",
+      "Jalapeño – 1 ea",
+      "Water – 12 qt",
+      "Beef Base – 2 cups",
+      "Chili Powder – 1.5 cups",
+      "Cumin – 1.5 cups",
+      "Oregano – 1 cup",
+      "Paprika – 1.5 cups",
+      "Flour – 3 cups"
+    ],
+    "ingredients_es": [
+      "Chorizo – 5 lb",
+      "Carne molida – 10 lb",
+      "Sal – 1 cda",
+      "Pimienta negra – 1 cda",
+      "Ajo en polvo – 2.5 tazas",
+      "Cebolla – 4 qt",
+      "Tomate – 4 qt",
+      "Jalapeño – 1",
+      "Agua – 12 qt",
+      "Base de res – 2 tazas",
+      "Chile en polvo – 1.5 tazas",
+      "Comino – 1.5 tazas",
+      "Orégano – 1 taza",
+      "Paprika – 1.5 tazas",
+      "Harina – 3 tazas"
+    ]
+  },
+  {
+    "name_en": "Foamy Garlic Butter",
+    "name_es": "Mantequilla Espumosa de Ajo",
+    "ingredients_en": [
+      "Butter – 8 lbs",
+      "Margarine – 8 lbs",
+      "Chicken Powder – 1 cup",
+      "Garlic Purée – 1 cup",
+      "White Wine – 2 bottles"
+    ],
+    "ingredients_es": [
+      "Mantequilla – 8 lb",
+      "Margarina – 8 lb",
+      "Polvo de pollo – 1 taza",
+      "Ajo puré – 1 taza",
+      "Vino blanco – 2 botellas"
+    ]
+  },
+  {
+    "name_en": "Mixto Seasoning",
+    "name_es": "Sazón Mixto",
+    "ingredients_en": [
+      "Black Pepper – 4.5 lb",
+      "Cumin – 4.5 lb",
+      "Chili Powder – 4.5 lb",
+      "Garlic Powder – 9 lb",
+      "Oregano – 1/2 bag",
+      "Salt – 6 lb"
+    ],
+    "ingredients_es": [
+      "Pimienta negra – 4.5 lb",
+      "Comino – 4.5 lb",
+      "Chile en polvo – 4.5 lb",
+      "Ajo en polvo – 9 lb",
+      "Orégano – 1/2 bolsa",
+      "Sal – 6 lb"
+    ]
+  },
+  {
+    "name_en": "Fuego Spice Mix",
+    "name_es": "Mezcla Fuego",
+    "ingredients_en": [
+      "Paprika – 4 cups",
+      "Cayenne – 1/4 cup",
+      "Salt – 2 cups",
+      "Black Pepper – 2 cups",
+      "Garlic Powder – 4 cups",
+      "Chili Powder – 4 cups",
+      "Oregano – 4 cups",
+      "White Pepper – 1/4 cup"
+    ],
+    "ingredients_es": [
+      "Paprika – 4 tazas",
+      "Cayena – 1/4 taza",
+      "Sal – 2 tazas",
+      "Pimienta negra – 2 tazas",
+      "Ajo en polvo – 4 tazas",
+      "Chile en polvo – 4 tazas",
+      "Orégano – 4 tazas",
+      "Pimienta blanca – 1/4 taza"
+    ]
+  },
+  {
+    "name_en": "Tex Mex Spice Mix",
+    "name_es": "Mezcla Tex Mex",
+    "ingredients_en": [
+      "Cumin – 6 cups",
+      "Garlic Powder – 6 cups",
+      "Salt – 4 cups",
+      "Black Pepper – 2 cups"
+    ],
+    "ingredients_es": [
+      "Comino – 6 tazas",
+      "Ajo en polvo – 6 tazas",
+      "Sal – 4 tazas",
+      "Pimienta negra – 2 tazas"
+    ]
+  },
+  {
+    "name_en": "Tequila Cream Sauce",
+    "name_es": "Salsa Crema Tequila",
+    "ingredients_en": [
+      "Mushrooms – 1 lb",
+      "Onion – 1 lb",
+      "Poblano – 1/2 lb",
+      "Corn – 1/2 lb",
+      "Cream Cheese – 1 lb",
+      "Sour Cream – 2 cups",
+      "Heavy Cream – 1 qt",
+      "White Cheese – 1.5 lb",
+      "Chicken Base – 3 Tbsp",
+      "Salt – 1/2 Tbsp",
+      "Garlic Powder – 1 tsp",
+      "Tequila – 3 Tbsp"
+    ],
+    "ingredients_es": [
+      "Hongos – 1 lb",
+      "Cebolla – 1 lb",
+      "Poblano – 1/2 lb",
+      "Elote – 1/2 lb",
+      "Queso crema – 1 lb",
+      "Crema agria – 2 tazas",
+      "Crema espesa – 1 qt",
+      "Queso blanco – 1.5 lb",
+      "Base pollo – 3 cdas",
+      "Sal – 1/2 cda",
+      "Ajo en polvo – 1 cdta",
+      "Tequila – 3 cdas"
+    ]
+  },
+  {
+    "name_en": "Mild Salsa",
+    "name_es": "Salsa Suave",
+    "ingredients_en": [
+      "Tomatoes – 5 lb",
+      "Onion – 1/2 lb",
+      "Whole Tomato Pouch – 1",
+      "Garlic Powder – 1 Tbsp",
+      "Salt – 2 Tbsp",
+      "Cilantro – 1 cup"
+    ],
+    "ingredients_es": [
+      "Tomate – 5 lb",
+      "Cebolla – 1/2 lb",
+      "Bolsa tomate entero – 1",
+      "Ajo en polvo – 1 cda",
+      "Sal – 2 cdas",
+      "Cilantro – 1 taza"
+    ]
+  }
+]
+,
+{
+  "name_en": "Honey Chipotle Glaze",
+  "name_es": "Glaseado Miel Chipotle",
+  "ingredients_en": [
+    "Sugar – 16 oz",
+    "Honey – 10 oz",
+    "Chipotle Adobo – 1 can",
+    "Cumin – 2 Tbsp",
+    "Lime Juice – 1/4 cup",
+    "Soy Sauce – 1/4 cup"
+  ],
+  "ingredients_es": [
+    "Azúcar – 16 oz",
+    "Miel – 10 oz",
+    "Chipotle adobo – 1 lata",
+    "Comino – 2 cdas",
+    "Jugo limón – 1/4 taza",
+    "Salsa soya – 1/4 taza"
+  ]
+},
+{
+  "name_en": "Korean BBQ Marinade",
+  "name_es": "Marinada BBQ Coreana",
+  "ingredients_en": [
+    "Onion – 1 ea",
+    "Garlic – 32 cloves",
+    "Chipotle – 1 can",
+    "Pears – 3 ea",
+    "Black Pepper – 1 Tbsp",
+    "Soy Sauce – 2 cups",
+    "Vegetable Oil – 1 cup",
+    "Sugar – 3/4 cup"
+  ],
+  "ingredients_es": [
+    "Cebolla – 1",
+    "Ajo – 32 dientes",
+    "Chipotle – 1 lata",
+    "Peras – 3",
+    "Pimienta negra – 1 cda",
+    "Salsa soya – 2 tazas",
+    "Aceite vegetal – 1 taza",
+    "Azúcar – 3/4 taza"
+  ]
+},
+{
+  "name_en": "Habanero Salsa",
+  "name_es": "Salsa Habanero",
+  "ingredients_en": [
+    "Tomatillos – 5 lb",
+    "Habanero – 5 lb",
+    "Garlic – 32 cloves",
+    "Guajillo – 32 ea",
+    "Chile de Árbol – 1 oz",
+    "Beef Base – 3/4 tsp",
+    "Salt – 1 Tbsp",
+    "Water – 2 qt"
+  ],
+  "ingredients_es": [
+    "Tomatillo – 5 lb",
+    "Habanero – 5 lb",
+    "Ajo – 32",
+    "Guajillo – 32",
+    "Chile de árbol – 1 oz",
+    "Base res – 3/4 cdta",
+    "Sal – 1 cda",
+    "Agua – 2 qt"
+  ]
+},
+{
+  "name_en": "Ranchero Sauce",
+  "name_es": "Salsa Ranchera",
+  "ingredients_en": [
+    "Tomato Pouches – 4",
+    "Tomatoes – 20 lb",
+    "Poblano (diced) – 2 qt",
+    "Onion (diced) – 2 qt",
+    "Tex-Mex Spice – 3 cups",
+    "Flour – 3 cups",
+    "Oil – 4 cups",
+    "Water – 12 qt"
+  ],
+  "ingredients_es": [
+    "Bolsa tomate – 4",
+    "Tomate – 20 lb",
+    "Poblano picado – 2 qt",
+    "Cebolla picada – 2 qt",
+    "Sazón Tex-Mex – 3 tazas",
+    "Harina – 3 tazas",
+    "Aceite – 4 tazas",
+    "Agua – 12 qt"
+  ]
+},
+{
+  "name_en": "Chicken Brine",
+  "name_es": "Salmuera de Pollo",
+  "ingredients_en": [
+    "Water – 5 gal",
+    "Salt – 2 cups",
+    "Fuego Spice Mix – 2 cups",
+    "Dried Oregano – 1/2 cup",
+    "White Onion – 5 ea",
+    "Cilantro – 5 bunches",
+    "Garlic Cloves – 2 cups",
+    "Jalapeños – 5 ea",
+    "Lime Juice – 1 qt"
+  ],
+  "ingredients_es": [
+    "Agua – 5 gal",
+    "Sal – 2 tazas",
+    "Mezcla Fuego – 2 tazas",
+    "Orégano seco – 1/2 taza",
+    "Cebolla blanca – 5",
+    "Cilantro – 5 manojos",
+    "Ajo – 2 tazas",
+    "Jalapeños – 5",
+    "Jugo limón – 1 qt"
+  ]
+},
+{
+  "name_en": "Chicken Marinade",
+  "name_es": "Marinada de Pollo",
+  "ingredients_en": [
+    "Guajillo Peppers – 100 ea",
+    "Cilantro – 4 bunches",
+    "Cumin – 1 cup",
+    "Black Pepper – 1 cup",
+    "Oregano – 1 cup",
+    "Lawry's Seasoning – 4.5 cups",
+    "Garlic Cloves – 3 lb",
+    "Fresh Orange Juice – 3 qt",
+    "Tropicana Orange Juice – 2 qt",
+    "Canola Oil – 3 qt",
+    "White Vinegar – 2.5 qt",
+    "Pineapple Juice – 2 qt"
+  ],
+  "ingredients_es": [
+    "Guajillo – 100",
+    "Cilantro – 4 manojos",
+    "Comino – 1 taza",
+    "Pimienta negra – 1 taza",
+    "Orégano – 1 taza",
+    "Sazón Lawry's – 4.5 tazas",
+    "Ajo – 3 lb",
+    "Jugo naranja fresco – 3 qt",
+    "Jugo naranja Tropicana – 2 qt",
+    "Aceite canola – 3 qt",
+    "Vinagre blanco – 2.5 qt",
+    "Jugo piña – 2 qt"
+  ]
+},
+{
+  "name_en": "Huey Luey Salsa",
+  "name_es": "Salsa Huey Luey",
+  "ingredients_en": [
+    "Whole Peeled Tomatoes – 18 bags",
+    "Whole Pickled Jalapeños – 2 cans",
+    "Chopped White Onion – 4 lb",
+    "Garlic Powder – 1 cup",
+    "Salt – 1 cup",
+    "Cilantro – 6 cups"
+  ],
+  "ingredients_es": [
+    "Tomate entero pelado – 18 bolsas",
+    "Jalapeño encurtido entero – 2 latas",
+    "Cebolla blanca picada – 4 lb",
+    "Ajo en polvo – 1 taza",
+    "Sal – 1 taza",
+    "Cilantro – 6 tazas"
+  ]
+},
+{
+  "name_en": "Salsa Verde",
+  "name_es": "Salsa Verde",
+  "ingredients_en": [
+    "Tomatillos – 10 lb",
+    "Onion – 1 lb",
+    "Jalapeño – 2 ea",
+    "Cilantro – 1 bunch",
+    "Garlic Purée – 1 Tbsp",
+    "Salt – 2 Tbsp",
+    "Oil – 1/4 cup",
+    "Water – 1 qt"
+  ],
+  "ingredients_es": [
+    "Tomatillo – 10 lb",
+    "Cebolla – 1 lb",
+    "Jalapeño – 2",
+    "Cilantro – 1 manojo",
+    "Ajo puré – 1 cda",
+    "Sal – 2 cdas",
+    "Aceite – 1/4 taza",
+    "Agua – 1 qt"
+  ]
+}
