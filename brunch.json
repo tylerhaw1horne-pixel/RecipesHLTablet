@@ -2,6 +2,12 @@
   {
     "name_en": "Pancakes",
     "name_es": "Panqueques",
+    "yield_en": "Full Brunch Batch",
+    "yield_es": "Lote Completo Brunch",
+    "time_en": "Cook: 2–3 min per side",
+    "time_es": "Cocción: 2–3 min por lado",
+    "holding_en": "Hot hold 135°F max 30 min.",
+    "holding_es": "Mantener caliente 135°F máximo 30 min.",
     "ingredients_en": [
       "Flour – 4.5 qt",
       "Baking Powder – 3/4 cup",
@@ -23,11 +29,44 @@
       "Leche – 3.75 qt",
       "Mantequilla – 3 tazas",
       "Vainilla – 2 cdas"
-    ]
+    ],
+    "procedure_quick_en": [
+      "Mix dry ingredients.",
+      "Add wet ingredients.",
+      "Cook on flat top."
+    ],
+    "procedure_quick_es": [
+      "Mezclar secos.",
+      "Agregar líquidos.",
+      "Cocinar en plancha."
+    ],
+    "procedure_detailed_en": [
+      "Combine flour, baking powder, salt, sugar and cinnamon.",
+      "Whisk eggs, milk, melted butter and vanilla.",
+      "Combine wet and dry until smooth.",
+      "Pour onto hot griddle.",
+      "Flip when bubbles form.",
+      "Cook until golden."
+    ],
+    "procedure_detailed_es": [
+      "Mezclar secos.",
+      "Batir huevos, leche, mantequilla y vainilla.",
+      "Unir mezclas.",
+      "Verter en plancha caliente.",
+      "Voltear cuando salgan burbujas.",
+      "Cocinar hasta dorado."
+    ],
+    "image": "images/pancakes.jpg"
   },
   {
     "name_en": "Buttermilk Syrup",
     "name_es": "Jarabe de Buttermilk",
+    "yield_en": "1 Sauce Batch",
+    "yield_es": "1 Lote Salsa",
+    "time_en": "Cook: 10 min",
+    "time_es": "Cocción: 10 min",
+    "holding_en": "Warm hold or refrigerate 5 days.",
+    "holding_es": "Mantener tibio o refrigerar 5 días.",
     "ingredients_en": [
       "Butter – 1 lb",
       "Sugar – 4 cups",
@@ -45,11 +84,44 @@
       "Bicarbonato – 1 cda",
       "Sal – 1 cda",
       "Vainilla – 1 cda"
-    ]
+    ],
+    "procedure_quick_en": [
+      "Melt butter.",
+      "Add sugar and buttermilk.",
+      "Simmer and finish with vanilla."
+    ],
+    "procedure_quick_es": [
+      "Derretir mantequilla.",
+      "Agregar azúcar y buttermilk.",
+      "Hervir y agregar vainilla."
+    ],
+    "procedure_detailed_en": [
+      "Melt butter in sauce pot.",
+      "Add sugar, buttermilk and corn syrup.",
+      "Bring to gentle boil.",
+      "Add baking soda and salt.",
+      "Remove from heat and add vanilla.",
+      "Cool slightly before serving."
+    ],
+    "procedure_detailed_es": [
+      "Derretir mantequilla.",
+      "Agregar azúcar y buttermilk.",
+      "Hervir suave.",
+      "Agregar bicarbonato y sal.",
+      "Retirar del fuego y agregar vainilla.",
+      "Enfriar un poco antes de servir."
+    ],
+    "image": "images/buttermilk_syrup.jpg"
   },
   {
     "name_en": "Whipped Butter",
     "name_es": "Mantequilla Batida",
+    "yield_en": "1 Cup",
+    "yield_es": "1 Taza",
+    "time_en": "Prep: 5 min",
+    "time_es": "Preparación: 5 min",
+    "holding_en": "Cold hold 5 days.",
+    "holding_es": "Mantener frío 5 días.",
     "ingredients_en": [
       "Butter (softened) – 1 cup",
       "Cream – 1-2 Tbsp",
@@ -59,11 +131,40 @@
       "Mantequilla (suave) – 1 taza",
       "Crema – 1-2 cdas",
       "Sal – 1/4 cdta"
-    ]
+    ],
+    "procedure_quick_en": [
+      "Whip butter.",
+      "Add cream and salt.",
+      "Beat until fluffy."
+    ],
+    "procedure_quick_es": [
+      "Batir mantequilla.",
+      "Agregar crema y sal.",
+      "Batir hasta esponjosa."
+    ],
+    "procedure_detailed_en": [
+      "Place softened butter in mixer.",
+      "Add cream and salt.",
+      "Whip until light and fluffy.",
+      "Store chilled."
+    ],
+    "procedure_detailed_es": [
+      "Colocar mantequilla suave.",
+      "Agregar crema y sal.",
+      "Batir hasta ligera.",
+      "Guardar en frío."
+    ],
+    "image": "images/whipped_butter.jpg"
   },
   {
     "name_en": "Biscuits and Gravy",
     "name_es": "Biscuits con Salsa",
+    "yield_en": "6–8 Portions",
+    "yield_es": "6–8 Porciones",
+    "time_en": "Cook: 20 min",
+    "time_es": "Cocción: 20 min",
+    "holding_en": "Hot hold 135°F.",
+    "holding_es": "Mantener caliente 135°F.",
     "ingredients_en": [
       "Biscuits",
       "Sausage or Chorizo – 1 lb",
@@ -83,11 +184,44 @@
       "Orégano – 1/2 cdta",
       "Comino – 1/2 cdta",
       "Salsa picante – 1 cda"
-    ]
+    ],
+    "procedure_quick_en": [
+      "Cook sausage.",
+      "Add flour.",
+      "Add milk and simmer."
+    ],
+    "procedure_quick_es": [
+      "Cocinar carne.",
+      "Agregar harina.",
+      "Agregar leche y hervir."
+    ],
+    "procedure_detailed_en": [
+      "Cook sausage fully.",
+      "Add flour and cook 2 minutes.",
+      "Slowly whisk in milk.",
+      "Add spices.",
+      "Simmer until thick.",
+      "Serve over warm biscuits."
+    ],
+    "procedure_detailed_es": [
+      "Cocinar carne.",
+      "Agregar harina y cocinar.",
+      "Agregar leche poco a poco.",
+      "Agregar especias.",
+      "Hervir hasta espesar.",
+      "Servir sobre biscuits."
+    ],
+    "image": "images/biscuits_gravy.jpg"
   },
   {
     "name_en": "French Toast Enchiladas",
     "name_es": "Enchiladas de French Toast",
+    "yield_en": "Full Pan",
+    "yield_es": "Charola Completa",
+    "time_en": "Bake: 25–30 min",
+    "time_es": "Hornear: 25–30 min",
+    "holding_en": "Hot hold 135°F or refrigerate 48 hrs.",
+    "holding_es": "Mantener caliente 135°F o refrigerar 48 hrs.",
     "ingredients_en": [
       "Eggs – 6",
       "Milk – 1 qt",
@@ -107,11 +241,44 @@
       "Queso crema – 3 lb",
       "Granola – 1 taza",
       "Fresas – 1 taza"
-    ]
+    ],
+    "procedure_quick_en": [
+      "Prepare custard.",
+      "Fill and roll bread.",
+      "Bake until set."
+    ],
+    "procedure_quick_es": [
+      "Preparar mezcla.",
+      "Rellenar pan.",
+      "Hornear."
+    ],
+    "procedure_detailed_en": [
+      "Whisk eggs, milk, sugar and cinnamon.",
+      "Spread cream cheese inside bread.",
+      "Roll tightly and place in pan.",
+      "Pour custard over rolls.",
+      "Top with granola and strawberries.",
+      "Bake until set."
+    ],
+    "procedure_detailed_es": [
+      "Batir huevos, leche, azúcar y canela.",
+      "Untar queso crema.",
+      "Enrollar y colocar en molde.",
+      "Verter mezcla encima.",
+      "Agregar granola y fresas.",
+      "Hornear."
+    ],
+    "image": "images/french_toast_enchiladas.jpg"
   },
   {
     "name_en": "French Toast Mixture",
     "name_es": "Mezcla para French Toast",
+    "yield_en": "1 Batch",
+    "yield_es": "1 Lote",
+    "time_en": "Prep: 5 min",
+    "time_es": "Preparación: 5 min",
+    "holding_en": "Cold hold 24 hrs.",
+    "holding_es": "Mantener frío 24 hrs.",
     "ingredients_en": [
       "Eggs – 6",
       "Milk – 2 qt",
@@ -123,6 +290,27 @@
       "Leche – 2 qt",
       "Canela – 2 cdas",
       "Extracto de vainilla – 2 cdas"
-    ]
+    ],
+    "procedure_quick_en": [
+      "Whisk ingredients.",
+      "Use for dipping bread."
+    ],
+    "procedure_quick_es": [
+      "Batir ingredientes.",
+      "Usar para remojar pan."
+    ],
+    "procedure_detailed_en": [
+      "Whisk eggs thoroughly.",
+      "Add milk, cinnamon and vanilla.",
+      "Mix until smooth.",
+      "Store refrigerated."
+    ],
+    "procedure_detailed_es": [
+      "Batir huevos.",
+      "Agregar leche, canela y vainilla.",
+      "Mezclar bien.",
+      "Guardar en frío."
+    ],
+    "image": "images/french_toast_mix.jpg"
   }
 ]
