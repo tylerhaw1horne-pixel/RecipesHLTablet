@@ -1,0 +1,292 @@
+[
+  {
+    "name_en": "Pico de Gallo",
+    "name_es": "Pico de Gallo",
+    "ingredients_en": [
+      "Diced Tomato – 20 lbs",
+      "Onion – 6 lbs",
+      "Lime Juice – 1 cup",
+      "Salt – 8 Tbsp",
+      "Cilantro – 8 cups",
+      "Fresh Jalapeño – 1 cup"
+    ],
+    "ingredients_es": [
+      "Tomate en cubos – 20 lbs",
+      "Cebolla – 6 lbs",
+      "Jugo de limón – 1 taza",
+      "Sal – 8 cdas",
+      "Cilantro picado – 8 tazas",
+      "Jalapeño fresco – 1 taza"
+    ]
+  },
+  {
+    "name_en": "Guacamole",
+    "name_es": "Guacamole",
+    "ingredients_en": [
+      "Avocado – 35 ea",
+      "Cilantro – 2 cups",
+      "Onion – 3 cups",
+      "Jalapeño – 1/4 cup",
+      "Salt – 2 Tbsp",
+      "Lime Juice – 1/4 cup"
+    ],
+    "ingredients_es": [
+      "Aguacate – 35",
+      "Cilantro – 2 tazas",
+      "Cebolla – 3 tazas",
+      "Jalapeño – 1/4 taza",
+      "Sal – 2 cdas",
+      "Limón – 1/4 taza"
+    ]
+  },
+  {
+    "name_en": "Grilled Corn",
+    "name_es": "Maíz Asado",
+    "ingredients_en": [
+      "Fresh Corn – 1/2 case",
+      "Frozen Corn – 2.5 qt",
+      "Salt – 2 Tbsp"
+    ],
+    "ingredients_es": [
+      "Maíz fresco – 1/2 caja",
+      "Maíz congelado – 2.5 qt",
+      "Sal – 2 cdas"
+    ]
+  },
+  {
+    "name_en": "Mango Salsa",
+    "name_es": "Salsa de Mango",
+    "ingredients_en": [
+      "Mango – 5-6 ea",
+      "Bell Pepper – 2 ea",
+      "Red Onion – 1 ea",
+      "Cilantro – 1 cup",
+      "Lime Juice – 2 Tbsp",
+      "Salt – 2 Tbsp",
+      "Chili Powder – 1 tsp"
+    ],
+    "ingredients_es": [
+      "Mango – 5-6",
+      "Chile dulce – 2",
+      "Cebolla morada – 1",
+      "Cilantro – 1 taza",
+      "Limón – 2 cdas",
+      "Sal – 2 cdas",
+      "Chile en polvo – 1 cdta"
+    ]
+  },
+  {
+    "name_en": "Jalapeño Coleslaw",
+    "name_es": "Ensalada de Repollo con Jalapeño",
+    "ingredients_en": [
+      "Green Cabbage – 8 lbs",
+      "Red Cabbage – 4 lbs",
+      "Cilantro – 8 oz",
+      "Jalapeño – 8 ea",
+      "White Onion – 2 cups",
+      "Vinegar – 2 cups",
+      "Salt – 2 Tbsp",
+      "Black Pepper – 1 Tbsp",
+      "Sugar – 1/2 cup",
+      "Mayonnaise – 1.5 gal"
+    ],
+    "ingredients_es": [
+      "Repollo verde – 8 lbs",
+      "Repollo morado – 4 lbs",
+      "Cilantro – 8 oz",
+      "Jalapeño – 8",
+      "Cebolla blanca – 2 tazas",
+      "Vinagre – 2 tazas",
+      "Sal – 2 cdas",
+      "Pimienta – 1 cda",
+      "Azúcar – 1/2 taza",
+      "Mayonesa – 1.5 gal"
+    ]
+  },
+  {
+    "name_en": "Spicy Cheese Dip Base",
+    "name_es": "Base Queso Picante",
+    "ingredients_en": [
+      "Cheese – 30 lb",
+      "Milk – 2 gal",
+      "Oregano – 1 Tbsp",
+      "Chicken Base – 6 Tbsp",
+      "Pickled Jalapeño – 1 can"
+    ],
+    "ingredients_es": [
+      "Queso – 30 lb",
+      "Leche – 2 gal",
+      "Orégano – 1 cda",
+      "Base pollo – 6 cdas",
+      "Jalapeño encurtido – 1 lata"
+    ]
+  },
+  {
+    "name_en": "Regular Cheese Dip",
+    "name_es": "Queso Regular",
+    "ingredients_en": [
+      "Cheese – 1 box (30 lb)",
+      "Milk – 2 gal"
+    ],
+    "ingredients_es": [
+      "Queso – 1 caja (30 lb)",
+      "Leche – 2 gal"
+    ]
+  },
+  {
+    "name_en": "Chipotle Mashed Potatoes",
+    "name_es": "Puré de Papa Chipotle",
+    "ingredients_en": [
+      "Red Potatoes – 15 lbs",
+      "Milk – 1.5 cups",
+      "Heavy Cream – 1.5 cups",
+      "Cream Cheese – 1/2 lb",
+      "Sour Cream – 2 cups",
+      "Cheese Dip – 2 cups",
+      "Black Pepper – 1 Tbsp",
+      "Salt – 5 Tbsp",
+      "Chipotle Adobo – 1 can",
+      "Margarine – 1/2 lb"
+    ],
+    "ingredients_es": [
+      "Papas rojas – 15 lbs",
+      "Leche – 1.5 tazas",
+      "Crema espesa – 1.5 tazas",
+      "Queso crema – 1/2 lb",
+      "Crema agria – 2 tazas",
+      "Queso dip – 2 tazas",
+      "Pimienta – 1 cda",
+      "Sal – 5 cdas",
+      "Chipotle adobo – 1 lata",
+      "Margarina – 1/2 lb"
+    ]
+  },
+  {
+    "name_en": "Mexican Rice",
+    "name_es": "Arroz Mexicano",
+    "ingredients_en": [
+      "Long Grain Rice – 9 qt",
+      "Salt – 18 Tbsp",
+      "Garlic Powder – 18 Tbsp",
+      "Water – 18 qt",
+      "Frozen Vegetables – 5 qt",
+      "Fajita Butter – 18 oz",
+      "Tomato Purée – 9 cups",
+      "Chicken Base – 4.5 Tbsp"
+    ],
+    "ingredients_es": [
+      "Arroz grano largo – 9 qt",
+      "Sal – 18 cdas",
+      "Ajo en polvo – 18 cdas",
+      "Agua – 18 qt",
+      "Vegetales congelados – 5 qt",
+      "Mantequilla fajita – 18 oz",
+      "Puré tomate – 9 tazas",
+      "Base pollo – 4.5 cdas"
+    ]
+  },
+  {
+    "name_en": "Cilantro Lime Rice",
+    "name_es": "Arroz con Cilantro y Limón",
+    "ingredients_en": [
+      "Long Grain Rice – 2.5 qt",
+      "Water – 5 qt",
+      "Fresh Lime – 1 ea",
+      "Salt – 5 Tbsp",
+      "Garlic Powder – 4 Tbsp",
+      "Onion – 2 cups"
+    ],
+    "ingredients_es": [
+      "Arroz grano largo – 2.5 qt",
+      "Agua – 5 qt",
+      "Limón fresco – 1",
+      "Sal – 5 cdas",
+      "Ajo en polvo – 4 cdas",
+      "Cebolla – 2 tazas"
+    ]
+  },
+  {
+    "name_en": "Black Beans",
+    "name_es": "Frijol Negro",
+    "ingredients_en": [
+      "Black Beans – 5 cups",
+      "Salt – 1 oz",
+      "Water – 4.5 qt"
+    ],
+    "ingredients_es": [
+      "Frijol negro – 5 tazas",
+      "Sal – 1 oz",
+      "Agua – 4.5 qt"
+    ]
+  },
+  {
+    "name_en": "Basic Pinto Beans",
+    "name_es": "Frijol Pinto Básico",
+    "ingredients_en": [
+      "Dry Pinto Beans – 1 qt",
+      "Salt – 1 oz"
+    ],
+    "ingredients_es": [
+      "Frijol pinto seco – 1 qt",
+      "Sal – 1 oz"
+    ]
+  },
+  {
+    "name_en": "Refried Beans",
+    "name_es": "Frijoles Refritos",
+    "ingredients_en": [
+      "Basic Beans – 10 lb",
+      "Bacon – 1 lb",
+      "Chorizo – 1 lb",
+      "Onion – 1/2 lb",
+      "Oil – 4 cups",
+      "Pico de Gallo – 5 cups"
+    ],
+    "ingredients_es": [
+      "Frijoles básicos – 10 lb",
+      "Tocino – 1 lb",
+      "Chorizo – 1 lb",
+      "Cebolla – 1/2 lb",
+      "Aceite – 4 tazas",
+      "Pico de gallo – 5 tazas"
+    ]
+  },
+  {
+    "name_en": "Charro Beans",
+    "name_es": "Frijoles Charros",
+    "ingredients_en": [
+      "Cooked Beans – 7 lb",
+      "Chorizo – 10 lb",
+      "Bacon – 1/2 lb",
+      "Pico de Gallo – 1/3 pan",
+      "Salt – 7 oz",
+      "Water – 2 qt"
+    ],
+    "ingredients_es": [
+      "Frijol cocido – 7 lb",
+      "Chorizo – 10 lb",
+      "Tocino – 1/2 lb",
+      "Pico – 1/3 pan",
+      "Sal – 7 oz",
+      "Agua – 2 qt"
+    ]
+  },
+  {
+    "name_en": "Pickled Red Onions",
+    "name_es": "Cebolla Morada Encurtida",
+    "ingredients_en": [
+      "Red Onion Julienne – 18 qt",
+      "Red Vinegar – 1.5 bottles",
+      "Orange Juice – 2 bottles",
+      "Kosher Salt – 4 Tbsp",
+      "Whole Oregano – 4 oz"
+    ],
+    "ingredients_es": [
+      "Cebolla morada en juliana – 18 qt",
+      "Vinagre rojo – 1.5 botellas",
+      "Jugo de naranja – 2 botellas",
+      "Sal kosher – 4 cdas",
+      "Orégano entero – 4 oz"
+    ]
+  }
+]
