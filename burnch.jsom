@@ -1,0 +1,128 @@
+[
+  {
+    "name_en": "Pancakes",
+    "name_es": "Panqueques",
+    "ingredients_en": [
+      "Flour – 4.5 qt",
+      "Baking Powder – 3/4 cup",
+      "Salt – 1/2 Tbsp",
+      "Sugar – 2.25 cups",
+      "Cinnamon – 2 Tbsp",
+      "Eggs – 11",
+      "Milk – 3.75 qt",
+      "Butter – 3 cups",
+      "Vanilla – 2 Tbsp"
+    ],
+    "ingredients_es": [
+      "Harina – 4.5 qt",
+      "Polvo hornear – 3/4 taza",
+      "Sal – 1/2 cda",
+      "Azúcar – 2.25 tazas",
+      "Canela – 2 cdas",
+      "Huevos – 11",
+      "Leche – 3.75 qt",
+      "Mantequilla – 3 tazas",
+      "Vainilla – 2 cdas"
+    ]
+  },
+  {
+    "name_en": "Buttermilk Syrup",
+    "name_es": "Jarabe de Buttermilk",
+    "ingredients_en": [
+      "Butter – 1 lb",
+      "Sugar – 4 cups",
+      "Buttermilk – 2 cups",
+      "Corn Syrup – 1 Tbsp",
+      "Baking Soda – 1 Tbsp",
+      "Salt – 1 Tbsp",
+      "Vanilla – 1 Tbsp"
+    ],
+    "ingredients_es": [
+      "Mantequilla – 1 lb",
+      "Azúcar – 4 tazas",
+      "Buttermilk – 2 tazas",
+      "Jarabe maíz – 1 cda",
+      "Bicarbonato – 1 cda",
+      "Sal – 1 cda",
+      "Vainilla – 1 cda"
+    ]
+  },
+  {
+    "name_en": "Whipped Butter",
+    "name_es": "Mantequilla Batida",
+    "ingredients_en": [
+      "Butter (softened) – 1 cup",
+      "Cream – 1-2 Tbsp",
+      "Salt – 1/4 tsp"
+    ],
+    "ingredients_es": [
+      "Mantequilla (suave) – 1 taza",
+      "Crema – 1-2 cdas",
+      "Sal – 1/4 cdta"
+    ]
+  },
+  {
+    "name_en": "Biscuits and Gravy",
+    "name_es": "Biscuits con Salsa",
+    "ingredients_en": [
+      "Biscuits",
+      "Sausage or Chorizo – 1 lb",
+      "Flour – 1/2 cup",
+      "Milk – 6 cups",
+      "Black Pepper – 1/2 tsp",
+      "Oregano – 1/2 tsp",
+      "Cumin – 1/2 tsp",
+      "Hot Sauce – 1 Tbsp"
+    ],
+    "ingredients_es": [
+      "Biscuits",
+      "Salchicha o chorizo – 1 lb",
+      "Harina – 1/2 taza",
+      "Leche – 6 tazas",
+      "Pimienta – 1/2 cdta",
+      "Orégano – 1/2 cdta",
+      "Comino – 1/2 cdta",
+      "Salsa picante – 1 cda"
+    ]
+  },
+  {
+    "name_en": "French Toast Enchiladas",
+    "name_es": "Enchiladas de French Toast",
+    "ingredients_en": [
+      "Eggs – 6",
+      "Milk – 1 qt",
+      "Sugar – 1.5 oz",
+      "Cinnamon – 0.75 oz",
+      "Hawaiian Bread – 2 bags",
+      "Cream Cheese – 3 lb",
+      "Granola – 1 cup",
+      "Strawberries – 1 cup"
+    ],
+    "ingredients_es": [
+      "Huevos – 6",
+      "Leche – 1 qt",
+      "Azúcar – 1.5 oz",
+      "Canela – 0.75 oz",
+      "Pan hawaiano – 2 bolsas",
+      "Queso crema – 3 lb",
+      "Granola – 1 taza",
+      "Fresas – 1 taza"
+    ]
+  },
+  {
+    "name_en": "French Toast Mixture",
+    "name_es": "Mezcla para French Toast",
+    "ingredients_en": [
+      "Eggs – 6",
+      "Milk – 2 qt",
+      "Cinnamon – 2 Tbsp",
+      "Vanilla Extract – 2 Tbsp"
+    ],
+    "ingredients_es": [
+      "Huevos – 6",
+      "Leche – 2 qt",
+      "Canela – 2 cdas",
+      "Extracto de vainilla – 2 cdas"
+    ]
+  }
+]
