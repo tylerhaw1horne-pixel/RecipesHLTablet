@@ -1,0 +1,130 @@
+[
+  {
+    "name_en": "Tres Leches Cake",
+    "name_es": "Pastel Tres Leches",
+    "ingredients_en": [
+      "Sugar – 1.5 cups",
+      "Vanilla – 1 Tbsp",
+      "Flour – 2.5 cups",
+      "Baking Soda – 1.5 Tbsp",
+      "Eggs – 8",
+      "Milk – 2.5 cups",
+      "Tres Leches Milk – 3 qt",
+      "Frosting (as needed)"
+    ],
+    "ingredients_es": [
+      "Azúcar – 1.5 tazas",
+      "Vainilla – 1 cda",
+      "Harina – 2.5 tazas",
+      "Bicarbonato – 1.5 cdas",
+      "Huevos – 8",
+      "Leche – 2.5 tazas",
+      "Mezcla tres leches – 3 qt",
+      "Betún (según necesidad)"
+    ]
+  },
+  {
+    "name_en": "Tres Leches Milk",
+    "name_es": "Mezcla Tres Leches",
+    "ingredients_en": [
+      "Condensed Milk – 3 cans",
+      "Evaporated Milk – 3 cans",
+      "Heavy Cream – 3 cups",
+      "Vanilla – 1 cup"
+    ],
+    "ingredients_es": [
+      "Leche condensada – 3 latas",
+      "Leche evaporada – 3 latas",
+      "Crema espesa – 3 tazas",
+      "Vainilla – 1 taza"
+    ]
+  },
+  {
+    "name_en": "Tres Leches Frosting",
+    "name_es": "Betún Tres Leches",
+    "ingredients_en": [
+      "Heavy Cream – 1 qt",
+      "Sugar – 1 cup",
+      "Vanilla – 1 Tbsp"
+    ],
+    "ingredients_es": [
+      "Crema espesa – 1 qt",
+      "Azúcar – 1 taza",
+      "Vainilla – 1 cda"
+    ]
+  },
+  {
+    "name_en": "Chocolate Brownie",
+    "name_es": "Brownie de Chocolate",
+    "ingredients_en": [
+      "Cocoa – 3 cups",
+      "Oil – 1 cup",
+      "Margarine – 1 lb",
+      "Water – 3/4 cup",
+      "Egg Whites – 1 cup",
+      "Sugar – 6.75 cups",
+      "Vanilla – 2 Tbsp",
+      "Flour – 5.25 cups",
+      "Salt – 1 tsp",
+      "Baking Powder – 1 tsp",
+      "Chocolate Chips – 2 cups"
+    ],
+    "ingredients_es": [
+      "Cacao – 3 tazas",
+      "Aceite – 1 taza",
+      "Margarina – 1 lb",
+      "Agua – 3/4 taza",
+      "Clara huevo – 1 taza",
+      "Azúcar – 6.75 tazas",
+      "Vainilla – 2 cdas",
+      "Harina – 5.25 tazas",
+      "Sal – 1 cdta",
+      "Polvo hornear – 1 cdta",
+      "Chispas chocolate – 2 tazas"
+    ]
+  },
+  {
+    "name_en": "Flan",
+    "name_es": "Flan",
+    "ingredients_en": [
+      "Condensed Milk – 4 cans",
+      "Milk – 4 cups",
+      "Eggs – 16",
+      "Vanilla – 1/4 cup",
+      "Sugar – 24 oz"
+    ],
+    "ingredients_es": [
+      "Leche condensada – 4 latas",
+      "Leche – 4 tazas",
+      "Huevos – 16",
+      "Vainilla – 1/4 taza",
+      "Azúcar – 24 oz"
+    ]
+  },
+  {
+    "name_en": "Pumpkin Flan",
+    "name_es": "Flan de Calabaza",
+    "ingredients_en": [
+      "Condensed Milk – 2.5 cans",
+      "Whole Milk – 4 cups",
+      "Eggs – 8",
+      "Vanilla – 1.5 oz",
+      "Sugar – 1/2 cup",
+      "Brown Sugar – 1/2 cup",
+      "Pumpkin Purée – 1.5 cans",
+      "Ginger – pinch",
+      "Nutmeg – pinch"
+    ],
+    "ingredients_es": [
+      "Leche condensada – 2.5 latas",
+      "Leche entera – 4 tazas",
+      "Huevos – 8",
+      "Vainilla – 1.5 oz",
+      "Azúcar – 1/2 taza",
+      "Azúcar morena – 1/2 taza",
+      "Puré calabaza – 1.5 latas",
+      "Jengibre – pizca",
+      "Nuez moscada – pizca"
+    ]
+  }
+]
