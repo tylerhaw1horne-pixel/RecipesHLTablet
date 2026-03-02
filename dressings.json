@@ -1,0 +1,114 @@
+[
+  {
+    "name_en": "Avocado Roll Dip",
+    "name_es": "Dip de Rollo de Aguacate",
+    "ingredients_en": [
+      "Sour Cream – 1.5 cups",
+      "Mayonnaise – 1/2 cup",
+      "Garlic Purée – 5 Tbsp",
+      "Kosher Salt – 2 tsp",
+      "Black Pepper – 1 tsp",
+      "Cilantro – 1 cup",
+      "Lime Juice – 1/4 cup",
+      "Jalapeño – 3 ea (diced)"
+    ],
+    "ingredients_es": [
+      "Crema agria – 1.5 tazas",
+      "Mayonesa – 1/2 taza",
+      "Ajo puré – 5 cdas",
+      "Sal kosher – 2 cdtas",
+      "Pimienta negra – 1 cdta",
+      "Cilantro – 1 taza",
+      "Jugo limón – 1/4 taza",
+      "Jalapeño – 3 picados"
+    ]
+  },
+  {
+    "name_en": "Chipotle Mayonnaise",
+    "name_es": "Mayonesa Chipotle",
+    "ingredients_en": [
+      "Mayonnaise – 1 gal",
+      "Chipotle Adobo – 1 can"
+    ],
+    "ingredients_es": [
+      "Mayonesa – 1 gal",
+      "Chipotle adobo – 1 lata"
+    ]
+  },
+  {
+    "name_en": "Cilantro Ranch",
+    "name_es": "Ranch con Cilantro",
+    "ingredients_en": [
+      "Cilantro – 2 cups",
+      "Ranch Dressing – 1 gal",
+      "Salsa Verde – 1/4–3 cups",
+      "Garlic Purée – 1 Tbsp",
+      "Lime Juice – 6 Tbsp"
+    ],
+    "ingredients_es": [
+      "Cilantro – 2 tazas",
+      "Aderezo ranch – 1 gal",
+      "Salsa verde – 1/4–3 tazas",
+      "Ajo puré – 1 cda",
+      "Jugo limón – 6 cdas"
+    ]
+  },
+  {
+    "name_en": "Mango Dressing",
+    "name_es": "Aderezo de Mango",
+    "ingredients_en": [
+      "Mango Concentrate – 2 qt",
+      "Orange Juice – 2.5 cups",
+      "Lime Juice – 1/4 cup",
+      "Black Pepper – 2 tsp",
+      "Salt – 4 Tbsp",
+      "Garlic Powder – 4 Tbsp",
+      "Vegetable Oil – 3/4 cup"
+    ],
+    "ingredients_es": [
+      "Concentrado mango – 2 qt",
+      "Jugo naranja – 2.5 tazas",
+      "Jugo limón – 1/4 taza",
+      "Pimienta negra – 2 cdtas",
+      "Sal – 4 cdas",
+      "Ajo en polvo – 4 cdas",
+      "Aceite vegetal – 3/4 taza"
+    ]
+  },
+  {
+    "name_en": "Chipotle Ranch",
+    "name_es": "Ranch Chipotle",
+    "ingredients_en": [
+      "Ranch Dressing – 1 gal",
+      "Chipotle Adobo – 1 can"
+    ],
+    "ingredients_es": [
+      "Aderezo ranch – 1 gal",
+      "Chipotle adobo – 1 lata"
+    ]
+  },
+  {
+    "name_en": "Oregano Vinaigrette",
+    "name_es": "Vinagreta de Orégano",
+    "ingredients_en": [
+      "Mayonnaise – 1 gal",
+      "Oregano – 1 cup",
+      "Red Vinegar – 2 cups",
+      "Garlic Cloves – 20 ea",
+      "Buttermilk – 1 qt",
+      "Honey Mustard – 1/2 cup",
+      "Black Pepper – 2 Tbsp",
+      "Salt – 2 Tbsp"
+    ],
+    "ingredients_es": [
+      "Mayonesa – 1 gal",
+      "Orégano – 1 taza",
+      "Vinagre rojo – 2 tazas",
+      "Ajo – 20",
+      "Buttermilk – 1 qt",
+      "Mostaza miel – 1/2 taza",
+      "Pimienta negra – 2 cdas",
+      "Sal – 2 cdas"
+    ]
+  }
+]
