@@ -2,6 +2,12 @@
   {
     "name_en": "Pico de Gallo",
     "name_es": "Pico de Gallo",
+    "yield_en": "4 – 1/3 Pans",
+    "yield_es": "4 – 1/3 Charolas",
+    "time_en": "Prep: 20 min",
+    "time_es": "Preparación: 20 min",
+    "holding_en": "Cold hold below 41°F. 48 hr max.",
+    "holding_es": "Mantener frío bajo 41°F. Máximo 48 horas.",
     "ingredients_en": [
       "Diced Tomato – 20 lbs",
       "Onion – 6 lbs",
@@ -17,11 +23,35 @@
       "Sal – 8 cdas",
       "Cilantro picado – 8 tazas",
       "Jalapeño fresco – 1 taza"
-    ]
+    ],
+    "procedure_quick_en": ["Combine ingredients.", "Fold gently.", "Adjust seasoning."],
+    "procedure_quick_es": ["Mezclar ingredientes.", "Mezclar suavemente.", "Ajustar sazón."],
+    "procedure_detailed_en": [
+      "Dice tomatoes uniform.",
+      "Combine in lexan.",
+      "Fold gently to prevent crushing.",
+      "Adjust lime and salt.",
+      "Label and refrigerate."
+    ],
+    "procedure_detailed_es": [
+      "Picar tomate uniforme.",
+      "Combinar en lexan.",
+      "Mezclar sin aplastar.",
+      "Ajustar limón y sal.",
+      "Etiquetar y refrigerar."
+    ],
+    "image": "images/pico.jpg"
   },
+
   {
     "name_en": "Guacamole",
     "name_es": "Guacamole",
+    "yield_en": "1 Full Pan",
+    "yield_es": "1 Charola Completa",
+    "time_en": "Prep: 15 min",
+    "time_es": "Preparación: 15 min",
+    "holding_en": "Cold hold 24 hr max.",
+    "holding_es": "Mantener frío máximo 24 horas.",
     "ingredients_en": [
       "Avocado – 35 ea",
       "Cilantro – 2 cups",
@@ -37,11 +67,35 @@
       "Jalapeño – 1/4 taza",
       "Sal – 2 cdas",
       "Limón – 1/4 taza"
-    ]
+    ],
+    "procedure_quick_en": ["Mash avocado.", "Add ingredients.", "Adjust salt."],
+    "procedure_quick_es": ["Machacar aguacate.", "Agregar ingredientes.", "Ajustar sal."],
+    "procedure_detailed_en": [
+      "Remove pits and scoop flesh.",
+      "Mash medium texture.",
+      "Add onion, jalapeño, cilantro.",
+      "Add lime and salt.",
+      "Mix and refrigerate."
+    ],
+    "procedure_detailed_es": [
+      "Quitar semilla.",
+      "Machacar textura media.",
+      "Agregar cebolla, jalapeño y cilantro.",
+      "Agregar limón y sal.",
+      "Refrigerar."
+    ],
+    "image": "images/guacamole.jpg"
   },
+
   {
     "name_en": "Grilled Corn",
     "name_es": "Maíz Asado",
+    "yield_en": "1 Full Pan",
+    "yield_es": "1 Charola Completa",
+    "time_en": "Cook: 15 min",
+    "time_es": "Cocción: 15 min",
+    "holding_en": "Hot hold at 135°F.",
+    "holding_es": "Mantener caliente a 135°F.",
     "ingredients_en": [
       "Fresh Corn – 1/2 case",
       "Frozen Corn – 2.5 qt",
@@ -51,11 +105,33 @@
       "Maíz fresco – 1/2 caja",
       "Maíz congelado – 2.5 qt",
       "Sal – 2 cdas"
-    ]
+    ],
+    "procedure_quick_en": ["Grill corn.", "Season.", "Hold hot."],
+    "procedure_quick_es": ["Asar maíz.", "Sazonar.", "Mantener caliente."],
+    "procedure_detailed_en": [
+      "Grill fresh corn until charred.",
+      "Combine with frozen corn.",
+      "Season with salt.",
+      "Hold hot."
+    ],
+    "procedure_detailed_es": [
+      "Asar maíz hasta dorado.",
+      "Mezclar con maíz congelado.",
+      "Agregar sal.",
+      "Mantener caliente."
+    ],
+    "image": "images/grilled_corn.jpg"
   },
+
   {
     "name_en": "Mango Salsa",
     "name_es": "Salsa de Mango",
+    "yield_en": "1/3 Pan",
+    "yield_es": "1/3 Charola",
+    "time_en": "Prep: 15 min",
+    "time_es": "Preparación: 15 min",
+    "holding_en": "Cold hold 24 hr.",
+    "holding_es": "Mantener frío 24 horas.",
     "ingredients_en": [
       "Mango – 5-6 ea",
       "Bell Pepper – 2 ea",
@@ -73,11 +149,33 @@
       "Limón – 2 cdas",
       "Sal – 2 cdas",
       "Chile en polvo – 1 cdta"
-    ]
+    ],
+    "procedure_quick_en": ["Dice mango.", "Mix ingredients.", "Chill."],
+    "procedure_quick_es": ["Picar mango.", "Mezclar.", "Refrigerar."],
+    "procedure_detailed_en": [
+      "Dice mango small.",
+      "Add pepper, onion, cilantro.",
+      "Add lime, salt, chili powder.",
+      "Mix and chill."
+    ],
+    "procedure_detailed_es": [
+      "Picar mango fino.",
+      "Agregar chile y cebolla.",
+      "Agregar limón, sal y chile.",
+      "Refrigerar."
+    ],
+    "image": "images/mango_salsa.jpg"
   },
+
   {
     "name_en": "Jalapeño Coleslaw",
     "name_es": "Ensalada de Repollo con Jalapeño",
+    "yield_en": "1 Full Pan",
+    "yield_es": "1 Charola Completa",
+    "time_en": "Prep: 25 min",
+    "time_es": "Preparación: 25 min",
+    "holding_en": "Cold hold 48 hr.",
+    "holding_es": "Mantener frío 48 horas.",
     "ingredients_en": [
       "Green Cabbage – 8 lbs",
       "Red Cabbage – 4 lbs",
@@ -101,192 +199,438 @@
       "Pimienta – 1 cda",
       "Azúcar – 1/2 taza",
       "Mayonesa – 1.5 gal"
-    ]
-  },
-  {
-    "name_en": "Spicy Cheese Dip Base",
-    "name_es": "Base Queso Picante",
-    "ingredients_en": [
-      "Cheese – 30 lb",
-      "Milk – 2 gal",
-      "Oregano – 1 Tbsp",
-      "Chicken Base – 6 Tbsp",
-      "Pickled Jalapeño – 1 can"
     ],
-    "ingredients_es": [
-      "Queso – 30 lb",
-      "Leche – 2 gal",
-      "Orégano – 1 cda",
-      "Base pollo – 6 cdas",
-      "Jalapeño encurtido – 1 lata"
-    ]
-  },
-  {
-    "name_en": "Regular Cheese Dip",
-    "name_es": "Queso Regular",
-    "ingredients_en": [
-      "Cheese – 1 box (30 lb)",
-      "Milk – 2 gal"
+    "procedure_quick_en": ["Shred cabbage.", "Mix dressing.", "Combine and chill."],
+    "procedure_quick_es": ["Picar repollo.", "Mezclar aderezo.", "Combinar y refrigerar."],
+    "procedure_detailed_en": [
+      "Shred both cabbages.",
+      "Mix vinegar, sugar, salt, pepper.",
+      "Add mayo and combine.",
+      "Fold in jalapeño and cilantro.",
+      "Chill."
     ],
-    "ingredients_es": [
-      "Queso – 1 caja (30 lb)",
-      "Leche – 2 gal"
-    ]
-  },
-  {
-    "name_en": "Chipotle Mashed Potatoes",
-    "name_es": "Puré de Papa Chipotle",
-    "ingredients_en": [
-      "Red Potatoes – 15 lbs",
-      "Milk – 1.5 cups",
-      "Heavy Cream – 1.5 cups",
-      "Cream Cheese – 1/2 lb",
-      "Sour Cream – 2 cups",
-      "Cheese Dip – 2 cups",
-      "Black Pepper – 1 Tbsp",
-      "Salt – 5 Tbsp",
-      "Chipotle Adobo – 1 can",
-      "Margarine – 1/2 lb"
+    "procedure_detailed_es": [
+      "Picar repollos.",
+      "Mezclar vinagre, azúcar, sal y pimienta.",
+      "Agregar mayonesa.",
+      "Incorporar jalapeño y cilantro.",
+      "Refrigerar."
     ],
-    "ingredients_es": [
-      "Papas rojas – 15 lbs",
-      "Leche – 1.5 tazas",
-      "Crema espesa – 1.5 tazas",
-      "Queso crema – 1/2 lb",
-      "Crema agria – 2 tazas",
-      "Queso dip – 2 tazas",
-      "Pimienta – 1 cda",
-      "Sal – 5 cdas",
-      "Chipotle adobo – 1 lata",
-      "Margarina – 1/2 lb"
-    ]
-  },
-  {
-    "name_en": "Mexican Rice",
-    "name_es": "Arroz Mexicano",
-    "ingredients_en": [
-      "Long Grain Rice – 9 qt",
-      "Salt – 18 Tbsp",
-      "Garlic Powder – 18 Tbsp",
-      "Water – 18 qt",
-      "Frozen Vegetables – 5 qt",
-      "Fajita Butter – 18 oz",
-      "Tomato Purée – 9 cups",
-      "Chicken Base – 4.5 Tbsp"
-    ],
-    "ingredients_es": [
-      "Arroz grano largo – 9 qt",
-      "Sal – 18 cdas",
-      "Ajo en polvo – 18 cdas",
-      "Agua – 18 qt",
-      "Vegetales congelados – 5 qt",
-      "Mantequilla fajita – 18 oz",
-      "Puré tomate – 9 tazas",
-      "Base pollo – 4.5 cdas"
-    ]
-  },
-  {
-    "name_en": "Cilantro Lime Rice",
-    "name_es": "Arroz con Cilantro y Limón",
-    "ingredients_en": [
-      "Long Grain Rice – 2.5 qt",
-      "Water – 5 qt",
-      "Fresh Lime – 1 ea",
-      "Salt – 5 Tbsp",
-      "Garlic Powder – 4 Tbsp",
-      "Onion – 2 cups"
-    ],
-    "ingredients_es": [
-      "Arroz grano largo – 2.5 qt",
-      "Agua – 5 qt",
-      "Limón fresco – 1",
-      "Sal – 5 cdas",
-      "Ajo en polvo – 4 cdas",
-      "Cebolla – 2 tazas"
-    ]
-  },
-  {
-    "name_en": "Black Beans",
-    "name_es": "Frijol Negro",
-    "ingredients_en": [
-      "Black Beans – 5 cups",
-      "Salt – 1 oz",
-      "Water – 4.5 qt"
-    ],
-    "ingredients_es": [
-      "Frijol negro – 5 tazas",
-      "Sal – 1 oz",
-      "Agua – 4.5 qt"
-    ]
-  },
-  {
-    "name_en": "Basic Pinto Beans",
-    "name_es": "Frijol Pinto Básico",
-    "ingredients_en": [
-      "Dry Pinto Beans – 1 qt",
-      "Salt – 1 oz"
-    ],
-    "ingredients_es": [
-      "Frijol pinto seco – 1 qt",
-      "Sal – 1 oz"
-    ]
-  },
-  {
-    "name_en": "Refried Beans",
-    "name_es": "Frijoles Refritos",
-    "ingredients_en": [
-      "Basic Beans – 10 lb",
-      "Bacon – 1 lb",
-      "Chorizo – 1 lb",
-      "Onion – 1/2 lb",
-      "Oil – 4 cups",
-      "Pico de Gallo – 5 cups"
-    ],
-    "ingredients_es": [
-      "Frijoles básicos – 10 lb",
-      "Tocino – 1 lb",
-      "Chorizo – 1 lb",
-      "Cebolla – 1/2 lb",
-      "Aceite – 4 tazas",
-      "Pico de gallo – 5 tazas"
-    ]
-  },
-  {
-    "name_en": "Charro Beans",
-    "name_es": "Frijoles Charros",
-    "ingredients_en": [
-      "Cooked Beans – 7 lb",
-      "Chorizo – 10 lb",
-      "Bacon – 1/2 lb",
-      "Pico de Gallo – 1/3 pan",
-      "Salt – 7 oz",
-      "Water – 2 qt"
-    ],
-    "ingredients_es": [
-      "Frijol cocido – 7 lb",
-      "Chorizo – 10 lb",
-      "Tocino – 1/2 lb",
-      "Pico – 1/3 pan",
-      "Sal – 7 oz",
-      "Agua – 2 qt"
-    ]
-  },
-  {
-    "name_en": "Pickled Red Onions",
-    "name_es": "Cebolla Morada Encurtida",
-    "ingredients_en": [
-      "Red Onion Julienne – 18 qt",
-      "Red Vinegar – 1.5 bottles",
-      "Orange Juice – 2 bottles",
-      "Kosher Salt – 4 Tbsp",
-      "Whole Oregano – 4 oz"
-    ],
-    "ingredients_es": [
-      "Cebolla morada en juliana – 18 qt",
-      "Vinagre rojo – 1.5 botellas",
-      "Jugo de naranja – 2 botellas",
-      "Sal kosher – 4 cdas",
-      "Orégano entero – 4 oz"
-    ]
+    "image": "images/coleslaw.jpg"
   }
+,
+{
+  "name_en": "Spicy Cheese Dip Base",
+  "name_es": "Base Queso Picante",
+  "yield_en": "1 Full Pan",
+  "yield_es": "1 Charola Completa",
+  "time_en": "Cook: 20 min",
+  "time_es": "Cocción: 20 min",
+  "holding_en": "Hot hold at 135°F.",
+  "holding_es": "Mantener caliente a 135°F.",
+  "ingredients_en": [
+    "Cheese – 30 lb",
+    "Milk – 2 gal",
+    "Oregano – 1 Tbsp",
+    "Chicken Base – 6 Tbsp",
+    "Pickled Jalapeño – 1 can"
+  ],
+  "ingredients_es": [
+    "Queso – 30 lb",
+    "Leche – 2 gal",
+    "Orégano – 1 cda",
+    "Base pollo – 6 cdas",
+    "Jalapeño encurtido – 1 lata"
+  ],
+  "procedure_quick_en": ["Melt cheese.", "Add seasonings.", "Hold hot."],
+  "procedure_quick_es": ["Derretir queso.", "Agregar sazón.", "Mantener caliente."],
+  "procedure_detailed_en": [
+    "Heat milk in steam kettle.",
+    "Add cheese gradually.",
+    "Add oregano, chicken base, jalapeño.",
+    "Whisk until smooth.",
+    "Hold hot."
+  ],
+  "procedure_detailed_es": [
+    "Calentar leche.",
+    "Agregar queso poco a poco.",
+    "Agregar orégano, base y jalapeño.",
+    "Mezclar hasta suave.",
+    "Mantener caliente."
+  ],
+  "image": "images/spicy_cheese.jpg"
+},
+{
+  "name_en": "Regular Cheese Dip",
+  "name_es": "Queso Regular",
+  "yield_en": "1 Full Pan",
+  "yield_es": "1 Charola Completa",
+  "time_en": "Cook: 15 min",
+  "time_es": "Cocción: 15 min",
+  "holding_en": "Hot hold at 135°F.",
+  "holding_es": "Mantener caliente a 135°F.",
+  "ingredients_en": [
+    "Cheese – 1 box (30 lb)",
+    "Milk – 2 gal"
+  ],
+  "ingredients_es": [
+    "Queso – 1 caja (30 lb)",
+    "Leche – 2 gal"
+  ],
+  "procedure_quick_en": ["Heat milk.", "Melt cheese.", "Hold hot."],
+  "procedure_quick_es": ["Calentar leche.", "Derretir queso.", "Mantener caliente."],
+  "procedure_detailed_en": [
+    "Heat milk slowly.",
+    "Add cheese gradually.",
+    "Whisk until smooth.",
+    "Hold hot."
+  ],
+  "procedure_detailed_es": [
+    "Calentar leche.",
+    "Agregar queso poco a poco.",
+    "Mezclar hasta suave.",
+    "Mantener caliente."
+  ],
+  "image": "images/regular_cheese.jpg"
+},
+{
+  "name_en": "Chipotle Mashed Potatoes",
+  "name_es": "Puré de Papa Chipotle",
+  "yield_en": "1 Full Pan",
+  "yield_es": "1 Charola Completa",
+  "time_en": "Cook: 40 min",
+  "time_es": "Cocción: 40 min",
+  "holding_en": "Hot hold 135°F.",
+  "holding_es": "Mantener caliente 135°F.",
+  "ingredients_en": [
+    "Red Potatoes – 15 lbs",
+    "Milk – 1.5 cups",
+    "Heavy Cream – 1.5 cups",
+    "Cream Cheese – 1/2 lb",
+    "Sour Cream – 2 cups",
+    "Cheese Dip – 2 cups",
+    "Black Pepper – 1 Tbsp",
+    "Salt – 5 Tbsp",
+    "Chipotle Adobo – 1 can",
+    "Margarine – 1/2 lb"
+  ],
+  "ingredients_es": [
+    "Papas rojas – 15 lbs",
+    "Leche – 1.5 tazas",
+    "Crema espesa – 1.5 tazas",
+    "Queso crema – 1/2 lb",
+    "Crema agria – 2 tazas",
+    "Queso dip – 2 tazas",
+    "Pimienta – 1 cda",
+    "Sal – 5 cdas",
+    "Chipotle adobo – 1 lata",
+    "Margarina – 1/2 lb"
+  ],
+  "procedure_quick_en": ["Boil potatoes.", "Mash with ingredients.", "Hold hot."],
+  "procedure_quick_es": ["Hervir papas.", "Machacar con ingredientes.", "Mantener caliente."],
+  "procedure_detailed_en": [
+    "Boil potatoes until fork tender.",
+    "Drain and mash.",
+    "Add dairy and seasoning.",
+    "Blend until smooth.",
+    "Hold hot."
+  ],
+  "procedure_detailed_es": [
+    "Hervir papas hasta suaves.",
+    "Escurrir y machacar.",
+    "Agregar lácteos y sazón.",
+    "Mezclar hasta suave.",
+    "Mantener caliente."
+  ],
+  "image": "images/chipotle_mash.jpg"
+},
+{
+  "name_en": "Mexican Rice",
+  "name_es": "Arroz Mexicano",
+  "yield_en": "1 Full Pan",
+  "yield_es": "1 Charola Completa",
+  "time_en": "Cook: 35 min",
+  "time_es": "Cocción: 35 min",
+  "holding_en": "Hot hold 135°F.",
+  "holding_es": "Mantener caliente 135°F.",
+  "ingredients_en": [
+    "Long Grain Rice – 9 qt",
+    "Salt – 18 Tbsp",
+    "Garlic Powder – 18 Tbsp",
+    "Water – 18 qt",
+    "Frozen Vegetables – 5 qt",
+    "Fajita Butter – 18 oz",
+    "Tomato Purée – 9 cups",
+    "Chicken Base – 4.5 Tbsp"
+  ],
+  "ingredients_es": [
+    "Arroz grano largo – 9 qt",
+    "Sal – 18 cdas",
+    "Ajo en polvo – 18 cdas",
+    "Agua – 18 qt",
+    "Vegetales congelados – 5 qt",
+    "Mantequilla fajita – 18 oz",
+    "Puré tomate – 9 tazas",
+    "Base pollo – 4.5 cdas"
+  ],
+  "procedure_quick_en": ["Cook rice.", "Add seasoning and purée.", "Fluff and hold."],
+  "procedure_quick_es": ["Cocinar arroz.", "Agregar sazón y puré.", "Esponjar y mantener."],
+  "procedure_detailed_en": [
+    "Rinse rice.",
+    "Combine rice and water.",
+    "Simmer covered.",
+    "Add purée and vegetables.",
+    "Fluff before service."
+  ],
+  "procedure_detailed_es": [
+    "Lavar arroz.",
+    "Combinar arroz y agua.",
+    "Cocinar tapado.",
+    "Agregar puré y vegetales.",
+    "Esponjar."
+  ],
+  "image": "images/mexican_rice.jpg"
+},
+{
+  "name_en": "Cilantro Lime Rice",
+  "name_es": "Arroz con Cilantro y Limón",
+  "yield_en": "1 Full Pan",
+  "yield_es": "1 Charola Completa",
+  "time_en": "Cook: 30 min",
+  "time_es": "Cocción: 30 min",
+  "holding_en": "Hot hold 135°F.",
+  "holding_es": "Mantener caliente 135°F.",
+  "ingredients_en": [
+    "Long Grain Rice – 2.5 qt",
+    "Water – 5 qt",
+    "Fresh Lime – 1 ea",
+    "Salt – 5 Tbsp",
+    "Garlic Powder – 4 Tbsp",
+    "Onion – 2 cups"
+  ],
+  "ingredients_es": [
+    "Arroz grano largo – 2.5 qt",
+    "Agua – 5 qt",
+    "Limón fresco – 1",
+    "Sal – 5 cdas",
+    "Ajo en polvo – 4 cdas",
+    "Cebolla – 2 tazas"
+  ],
+  "procedure_quick_en": ["Cook rice.", "Add lime and seasoning.", "Fluff."],
+  "procedure_quick_es": ["Cocinar arroz.", "Agregar limón y sazón.", "Esponjar."],
+  "procedure_detailed_en": [
+    "Cook rice until tender.",
+    "Add lime juice.",
+    "Add salt and garlic.",
+    "Fold in onion.",
+    "Hold hot."
+  ],
+  "procedure_detailed_es": [
+    "Cocinar arroz.",
+    "Agregar limón.",
+    "Agregar sal y ajo.",
+    "Agregar cebolla.",
+    "Mantener caliente."
+  ],
+  "image": "images/cilantro_lime_rice.jpg"
+},
+{
+  "name_en": "Black Beans",
+  "name_es": "Frijol Negro",
+  "yield_en": "1/3 Pan",
+  "yield_es": "1/3 Charola",
+  "time_en": "Cook: 45 min",
+  "time_es": "Cocción: 45 min",
+  "holding_en": "Hot hold 135°F.",
+  "holding_es": "Mantener caliente 135°F.",
+  "ingredients_en": [
+    "Black Beans – 5 cups",
+    "Salt – 1 oz",
+    "Water – 4.5 qt"
+  ],
+  "ingredients_es": [
+    "Frijol negro – 5 tazas",
+    "Sal – 1 oz",
+    "Agua – 4.5 qt"
+  ],
+  "procedure_quick_en": ["Cook beans.", "Season.", "Hold hot."],
+  "procedure_quick_es": ["Cocinar frijoles.", "Sazonar.", "Mantener caliente."],
+  "procedure_detailed_en": [
+    "Combine beans and water.",
+    "Simmer until tender.",
+    "Add salt at end.",
+    "Hold hot."
+  ],
+  "procedure_detailed_es": [
+    "Combinar frijol y agua.",
+    "Cocinar hasta suave.",
+    "Agregar sal al final.",
+    "Mantener caliente."
+  ],
+  "image": "images/black_beans.jpg"
+},
+{
+  "name_en": "Basic Pinto Beans",
+  "name_es": "Frijol Pinto Básico",
+  "yield_en": "1/3 Pan",
+  "yield_es": "1/3 Charola",
+  "time_en": "Cook: 1 hr",
+  "time_es": "Cocción: 1 hora",
+  "holding_en": "Hot hold 135°F.",
+  "holding_es": "Mantener caliente 135°F.",
+  "ingredients_en": [
+    "Dry Pinto Beans – 1 qt",
+    "Salt – 1 oz"
+  ],
+  "ingredients_es": [
+    "Frijol pinto seco – 1 qt",
+    "Sal – 1 oz"
+  ],
+  "procedure_quick_en": ["Cook beans.", "Season.", "Hold hot."],
+  "procedure_quick_es": ["Cocinar frijol.", "Sazonar.", "Mantener caliente."],
+  "procedure_detailed_en": [
+    "Soak beans overnight.",
+    "Cook until tender.",
+    "Add salt.",
+    "Hold hot."
+  ],
+  "procedure_detailed_es": [
+    "Remojar frijol.",
+    "Cocinar hasta suave.",
+    "Agregar sal.",
+    "Mantener caliente."
+  ],
+  "image": "images/pinto_beans.jpg"
+},
+{
+  "name_en": "Refried Beans",
+  "name_es": "Frijoles Refritos",
+  "yield_en": "1 Full Pan",
+  "yield_es": "1 Charola Completa",
+  "time_en": "Cook: 30 min",
+  "time_es": "Cocción: 30 min",
+  "holding_en": "Hot hold 135°F.",
+  "holding_es": "Mantener caliente 135°F.",
+  "ingredients_en": [
+    "Basic Beans – 10 lb",
+    "Bacon – 1 lb",
+    "Chorizo – 1 lb",
+    "Onion – 1/2 lb",
+    "Oil – 4 cups",
+    "Pico de Gallo – 5 cups"
+  ],
+  "ingredients_es": [
+    "Frijoles básicos – 10 lb",
+    "Tocino – 1 lb",
+    "Chorizo – 1 lb",
+    "Cebolla – 1/2 lb",
+    "Aceite – 4 tazas",
+    "Pico de gallo – 5 tazas"
+  ],
+  "procedure_quick_en": ["Cook meats.", "Add beans.", "Mash and hold."],
+  "procedure_quick_es": ["Cocinar carnes.", "Agregar frijoles.", "Machacar y mantener."],
+  "procedure_detailed_en": [
+    "Render bacon and chorizo.",
+    "Add onion.",
+    "Add beans and oil.",
+    "Mash to consistency.",
+    "Fold in pico.",
+    "Hold hot."
+  ],
+  "procedure_detailed_es": [
+    "Cocinar tocino y chorizo.",
+    "Agregar cebolla.",
+    "Agregar frijoles y aceite.",
+    "Machacar.",
+    "Agregar pico.",
+    "Mantener caliente."
+  ],
+  "image": "images/refried_beans.jpg"
+},
+{
+  "name_en": "Charro Beans",
+  "name_es": "Frijoles Charros",
+  "yield_en": "1 Full Pan",
+  "yield_es": "1 Charola Completa",
+  "time_en": "Cook: 40 min",
+  "time_es": "Cocción: 40 min",
+  "holding_en": "Hot hold 135°F.",
+  "holding_es": "Mantener caliente 135°F.",
+  "ingredients_en": [
+    "Cooked Beans – 7 lb",
+    "Chorizo – 10 lb",
+    "Bacon – 1/2 lb",
+    "Pico de Gallo – 1/3 pan",
+    "Salt – 7 oz",
+    "Water – 2 qt"
+  ],
+  "ingredients_es": [
+    "Frijol cocido – 7 lb",
+    "Chorizo – 10 lb",
+    "Tocino – 1/2 lb",
+    "Pico – 1/3 pan",
+    "Sal – 7 oz",
+    "Agua – 2 qt"
+  ],
+  "procedure_quick_en": ["Cook meats.", "Add beans and liquid.", "Simmer and hold."],
+  "procedure_quick_es": ["Cocinar carnes.", "Agregar frijol y agua.", "Hervir y mantener."],
+  "procedure_detailed_en": [
+    "Render bacon and chorizo.",
+    "Add beans and water.",
+    "Add pico.",
+    "Simmer 20 minutes.",
+    "Adjust salt.",
+    "Hold hot."
+  ],
+  "procedure_detailed_es": [
+    "Cocinar tocino y chorizo.",
+    "Agregar frijol y agua.",
+    "Agregar pico.",
+    "Hervir 20 minutos.",
+    "Ajustar sal.",
+    "Mantener caliente."
+  ],
+  "image": "images/charro_beans.jpg"
+},
+{
+  "name_en": "Pickled Red Onions",
+  "name_es": "Cebolla Morada Encurtida",
+  "yield_en": "2 – 1/3 Pans",
+  "yield_es": "2 – 1/3 Charolas",
+  "time_en": "Prep: 15 min",
+  "time_es": "Preparación: 15 min",
+  "holding_en": "Cold hold 72 hr.",
+  "holding_es": "Mantener frío 72 horas.",
+  "ingredients_en": [
+    "Red Onion Julienne – 18 qt",
+    "Red Vinegar – 1.5 bottles",
+    "Orange Juice – 2 bottles",
+    "Kosher Salt – 4 Tbsp",
+    "Whole Oregano – 4 oz"
+  ],
+  "ingredients_es": [
+    "Cebolla morada en juliana – 18 qt",
+    "Vinagre rojo – 1.5 botellas",
+    "Jugo de naranja – 2 botellas",
+    "Sal kosher – 4 cdas",
+    "Orégano entero – 4 oz"
+  ],
+  "procedure_quick_en": ["Combine ingredients.", "Mix well.", "Chill."],
+  "procedure_quick_es": ["Combinar ingredientes.", "Mezclar.", "Refrigerar."],
+  "procedure_detailed_en": [
+    "Julienne onions thin.",
+    "Combine vinegar and orange juice.",
+    "Add salt and oregano.",
+    "Mix thoroughly.",
+    "Refrigerate."
+  ],
+  "procedure_detailed_es": [
+    "Picar cebolla fina.",
+    "Combinar vinagre y jugo.",
+    "Agregar sal y orégano.",
+    "Mezclar bien.",
+    "Refrigerar."
+  ],
+  "image": "images/pickled_onions.jpg"
+}
 ]
