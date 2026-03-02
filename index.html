@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huey Luey's Kitchen Recipe Hub</title>
+
+<style>
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#ffffff;
+    color:#222;
+}
+
+header {
+    background:#f37021;
+    color:white;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+button {
+    padding:8px 14px;
+    border:none;
+    background:#2e7d32;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover { opacity:.85; }
+
+.search {
+    padding:10px;
+    width:100%;
+    border:none;
+    border-bottom:2px solid #ddd;
+    font-size:16px;
+}
+
+.container {
+    padding:20px;
+}
+
+.card {
+    background:#f9f9f9;
+    padding:15px;
+    margin:10px 0;
+    border-radius:8px;
+    cursor:pointer;
+    border:1px solid #eee;
+}
+
+.card:hover {
+    background:#f0f0f0;
+}
+
+.back-btn {
+    margin-bottom:15px;
+}
+
+ul {
+    padding-left:20px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h2>Huey Luey's Recipe Hub</h2>
+    <button onclick="toggleLanguage()">EN / ES</button>
+</header>
+
+<input type="text" class="search" placeholder="Search recipes..." onkeyup="searchRecipes(this.value)">
+
+<div class="container" id="app"></div>
+
+<script>
+let language = "en";
+let currentCategory = null;
+
+const data = [
+  {
+    category: "Items & Sides",
+    items: [
+      {
+        name_en: "Pico de Gallo",
+        name_es: "Pico de Gallo",
+        ingredients_en: [
+          "Diced Tomato – 20 lbs",
+          "Onion – 6 lbs",
+          "Lime Juice – 1 cup",
+          "Salt – 8 Tbsp",
+          "Cilantro – 8 cups",
+          "Fresh Jalapeño – 1 cup"
+        ],
+        ingredients_es: [
+          "Tomate en cubos – 20 lbs",
+          "Cebolla – 6 lbs",
+          "Jugo de limón – 1 taza",
+          "Sal – 8 cdas",
+          "Cilantro – 8 tazas",
+          "Jalapeño fresco – 1 taza"
+        ]
+      },
+      {
+        name_en: "Guacamole",
+        name_es: "Guacamole",
+        ingredients_en: [
+          "Avocado – 35 ea",
+          "Cilantro – 2 cups",
+          "Onion – 3 cups",
+          "Jalapeño – 1/4 cup",
+          "Salt – 2 Tbsp",
+          "Lime Juice – 1/4 cup"
+        ],
+        ingredients_es: [
+          "Aguacate – 35",
+          "Cilantro – 2 tazas",
+          "Cebolla – 3 tazas",
+          "Jalapeño – 1/4 taza",
+          "Sal – 2 cdas",
+          "Limón – 1/4 taza"
+        ]
+      }
+    ]
+  }
+];
+
+function renderCategories() {
+    currentCategory = null;
+    const app = document.getElementById("app");
+    app.innerHTML = "";
+    data.forEach(cat => {
+        const div = document.createElement("div");
+        div.className = "card";
+        div.innerText = cat.category;
+        div.onclick = () => renderItems(cat);
+        app.appendChild(div);
+    });
+}
+
+function renderItems(cat) {
+    currentCategory = cat;
+    const app = document.getElementById("app");
+    app.innerHTML = '<button class="back-btn" onclick="renderCategories()">⬅ Back</button>';
+    cat.items.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "card";
+        div.innerText = language === "en" ? item.name_en : item.name_es;
+        div.onclick = () => renderRecipe(item);
+        app.appendChild(div);
+    });
+}
+
+function renderRecipe(item) {
+    const app = document.getElementById("app");
+    app.innerHTML = '<button class="back-btn" onclick="renderItems(currentCategory)">⬅ Back</button>';
+    const title = document.createElement("h3");
+    title.innerText = language === "en" ? item.name_en : item.name_es;
+    app.appendChild(title);
+
+    const ul = document.createElement("ul");
+    const ingredients = language === "en" ? item.ingredients_en : item.ingredients_es;
+    ingredients.forEach(i => {
+        const li = document.createElement("li");
+        li.innerText = i;
+        ul.appendChild(li);
+    });
+    app.appendChild(ul);
+}
+
+function toggleLanguage() {
+    language = language === "en" ? "es" : "en";
+    if(currentCategory) renderItems(currentCategory);
+    else renderCategories();
+}
+
+function searchRecipes(term) {
+    term = term.toLowerCase();
+    if(!currentCategory) {
+        renderCategories();
+        return;
+    }
+    const app = document.getElementById("app");
+    app.innerHTML = '<button class="back-btn" onclick="renderCategories()">⬅ Back</button>';
+    currentCategory.items
+        .filter(item => item.name_en.toLowerCase().includes(term))
+        .forEach(item => {
+            const div = document.createElement("div");
+            div.className = "card";
+            div.innerText = language === "en" ? item.name_en : item.name_es;
+            div.onclick = () => renderRecipe(item);
+            app.appendChild(div);
+        });
+}
+
+renderCategories();
+</script>
+
+</body>
+</html>
