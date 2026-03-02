@@ -2,6 +2,12 @@
   {
     "name_en": "Avocado Roll Dip",
     "name_es": "Dip de Rollo de Aguacate",
+    "yield_en": "1 Large Batch",
+    "yield_es": "1 Lote Grande",
+    "time_en": "Prep: 10 minutes",
+    "time_es": "Preparación: 10 minutos",
+    "holding_en": "Cold hold 48 hours at 41°F or below.",
+    "holding_es": "Mantener frío 48 horas a 41°F o menos.",
     "ingredients_en": [
       "Sour Cream – 1.5 cups",
       "Mayonnaise – 1/2 cup",
@@ -21,11 +27,44 @@
       "Cilantro – 1 taza",
       "Jugo limón – 1/4 taza",
       "Jalapeño – 3 picados"
-    ]
+    ],
+    "procedure_quick_en": [
+      "Combine all ingredients.",
+      "Blend until smooth.",
+      "Adjust seasoning."
+    ],
+    "procedure_quick_es": [
+      "Combinar ingredientes.",
+      "Licuar hasta suave.",
+      "Ajustar sazón."
+    ],
+    "procedure_detailed_en": [
+      "Add sour cream and mayonnaise to mixing bowl.",
+      "Add garlic purée, salt, and pepper.",
+      "Add cilantro, lime juice, and jalapeño.",
+      "Blend until smooth.",
+      "Taste and adjust seasoning.",
+      "Refrigerate before service."
+    ],
+    "procedure_detailed_es": [
+      "Agregar crema agria y mayonesa.",
+      "Agregar ajo, sal y pimienta.",
+      "Agregar cilantro, limón y jalapeño.",
+      "Licuar hasta suave.",
+      "Ajustar sazón.",
+      "Refrigerar antes de usar."
+    ],
+    "image": "images/avocado_roll_dip.jpg"
   },
   {
     "name_en": "Chipotle Mayonnaise",
     "name_es": "Mayonesa Chipotle",
+    "yield_en": "1 Gallon Batch",
+    "yield_es": "1 Galón",
+    "time_en": "Prep: 5 minutes",
+    "time_es": "Preparación: 5 minutos",
+    "holding_en": "Cold hold 5 days.",
+    "holding_es": "Mantener frío 5 días.",
     "ingredients_en": [
       "Mayonnaise – 1 gal",
       "Chipotle Adobo – 1 can"
@@ -33,11 +72,40 @@
     "ingredients_es": [
       "Mayonesa – 1 gal",
       "Chipotle adobo – 1 lata"
-    ]
+    ],
+    "procedure_quick_en": [
+      "Combine ingredients.",
+      "Blend smooth.",
+      "Refrigerate."
+    ],
+    "procedure_quick_es": [
+      "Combinar ingredientes.",
+      "Licuar.",
+      "Refrigerar."
+    ],
+    "procedure_detailed_en": [
+      "Place mayonnaise in mixing bowl.",
+      "Add chipotle adobo.",
+      "Blend until fully incorporated.",
+      "Store cold."
+    ],
+    "procedure_detailed_es": [
+      "Colocar mayonesa en recipiente.",
+      "Agregar chipotle.",
+      "Mezclar hasta incorporar.",
+      "Guardar en frío."
+    ],
+    "image": "images/chipotle_mayo.jpg"
   },
   {
     "name_en": "Cilantro Ranch",
     "name_es": "Ranch con Cilantro",
+    "yield_en": "1 Gallon Batch",
+    "yield_es": "1 Galón",
+    "time_en": "Prep: 10 minutes",
+    "time_es": "Preparación: 10 minutos",
+    "holding_en": "Cold hold 5 days.",
+    "holding_es": "Mantener frío 5 días.",
     "ingredients_en": [
       "Cilantro – 2 cups",
       "Ranch Dressing – 1 gal",
@@ -51,11 +119,44 @@
       "Salsa verde – 1/4–3 tazas",
       "Ajo puré – 1 cda",
       "Jugo limón – 6 cdas"
-    ]
+    ],
+    "procedure_quick_en": [
+      "Combine ingredients.",
+      "Blend smooth.",
+      "Adjust consistency."
+    ],
+    "procedure_quick_es": [
+      "Combinar ingredientes.",
+      "Licuar.",
+      "Ajustar consistencia."
+    ],
+    "procedure_detailed_en": [
+      "Add ranch to mixing container.",
+      "Add cilantro and salsa verde.",
+      "Add garlic and lime juice.",
+      "Blend smooth.",
+      "Adjust thickness as needed.",
+      "Refrigerate."
+    ],
+    "procedure_detailed_es": [
+      "Agregar ranch al recipiente.",
+      "Agregar cilantro y salsa verde.",
+      "Agregar ajo y limón.",
+      "Licuar.",
+      "Ajustar textura.",
+      "Refrigerar."
+    ],
+    "image": "images/cilantro_ranch.jpg"
   },
   {
     "name_en": "Mango Dressing",
     "name_es": "Aderezo de Mango",
+    "yield_en": "1 Batch",
+    "yield_es": "1 Lote",
+    "time_en": "Prep: 10 minutes",
+    "time_es": "Preparación: 10 minutos",
+    "holding_en": "Cold hold 5 days.",
+    "holding_es": "Mantener frío 5 días.",
     "ingredients_en": [
       "Mango Concentrate – 2 qt",
       "Orange Juice – 2.5 cups",
@@ -73,11 +174,40 @@
       "Sal – 4 cdas",
       "Ajo en polvo – 4 cdas",
       "Aceite vegetal – 3/4 taza"
-    ]
+    ],
+    "procedure_quick_en": [
+      "Combine ingredients.",
+      "Blend smooth.",
+      "Refrigerate."
+    ],
+    "procedure_quick_es": [
+      "Combinar ingredientes.",
+      "Licuar.",
+      "Refrigerar."
+    ],
+    "procedure_detailed_en": [
+      "Add mango concentrate and juices.",
+      "Add spices and oil.",
+      "Blend until emulsified.",
+      "Chill before service."
+    ],
+    "procedure_detailed_es": [
+      "Agregar concentrado y jugos.",
+      "Agregar especias y aceite.",
+      "Licuar hasta emulsionar.",
+      "Refrigerar."
+    ],
+    "image": "images/mango_dressing.jpg"
   },
   {
     "name_en": "Chipotle Ranch",
     "name_es": "Ranch Chipotle",
+    "yield_en": "1 Gallon Batch",
+    "yield_es": "1 Galón",
+    "time_en": "Prep: 5 minutes",
+    "time_es": "Preparación: 5 minutos",
+    "holding_en": "Cold hold 5 days.",
+    "holding_es": "Mantener frío 5 días.",
     "ingredients_en": [
       "Ranch Dressing – 1 gal",
       "Chipotle Adobo – 1 can"
@@ -85,11 +215,40 @@
     "ingredients_es": [
       "Aderezo ranch – 1 gal",
       "Chipotle adobo – 1 lata"
-    ]
+    ],
+    "procedure_quick_en": [
+      "Combine ingredients.",
+      "Blend smooth.",
+      "Refrigerate."
+    ],
+    "procedure_quick_es": [
+      "Combinar ingredientes.",
+      "Licuar.",
+      "Refrigerar."
+    ],
+    "procedure_detailed_en": [
+      "Add ranch dressing to mixing container.",
+      "Add chipotle adobo.",
+      "Blend until smooth.",
+      "Store cold."
+    ],
+    "procedure_detailed_es": [
+      "Agregar ranch al recipiente.",
+      "Agregar chipotle.",
+      "Licuar.",
+      "Guardar frío."
+    ],
+    "image": "images/chipotle_ranch.jpg"
   },
   {
     "name_en": "Oregano Vinaigrette",
     "name_es": "Vinagreta de Orégano",
+    "yield_en": "6 Quarts",
+    "yield_es": "6 Cuartos",
+    "time_en": "Prep: 15 minutes",
+    "time_es": "Preparación: 15 minutos",
+    "holding_en": "Cold hold 5 days.",
+    "holding_es": "Mantener frío 5 días.",
     "ingredients_en": [
       "Mayonnaise – 1 gal",
       "Oregano – 1 cup",
@@ -109,6 +268,31 @@
       "Mostaza miel – 1/2 taza",
       "Pimienta negra – 2 cdas",
       "Sal – 2 cdas"
-    ]
+    ],
+    "procedure_quick_en": [
+      "Combine ingredients.",
+      "Blend smooth.",
+      "Refrigerate."
+    ],
+    "procedure_quick_es": [
+      "Combinar ingredientes.",
+      "Licuar.",
+      "Refrigerar."
+    ],
+    "procedure_detailed_en": [
+      "Add mayonnaise and buttermilk.",
+      "Add vinegar and honey mustard.",
+      "Add garlic and spices.",
+      "Blend until smooth.",
+      "Refrigerate before use."
+    ],
+    "procedure_detailed_es": [
+      "Agregar mayonesa y buttermilk.",
+      "Agregar vinagre y mostaza.",
+      "Agregar ajo y especias.",
+      "Licuar.",
+      "Refrigerar."
+    ],
+    "image": "images/oregano_vinaigrette.jpg"
   }
 ]
