@@ -166,200 +166,199 @@
       "Sal – 2 cdas",
       "Cilantro – 1 taza"
     ]
+  },
+  {
+    "name_en": "Honey Chipotle Glaze",
+    "name_es": "Glaseado Miel Chipotle",
+    "ingredients_en": [
+      "Sugar – 16 oz",
+      "Honey – 10 oz",
+      "Chipotle Adobo – 1 can",
+      "Cumin – 2 Tbsp",
+      "Lime Juice – 1/4 cup",
+      "Soy Sauce – 1/4 cup"
+    ],
+    "ingredients_es": [
+      "Azúcar – 16 oz",
+      "Miel – 10 oz",
+      "Chipotle adobo – 1 lata",
+      "Comino – 2 cdas",
+      "Jugo limón – 1/4 taza",
+      "Salsa soya – 1/4 taza"
+    ]
+  },
+  {
+    "name_en": "Korean BBQ Marinade",
+    "name_es": "Marinada BBQ Coreana",
+    "ingredients_en": [
+      "Onion – 1 ea",
+      "Garlic – 32 cloves",
+      "Chipotle – 1 can",
+      "Pears – 3 ea",
+      "Black Pepper – 1 Tbsp",
+      "Soy Sauce – 2 cups",
+      "Vegetable Oil – 1 cup",
+      "Sugar – 3/4 cup"
+    ],
+    "ingredients_es": [
+      "Cebolla – 1",
+      "Ajo – 32 dientes",
+      "Chipotle – 1 lata",
+      "Peras – 3",
+      "Pimienta negra – 1 cda",
+      "Salsa soya – 2 tazas",
+      "Aceite vegetal – 1 taza",
+      "Azúcar – 3/4 taza"
+    ]
+  },
+  {
+    "name_en": "Habanero Salsa",
+    "name_es": "Salsa Habanero",
+    "ingredients_en": [
+      "Tomatillos – 5 lb",
+      "Habanero – 5 lb",
+      "Garlic – 32 cloves",
+      "Guajillo – 32 ea",
+      "Chile de Árbol – 1 oz",
+      "Beef Base – 3/4 tsp",
+      "Salt – 1 Tbsp",
+      "Water – 2 qt"
+    ],
+    "ingredients_es": [
+      "Tomatillo – 5 lb",
+      "Habanero – 5 lb",
+      "Ajo – 32",
+      "Guajillo – 32",
+      "Chile de árbol – 1 oz",
+      "Base res – 3/4 cdta",
+      "Sal – 1 cda",
+      "Agua – 2 qt"
+    ]
+  },
+  {
+    "name_en": "Ranchero Sauce",
+    "name_es": "Salsa Ranchera",
+    "ingredients_en": [
+      "Tomato Pouches – 4",
+      "Tomatoes – 20 lb",
+      "Poblano (diced) – 2 qt",
+      "Onion (diced) – 2 qt",
+      "Tex-Mex Spice – 3 cups",
+      "Flour – 3 cups",
+      "Oil – 4 cups",
+      "Water – 12 qt"
+    ],
+    "ingredients_es": [
+      "Bolsa tomate – 4",
+      "Tomate – 20 lb",
+      "Poblano picado – 2 qt",
+      "Cebolla picada – 2 qt",
+      "Sazón Tex-Mex – 3 tazas",
+      "Harina – 3 tazas",
+      "Aceite – 4 tazas",
+      "Agua – 12 qt"
+    ]
+  },
+  {
+    "name_en": "Chicken Brine",
+    "name_es": "Salmuera de Pollo",
+    "ingredients_en": [
+      "Water – 5 gal",
+      "Salt – 2 cups",
+      "Fuego Spice Mix – 2 cups",
+      "Dried Oregano – 1/2 cup",
+      "White Onion – 5 ea",
+      "Cilantro – 5 bunches",
+      "Garlic Cloves – 2 cups",
+      "Jalapeños – 5 ea",
+      "Lime Juice – 1 qt"
+    ],
+    "ingredients_es": [
+      "Agua – 5 gal",
+      "Sal – 2 tazas",
+      "Mezcla Fuego – 2 tazas",
+      "Orégano seco – 1/2 taza",
+      "Cebolla blanca – 5",
+      "Cilantro – 5 manojos",
+      "Ajo – 2 tazas",
+      "Jalapeños – 5",
+      "Jugo limón – 1 qt"
+    ]
+  },
+  {
+    "name_en": "Chicken Marinade",
+    "name_es": "Marinada de Pollo",
+    "ingredients_en": [
+      "Guajillo Peppers – 100 ea",
+      "Cilantro – 4 bunches",
+      "Cumin – 1 cup",
+      "Black Pepper – 1 cup",
+      "Oregano – 1 cup",
+      "Lawry's Seasoning – 4.5 cups",
+      "Garlic Cloves – 3 lb",
+      "Fresh Orange Juice – 3 qt",
+      "Tropicana Orange Juice – 2 qt",
+      "Canola Oil – 3 qt",
+      "White Vinegar – 2.5 qt",
+      "Pineapple Juice – 2 qt"
+    ],
+    "ingredients_es": [
+      "Guajillo – 100",
+      "Cilantro – 4 manojos",
+      "Comino – 1 taza",
+      "Pimienta negra – 1 taza",
+      "Orégano – 1 taza",
+      "Sazón Lawry's – 4.5 tazas",
+      "Ajo – 3 lb",
+      "Jugo naranja fresco – 3 qt",
+      "Jugo naranja Tropicana – 2 qt",
+      "Aceite canola – 3 qt",
+      "Vinagre blanco – 2.5 qt",
+      "Jugo piña – 2 qt"
+    ]
+  },
+  {
+    "name_en": "Huey Luey Salsa",
+    "name_es": "Salsa Huey Luey",
+    "ingredients_en": [
+      "Whole Peeled Tomatoes – 18 bags",
+      "Whole Pickled Jalapeños – 2 cans",
+      "Chopped White Onion – 4 lb",
+      "Garlic Powder – 1 cup",
+      "Salt – 1 cup",
+      "Cilantro – 6 cups"
+    ],
+    "ingredients_es": [
+      "Tomate entero pelado – 18 bolsas",
+      "Jalapeño encurtido entero – 2 latas",
+      "Cebolla blanca picada – 4 lb",
+      "Ajo en polvo – 1 taza",
+      "Sal – 1 taza",
+      "Cilantro – 6 tazas"
+    ]
+  },
+  {
+    "name_en": "Salsa Verde",
+    "name_es": "Salsa Verde",
+    "ingredients_en": [
+      "Tomatillos – 10 lb",
+      "Onion – 1 lb",
+      "Jalapeño – 2 ea",
+      "Cilantro – 1 bunch",
+      "Garlic Purée – 1 Tbsp",
+      "Salt – 2 Tbsp",
+      "Oil – 1/4 cup",
+      "Water – 1 qt"
+    ],
+    "ingredients_es": [
+      "Tomatillo – 10 lb",
+      "Cebolla – 1 lb",
+      "Jalapeño – 2",
+      "Cilantro – 1 manojo",
+      "Ajo puré – 1 cda",
+      "Sal – 2 cdas",
+      "Aceite – 1/4 taza",
+      "Agua – 1 qt"
+    ]
   }
 ]
-,
-{
-  "name_en": "Honey Chipotle Glaze",
-  "name_es": "Glaseado Miel Chipotle",
-  "ingredients_en": [
-    "Sugar – 16 oz",
-    "Honey – 10 oz",
-    "Chipotle Adobo – 1 can",
-    "Cumin – 2 Tbsp",
-    "Lime Juice – 1/4 cup",
-    "Soy Sauce – 1/4 cup"
-  ],
-  "ingredients_es": [
-    "Azúcar – 16 oz",
-    "Miel – 10 oz",
-    "Chipotle adobo – 1 lata",
-    "Comino – 2 cdas",
-    "Jugo limón – 1/4 taza",
-    "Salsa soya – 1/4 taza"
-  ]
-},
-{
-  "name_en": "Korean BBQ Marinade",
-  "name_es": "Marinada BBQ Coreana",
-  "ingredients_en": [
-    "Onion – 1 ea",
-    "Garlic – 32 cloves",
-    "Chipotle – 1 can",
-    "Pears – 3 ea",
-    "Black Pepper – 1 Tbsp",
-    "Soy Sauce – 2 cups",
-    "Vegetable Oil – 1 cup",
-    "Sugar – 3/4 cup"
-  ],
-  "ingredients_es": [
-    "Cebolla – 1",
-    "Ajo – 32 dientes",
-    "Chipotle – 1 lata",
-    "Peras – 3",
-    "Pimienta negra – 1 cda",
-    "Salsa soya – 2 tazas",
-    "Aceite vegetal – 1 taza",
-    "Azúcar – 3/4 taza"
-  ]
-},
-{
-  "name_en": "Habanero Salsa",
-  "name_es": "Salsa Habanero",
-  "ingredients_en": [
-    "Tomatillos – 5 lb",
-    "Habanero – 5 lb",
-    "Garlic – 32 cloves",
-    "Guajillo – 32 ea",
-    "Chile de Árbol – 1 oz",
-    "Beef Base – 3/4 tsp",
-    "Salt – 1 Tbsp",
-    "Water – 2 qt"
-  ],
-  "ingredients_es": [
-    "Tomatillo – 5 lb",
-    "Habanero – 5 lb",
-    "Ajo – 32",
-    "Guajillo – 32",
-    "Chile de árbol – 1 oz",
-    "Base res – 3/4 cdta",
-    "Sal – 1 cda",
-    "Agua – 2 qt"
-  ]
-},
-{
-  "name_en": "Ranchero Sauce",
-  "name_es": "Salsa Ranchera",
-  "ingredients_en": [
-    "Tomato Pouches – 4",
-    "Tomatoes – 20 lb",
-    "Poblano (diced) – 2 qt",
-    "Onion (diced) – 2 qt",
-    "Tex-Mex Spice – 3 cups",
-    "Flour – 3 cups",
-    "Oil – 4 cups",
-    "Water – 12 qt"
-  ],
-  "ingredients_es": [
-    "Bolsa tomate – 4",
-    "Tomate – 20 lb",
-    "Poblano picado – 2 qt",
-    "Cebolla picada – 2 qt",
-    "Sazón Tex-Mex – 3 tazas",
-    "Harina – 3 tazas",
-    "Aceite – 4 tazas",
-    "Agua – 12 qt"
-  ]
-},
-{
-  "name_en": "Chicken Brine",
-  "name_es": "Salmuera de Pollo",
-  "ingredients_en": [
-    "Water – 5 gal",
-    "Salt – 2 cups",
-    "Fuego Spice Mix – 2 cups",
-    "Dried Oregano – 1/2 cup",
-    "White Onion – 5 ea",
-    "Cilantro – 5 bunches",
-    "Garlic Cloves – 2 cups",
-    "Jalapeños – 5 ea",
-    "Lime Juice – 1 qt"
-  ],
-  "ingredients_es": [
-    "Agua – 5 gal",
-    "Sal – 2 tazas",
-    "Mezcla Fuego – 2 tazas",
-    "Orégano seco – 1/2 taza",
-    "Cebolla blanca – 5",
-    "Cilantro – 5 manojos",
-    "Ajo – 2 tazas",
-    "Jalapeños – 5",
-    "Jugo limón – 1 qt"
-  ]
-},
-{
-  "name_en": "Chicken Marinade",
-  "name_es": "Marinada de Pollo",
-  "ingredients_en": [
-    "Guajillo Peppers – 100 ea",
-    "Cilantro – 4 bunches",
-    "Cumin – 1 cup",
-    "Black Pepper – 1 cup",
-    "Oregano – 1 cup",
-    "Lawry's Seasoning – 4.5 cups",
-    "Garlic Cloves – 3 lb",
-    "Fresh Orange Juice – 3 qt",
-    "Tropicana Orange Juice – 2 qt",
-    "Canola Oil – 3 qt",
-    "White Vinegar – 2.5 qt",
-    "Pineapple Juice – 2 qt"
-  ],
-  "ingredients_es": [
-    "Guajillo – 100",
-    "Cilantro – 4 manojos",
-    "Comino – 1 taza",
-    "Pimienta negra – 1 taza",
-    "Orégano – 1 taza",
-    "Sazón Lawry's – 4.5 tazas",
-    "Ajo – 3 lb",
-    "Jugo naranja fresco – 3 qt",
-    "Jugo naranja Tropicana – 2 qt",
-    "Aceite canola – 3 qt",
-    "Vinagre blanco – 2.5 qt",
-    "Jugo piña – 2 qt"
-  ]
-},
-{
-  "name_en": "Huey Luey Salsa",
-  "name_es": "Salsa Huey Luey",
-  "ingredients_en": [
-    "Whole Peeled Tomatoes – 18 bags",
-    "Whole Pickled Jalapeños – 2 cans",
-    "Chopped White Onion – 4 lb",
-    "Garlic Powder – 1 cup",
-    "Salt – 1 cup",
-    "Cilantro – 6 cups"
-  ],
-  "ingredients_es": [
-    "Tomate entero pelado – 18 bolsas",
-    "Jalapeño encurtido entero – 2 latas",
-    "Cebolla blanca picada – 4 lb",
-    "Ajo en polvo – 1 taza",
-    "Sal – 1 taza",
-    "Cilantro – 6 tazas"
-  ]
-},
-{
-  "name_en": "Salsa Verde",
-  "name_es": "Salsa Verde",
-  "ingredients_en": [
-    "Tomatillos – 10 lb",
-    "Onion – 1 lb",
-    "Jalapeño – 2 ea",
-    "Cilantro – 1 bunch",
-    "Garlic Purée – 1 Tbsp",
-    "Salt – 2 Tbsp",
-    "Oil – 1/4 cup",
-    "Water – 1 qt"
-  ],
-  "ingredients_es": [
-    "Tomatillo – 10 lb",
-    "Cebolla – 1 lb",
-    "Jalapeño – 2",
-    "Cilantro – 1 manojo",
-    "Ajo puré – 1 cda",
-    "Sal – 2 cdas",
-    "Aceite – 1/4 taza",
-    "Agua – 1 qt"
-  ]
-}
