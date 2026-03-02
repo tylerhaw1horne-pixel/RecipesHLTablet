@@ -2,6 +2,12 @@
   {
     "name_en": "Tres Leches Cake",
     "name_es": "Pastel Tres Leches",
+    "yield_en": "1 Full Sheet Cake",
+    "yield_es": "1 Pastel Completo",
+    "time_en": "Bake: 35–40 min",
+    "time_es": "Hornear: 35–40 min",
+    "holding_en": "Cold hold 72 hrs.",
+    "holding_es": "Mantener frío 72 horas.",
     "ingredients_en": [
       "Sugar – 1.5 cups",
       "Vanilla – 1 Tbsp",
@@ -21,11 +27,48 @@
       "Leche – 2.5 tazas",
       "Mezcla tres leches – 3 qt",
       "Betún (según necesidad)"
-    ]
+    ],
+    "procedure_quick_en": [
+      "Mix batter.",
+      "Bake until set.",
+      "Soak with milk mixture.",
+      "Frost and chill."
+    ],
+    "procedure_quick_es": [
+      "Mezclar masa.",
+      "Hornear.",
+      "Remojar con mezcla.",
+      "Cubrir y refrigerar."
+    ],
+    "procedure_detailed_en": [
+      "Mix sugar, eggs and vanilla.",
+      "Add flour and baking soda.",
+      "Add milk and mix smooth.",
+      "Bake until golden and set.",
+      "Poke holes and soak with Tres Leches Milk.",
+      "Top with frosting.",
+      "Chill before serving."
+    ],
+    "procedure_detailed_es": [
+      "Mezclar azúcar, huevo y vainilla.",
+      "Agregar harina y bicarbonato.",
+      "Agregar leche.",
+      "Hornear hasta listo.",
+      "Hacer perforaciones y agregar mezcla.",
+      "Cubrir con betún.",
+      "Refrigerar."
+    ],
+    "image": "images/tres_leches_cake.jpg"
   },
   {
     "name_en": "Tres Leches Milk",
     "name_es": "Mezcla Tres Leches",
+    "yield_en": "3 Quarts",
+    "yield_es": "3 Cuartos",
+    "time_en": "Prep: 5 min",
+    "time_es": "Preparación: 5 min",
+    "holding_en": "Cold hold 5 days.",
+    "holding_es": "Mantener frío 5 días.",
     "ingredients_en": [
       "Condensed Milk – 3 cans",
       "Evaporated Milk – 3 cans",
@@ -37,11 +80,40 @@
       "Leche evaporada – 3 latas",
       "Crema espesa – 3 tazas",
       "Vainilla – 1 taza"
-    ]
+    ],
+    "procedure_quick_en": [
+      "Combine all ingredients.",
+      "Whisk until smooth.",
+      "Refrigerate."
+    ],
+    "procedure_quick_es": [
+      "Combinar ingredientes.",
+      "Mezclar.",
+      "Refrigerar."
+    ],
+    "procedure_detailed_en": [
+      "Combine condensed milk and evaporated milk.",
+      "Add heavy cream and vanilla.",
+      "Whisk until fully incorporated.",
+      "Store chilled."
+    ],
+    "procedure_detailed_es": [
+      "Combinar leches.",
+      "Agregar crema y vainilla.",
+      "Mezclar bien.",
+      "Guardar en frío."
+    ],
+    "image": "images/tres_leches_milk.jpg"
   },
   {
     "name_en": "Tres Leches Frosting",
     "name_es": "Betún Tres Leches",
+    "yield_en": "1 Quart",
+    "yield_es": "1 Cuarto",
+    "time_en": "Prep: 10 min",
+    "time_es": "Preparación: 10 min",
+    "holding_en": "Cold hold 48 hrs.",
+    "holding_es": "Mantener frío 48 hrs.",
     "ingredients_en": [
       "Heavy Cream – 1 qt",
       "Sugar – 1 cup",
@@ -51,11 +123,42 @@
       "Crema espesa – 1 qt",
       "Azúcar – 1 taza",
       "Vainilla – 1 cda"
-    ]
+    ],
+    "procedure_quick_en": [
+      "Whip cream.",
+      "Add sugar and vanilla.",
+      "Beat to stiff peaks."
+    ],
+    "procedure_quick_es": [
+      "Batir crema.",
+      "Agregar azúcar y vainilla.",
+      "Batir hasta firme."
+    ],
+    "procedure_detailed_en": [
+      "Chill bowl and whisk.",
+      "Whip heavy cream until soft peaks.",
+      "Add sugar and vanilla.",
+      "Continue whipping to stiff peaks.",
+      "Store chilled."
+    ],
+    "procedure_detailed_es": [
+      "Enfriar bowl.",
+      "Batir crema.",
+      "Agregar azúcar y vainilla.",
+      "Batir hasta firme.",
+      "Guardar en frío."
+    ],
+    "image": "images/tres_leches_frosting.jpg"
   },
   {
     "name_en": "Chocolate Brownie",
     "name_es": "Brownie de Chocolate",
+    "yield_en": "1 Full Sheet",
+    "yield_es": "1 Charola Completa",
+    "time_en": "Bake: 30–35 min",
+    "time_es": "Hornear: 30–35 min",
+    "holding_en": "Room temp 48 hrs or refrigerate.",
+    "holding_es": "Temperatura ambiente 48 hrs o refrigerar.",
     "ingredients_en": [
       "Cocoa – 3 cups",
       "Oil – 1 cup",
@@ -81,11 +184,44 @@
       "Sal – 1 cdta",
       "Polvo hornear – 1 cdta",
       "Chispas chocolate – 2 tazas"
-    ]
+    ],
+    "procedure_quick_en": [
+      "Mix wet ingredients.",
+      "Add dry ingredients.",
+      "Bake until set."
+    ],
+    "procedure_quick_es": [
+      "Mezclar líquidos.",
+      "Agregar secos.",
+      "Hornear."
+    ],
+    "procedure_detailed_en": [
+      "Mix oil, margarine, sugar and cocoa.",
+      "Add eggs and vanilla.",
+      "Add flour, salt and baking powder.",
+      "Fold in chocolate chips.",
+      "Bake until center is set.",
+      "Cool before cutting."
+    ],
+    "procedure_detailed_es": [
+      "Mezclar líquidos.",
+      "Agregar huevos y vainilla.",
+      "Agregar secos.",
+      "Agregar chispas.",
+      "Hornear.",
+      "Enfriar antes de cortar."
+    ],
+    "image": "images/chocolate_brownie.jpg"
   },
   {
     "name_en": "Flan",
     "name_es": "Flan",
+    "yield_en": "2 Full Pans",
+    "yield_es": "2 Charolas",
+    "time_en": "Bake: 60 min (water bath)",
+    "time_es": "Hornear: 60 min baño maría",
+    "holding_en": "Cold hold 72 hrs.",
+    "holding_es": "Mantener frío 72 hrs.",
     "ingredients_en": [
       "Condensed Milk – 4 cans",
       "Milk – 4 cups",
@@ -99,11 +235,42 @@
       "Huevos – 16",
       "Vainilla – 1/4 taza",
       "Azúcar – 24 oz"
-    ]
+    ],
+    "procedure_quick_en": [
+      "Blend ingredients.",
+      "Bake in water bath.",
+      "Chill before serving."
+    ],
+    "procedure_quick_es": [
+      "Licuar ingredientes.",
+      "Hornear baño maría.",
+      "Refrigerar."
+    ],
+    "procedure_detailed_en": [
+      "Caramelize sugar in pan.",
+      "Blend remaining ingredients.",
+      "Pour over caramel.",
+      "Bake in water bath.",
+      "Cool and refrigerate."
+    ],
+    "procedure_detailed_es": [
+      "Caramelizar azúcar.",
+      "Licuar ingredientes.",
+      "Verter sobre caramelo.",
+      "Hornear baño maría.",
+      "Refrigerar."
+    ],
+    "image": "images/flan.jpg"
   },
   {
     "name_en": "Pumpkin Flan",
     "name_es": "Flan de Calabaza",
+    "yield_en": "1 Full Pan",
+    "yield_es": "1 Charola",
+    "time_en": "Bake: 60 min",
+    "time_es": "Hornear: 60 min",
+    "holding_en": "Cold hold 72 hrs.",
+    "holding_es": "Mantener frío 72 hrs.",
     "ingredients_en": [
       "Condensed Milk – 2.5 cans",
       "Whole Milk – 4 cups",
@@ -125,6 +292,31 @@
       "Puré calabaza – 1.5 latas",
       "Jengibre – pizca",
       "Nuez moscada – pizca"
-    ]
+    ],
+    "procedure_quick_en": [
+      "Blend ingredients.",
+      "Bake in water bath.",
+      "Chill."
+    ],
+    "procedure_quick_es": [
+      "Licuar ingredientes.",
+      "Hornear baño maría.",
+      "Refrigerar."
+    ],
+    "procedure_detailed_en": [
+      "Caramelize sugars.",
+      "Blend remaining ingredients.",
+      "Pour into pan.",
+      "Bake in water bath.",
+      "Cool and refrigerate."
+    ],
+    "procedure_detailed_es": [
+      "Caramelizar azúcar.",
+      "Licuar ingredientes.",
+      "Verter en molde.",
+      "Hornear baño maría.",
+      "Refrigerar."
+    ],
+    "image": "images/pumpkin_flan.jpg"
   }
 ]
