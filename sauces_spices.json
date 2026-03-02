@@ -2,6 +2,12 @@
   {
     "name_en": "Chili Gravy",
     "name_es": "Chili Gravy",
+    "yield_en": "1 Steam Kettle Batch",
+    "yield_es": "1 Lote Marmita",
+    "time_en": "Cook: 60 min",
+    "time_es": "Cocción: 60 min",
+    "holding_en": "Hot hold 135°F.",
+    "holding_es": "Mantener caliente 135°F.",
     "ingredients_en": [
       "Chorizo – 5 lbs",
       "Ground Beef – 10 lbs",
@@ -29,17 +35,42 @@
       "Tomate – 4 qt",
       "Jalapeño – 1",
       "Agua – 12 qt",
-      "Base de res – 2 tazas",
+      "Base res – 2 tazas",
       "Chile en polvo – 1.5 tazas",
       "Comino – 1.5 tazas",
       "Orégano – 1 taza",
       "Paprika – 1.5 tazas",
       "Harina – 3 tazas"
-    ]
+    ],
+    "procedure_quick_en": ["Brown meats.", "Add spices and liquid.", "Simmer until thick."],
+    "procedure_quick_es": ["Dorar carnes.", "Agregar especias y líquido.", "Hervir hasta espesar."],
+    "procedure_detailed_en": [
+      "Brown chorizo and ground beef.",
+      "Add onion, tomato, jalapeño.",
+      "Add dry spices and flour.",
+      "Add water and beef base.",
+      "Simmer until thickened.",
+      "Hold hot."
+    ],
+    "procedure_detailed_es": [
+      "Dorar chorizo y carne.",
+      "Agregar cebolla, tomate y jalapeño.",
+      "Agregar especias y harina.",
+      "Agregar agua y base.",
+      "Hervir hasta espesar.",
+      "Mantener caliente."
+    ],
+    "image": "images/chili_gravy.jpg"
   },
   {
     "name_en": "Foamy Garlic Butter",
     "name_es": "Mantequilla Espumosa de Ajo",
+    "yield_en": "1 Cambro",
+    "yield_es": "1 Cambro",
+    "time_en": "Prep: 20 min",
+    "time_es": "Preparación: 20 min",
+    "holding_en": "Cold hold 7 days.",
+    "holding_es": "Mantener frío 7 días.",
     "ingredients_en": [
       "Butter – 8 lbs",
       "Margarine – 8 lbs",
@@ -53,11 +84,32 @@
       "Polvo de pollo – 1 taza",
       "Ajo puré – 1 taza",
       "Vino blanco – 2 botellas"
-    ]
+    ],
+    "procedure_quick_en": ["Melt fats.", "Blend ingredients.", "Cool."],
+    "procedure_quick_es": ["Derretir grasas.", "Mezclar ingredientes.", "Enfriar."],
+    "procedure_detailed_en": [
+      "Melt butter and margarine.",
+      "Add garlic and chicken powder.",
+      "Add wine and emulsify.",
+      "Cool and store."
+    ],
+    "procedure_detailed_es": [
+      "Derretir mantequilla y margarina.",
+      "Agregar ajo y polvo de pollo.",
+      "Agregar vino y mezclar.",
+      "Enfriar y almacenar."
+    ],
+    "image": "images/garlic_butter.jpg"
   },
   {
     "name_en": "Mixto Seasoning",
     "name_es": "Sazón Mixto",
+    "yield_en": "Bulk Batch",
+    "yield_es": "Lote Grande",
+    "time_en": "Prep: 10 min",
+    "time_es": "Preparación: 10 min",
+    "holding_en": "Dry storage.",
+    "holding_es": "Almacenar seco.",
     "ingredients_en": [
       "Black Pepper – 4.5 lb",
       "Cumin – 4.5 lb",
@@ -73,11 +125,30 @@
       "Ajo en polvo – 9 lb",
       "Orégano – 1/2 bolsa",
       "Sal – 6 lb"
-    ]
+    ],
+    "procedure_quick_en": ["Combine spices.", "Mix thoroughly.", "Store dry."],
+    "procedure_quick_es": ["Combinar especias.", "Mezclar bien.", "Guardar seco."],
+    "procedure_detailed_en": [
+      "Combine all spices evenly.",
+      "Mix in large container.",
+      "Store sealed."
+    ],
+    "procedure_detailed_es": [
+      "Combinar especias.",
+      "Mezclar uniforme.",
+      "Guardar sellado."
+    ],
+    "image": "images/mixto.jpg"
   },
   {
     "name_en": "Fuego Spice Mix",
     "name_es": "Mezcla Fuego",
+    "yield_en": "Bulk Batch",
+    "yield_es": "Lote Grande",
+    "time_en": "Prep: 10 min",
+    "time_es": "Preparación: 10 min",
+    "holding_en": "Dry storage.",
+    "holding_es": "Almacenar seco.",
     "ingredients_en": [
       "Paprika – 4 cups",
       "Cayenne – 1/4 cup",
@@ -97,11 +168,30 @@
       "Chile en polvo – 4 tazas",
       "Orégano – 4 tazas",
       "Pimienta blanca – 1/4 taza"
-    ]
+    ],
+    "procedure_quick_en": ["Combine all spices.", "Mix evenly.", "Store dry."],
+    "procedure_quick_es": ["Combinar especias.", "Mezclar uniforme.", "Guardar seco."],
+    "procedure_detailed_en": [
+      "Combine spices in mixer.",
+      "Blend thoroughly.",
+      "Store airtight."
+    ],
+    "procedure_detailed_es": [
+      "Combinar especias.",
+      "Mezclar bien.",
+      "Guardar hermético."
+    ],
+    "image": "images/fuego_mix.jpg"
   },
   {
     "name_en": "Tex Mex Spice Mix",
     "name_es": "Mezcla Tex Mex",
+    "yield_en": "Bulk Batch",
+    "yield_es": "Lote Grande",
+    "time_en": "Prep: 10 min",
+    "time_es": "Preparación: 10 min",
+    "holding_en": "Dry storage.",
+    "holding_es": "Almacenar seco.",
     "ingredients_en": [
       "Cumin – 6 cups",
       "Garlic Powder – 6 cups",
@@ -113,252 +203,487 @@
       "Ajo en polvo – 6 tazas",
       "Sal – 4 tazas",
       "Pimienta negra – 2 tazas"
-    ]
-  },
-  {
-    "name_en": "Tequila Cream Sauce",
-    "name_es": "Salsa Crema Tequila",
-    "ingredients_en": [
-      "Mushrooms – 1 lb",
-      "Onion – 1 lb",
-      "Poblano – 1/2 lb",
-      "Corn – 1/2 lb",
-      "Cream Cheese – 1 lb",
-      "Sour Cream – 2 cups",
-      "Heavy Cream – 1 qt",
-      "White Cheese – 1.5 lb",
-      "Chicken Base – 3 Tbsp",
-      "Salt – 1/2 Tbsp",
-      "Garlic Powder – 1 tsp",
-      "Tequila – 3 Tbsp"
     ],
-    "ingredients_es": [
-      "Hongos – 1 lb",
-      "Cebolla – 1 lb",
-      "Poblano – 1/2 lb",
-      "Elote – 1/2 lb",
-      "Queso crema – 1 lb",
-      "Crema agria – 2 tazas",
-      "Crema espesa – 1 qt",
-      "Queso blanco – 1.5 lb",
-      "Base pollo – 3 cdas",
-      "Sal – 1/2 cda",
-      "Ajo en polvo – 1 cdta",
-      "Tequila – 3 cdas"
-    ]
-  },
-  {
-    "name_en": "Mild Salsa",
-    "name_es": "Salsa Suave",
-    "ingredients_en": [
-      "Tomatoes – 5 lb",
-      "Onion – 1/2 lb",
-      "Whole Tomato Pouch – 1",
-      "Garlic Powder – 1 Tbsp",
-      "Salt – 2 Tbsp",
-      "Cilantro – 1 cup"
+    "procedure_quick_en": ["Combine.", "Mix evenly.", "Store."],
+    "procedure_quick_es": ["Combinar.", "Mezclar.", "Guardar."],
+    "procedure_detailed_en": [
+      "Combine all spices evenly.",
+      "Mix thoroughly.",
+      "Store sealed."
     ],
-    "ingredients_es": [
-      "Tomate – 5 lb",
-      "Cebolla – 1/2 lb",
-      "Bolsa tomate entero – 1",
-      "Ajo en polvo – 1 cda",
-      "Sal – 2 cdas",
-      "Cilantro – 1 taza"
-    ]
-  },
-  {
-    "name_en": "Honey Chipotle Glaze",
-    "name_es": "Glaseado Miel Chipotle",
-    "ingredients_en": [
-      "Sugar – 16 oz",
-      "Honey – 10 oz",
-      "Chipotle Adobo – 1 can",
-      "Cumin – 2 Tbsp",
-      "Lime Juice – 1/4 cup",
-      "Soy Sauce – 1/4 cup"
+    "procedure_detailed_es": [
+      "Combinar especias.",
+      "Mezclar uniforme.",
+      "Guardar sellado."
     ],
-    "ingredients_es": [
-      "Azúcar – 16 oz",
-      "Miel – 10 oz",
-      "Chipotle adobo – 1 lata",
-      "Comino – 2 cdas",
-      "Jugo limón – 1/4 taza",
-      "Salsa soya – 1/4 taza"
-    ]
-  },
-  {
-    "name_en": "Korean BBQ Marinade",
-    "name_es": "Marinada BBQ Coreana",
-    "ingredients_en": [
-      "Onion – 1 ea",
-      "Garlic – 32 cloves",
-      "Chipotle – 1 can",
-      "Pears – 3 ea",
-      "Black Pepper – 1 Tbsp",
-      "Soy Sauce – 2 cups",
-      "Vegetable Oil – 1 cup",
-      "Sugar – 3/4 cup"
-    ],
-    "ingredients_es": [
-      "Cebolla – 1",
-      "Ajo – 32 dientes",
-      "Chipotle – 1 lata",
-      "Peras – 3",
-      "Pimienta negra – 1 cda",
-      "Salsa soya – 2 tazas",
-      "Aceite vegetal – 1 taza",
-      "Azúcar – 3/4 taza"
-    ]
-  },
-  {
-    "name_en": "Habanero Salsa",
-    "name_es": "Salsa Habanero",
-    "ingredients_en": [
-      "Tomatillos – 5 lb",
-      "Habanero – 5 lb",
-      "Garlic – 32 cloves",
-      "Guajillo – 32 ea",
-      "Chile de Árbol – 1 oz",
-      "Beef Base – 3/4 tsp",
-      "Salt – 1 Tbsp",
-      "Water – 2 qt"
-    ],
-    "ingredients_es": [
-      "Tomatillo – 5 lb",
-      "Habanero – 5 lb",
-      "Ajo – 32",
-      "Guajillo – 32",
-      "Chile de árbol – 1 oz",
-      "Base res – 3/4 cdta",
-      "Sal – 1 cda",
-      "Agua – 2 qt"
-    ]
-  },
-  {
-    "name_en": "Ranchero Sauce",
-    "name_es": "Salsa Ranchera",
-    "ingredients_en": [
-      "Tomato Pouches – 4",
-      "Tomatoes – 20 lb",
-      "Poblano (diced) – 2 qt",
-      "Onion (diced) – 2 qt",
-      "Tex-Mex Spice – 3 cups",
-      "Flour – 3 cups",
-      "Oil – 4 cups",
-      "Water – 12 qt"
-    ],
-    "ingredients_es": [
-      "Bolsa tomate – 4",
-      "Tomate – 20 lb",
-      "Poblano picado – 2 qt",
-      "Cebolla picada – 2 qt",
-      "Sazón Tex-Mex – 3 tazas",
-      "Harina – 3 tazas",
-      "Aceite – 4 tazas",
-      "Agua – 12 qt"
-    ]
-  },
-  {
-    "name_en": "Chicken Brine",
-    "name_es": "Salmuera de Pollo",
-    "ingredients_en": [
-      "Water – 5 gal",
-      "Salt – 2 cups",
-      "Fuego Spice Mix – 2 cups",
-      "Dried Oregano – 1/2 cup",
-      "White Onion – 5 ea",
-      "Cilantro – 5 bunches",
-      "Garlic Cloves – 2 cups",
-      "Jalapeños – 5 ea",
-      "Lime Juice – 1 qt"
-    ],
-    "ingredients_es": [
-      "Agua – 5 gal",
-      "Sal – 2 tazas",
-      "Mezcla Fuego – 2 tazas",
-      "Orégano seco – 1/2 taza",
-      "Cebolla blanca – 5",
-      "Cilantro – 5 manojos",
-      "Ajo – 2 tazas",
-      "Jalapeños – 5",
-      "Jugo limón – 1 qt"
-    ]
-  },
-  {
-    "name_en": "Chicken Marinade",
-    "name_es": "Marinada de Pollo",
-    "ingredients_en": [
-      "Guajillo Peppers – 100 ea",
-      "Cilantro – 4 bunches",
-      "Cumin – 1 cup",
-      "Black Pepper – 1 cup",
-      "Oregano – 1 cup",
-      "Lawry's Seasoning – 4.5 cups",
-      "Garlic Cloves – 3 lb",
-      "Fresh Orange Juice – 3 qt",
-      "Tropicana Orange Juice – 2 qt",
-      "Canola Oil – 3 qt",
-      "White Vinegar – 2.5 qt",
-      "Pineapple Juice – 2 qt"
-    ],
-    "ingredients_es": [
-      "Guajillo – 100",
-      "Cilantro – 4 manojos",
-      "Comino – 1 taza",
-      "Pimienta negra – 1 taza",
-      "Orégano – 1 taza",
-      "Sazón Lawry's – 4.5 tazas",
-      "Ajo – 3 lb",
-      "Jugo naranja fresco – 3 qt",
-      "Jugo naranja Tropicana – 2 qt",
-      "Aceite canola – 3 qt",
-      "Vinagre blanco – 2.5 qt",
-      "Jugo piña – 2 qt"
-    ]
-  },
-  {
-    "name_en": "Huey Luey Salsa",
-    "name_es": "Salsa Huey Luey",
-    "ingredients_en": [
-      "Whole Peeled Tomatoes – 18 bags",
-      "Whole Pickled Jalapeños – 2 cans",
-      "Chopped White Onion – 4 lb",
-      "Garlic Powder – 1 cup",
-      "Salt – 1 cup",
-      "Cilantro – 6 cups"
-    ],
-    "ingredients_es": [
-      "Tomate entero pelado – 18 bolsas",
-      "Jalapeño encurtido entero – 2 latas",
-      "Cebolla blanca picada – 4 lb",
-      "Ajo en polvo – 1 taza",
-      "Sal – 1 taza",
-      "Cilantro – 6 tazas"
-    ]
-  },
-  {
-    "name_en": "Salsa Verde",
-    "name_es": "Salsa Verde",
-    "ingredients_en": [
-      "Tomatillos – 10 lb",
-      "Onion – 1 lb",
-      "Jalapeño – 2 ea",
-      "Cilantro – 1 bunch",
-      "Garlic Purée – 1 Tbsp",
-      "Salt – 2 Tbsp",
-      "Oil – 1/4 cup",
-      "Water – 1 qt"
-    ],
-    "ingredients_es": [
-      "Tomatillo – 10 lb",
-      "Cebolla – 1 lb",
-      "Jalapeño – 2",
-      "Cilantro – 1 manojo",
-      "Ajo puré – 1 cda",
-      "Sal – 2 cdas",
-      "Aceite – 1/4 taza",
-      "Agua – 1 qt"
-    ]
+    "image": "images/texmex_mix.jpg"
   }
+  ,
+{
+  "name_en": "Tequila Cream Sauce",
+  "name_es": "Salsa Crema Tequila",
+  "yield_en": "1 Full Pan",
+  "yield_es": "1 Charola Completa",
+  "time_en": "Cook: 30 min",
+  "time_es": "Cocción: 30 min",
+  "holding_en": "Hot hold 135°F.",
+  "holding_es": "Mantener caliente 135°F.",
+  "ingredients_en": [
+    "Mushrooms – 1 lb",
+    "Onion – 1 lb",
+    "Poblano – 1/2 lb",
+    "Corn – 1/2 lb",
+    "Cream Cheese – 1 lb",
+    "Sour Cream – 2 cups",
+    "Heavy Cream – 1 qt",
+    "White Cheese – 1.5 lb",
+    "Chicken Base – 3 Tbsp",
+    "Salt – 1/2 Tbsp",
+    "Garlic Powder – 1 tsp",
+    "Tequila – 3 Tbsp"
+  ],
+  "ingredients_es": [
+    "Hongos – 1 lb",
+    "Cebolla – 1 lb",
+    "Poblano – 1/2 lb",
+    "Elote – 1/2 lb",
+    "Queso crema – 1 lb",
+    "Crema agria – 2 tazas",
+    "Crema espesa – 1 qt",
+    "Queso blanco – 1.5 lb",
+    "Base pollo – 3 cdas",
+    "Sal – 1/2 cda",
+    "Ajo en polvo – 1 cdta",
+    "Tequila – 3 cdas"
+  ],
+  "procedure_quick_en": ["Sauté vegetables.", "Add dairy.", "Simmer and finish with tequila."],
+  "procedure_quick_es": ["Saltear vegetales.", "Agregar lácteos.", "Hervir y terminar con tequila."],
+  "procedure_detailed_en": [
+    "Sauté mushrooms, onion and poblano.",
+    "Add corn.",
+    "Add cream cheese and sour cream.",
+    "Add heavy cream and white cheese.",
+    "Season and simmer.",
+    "Finish with tequila.",
+    "Hold hot."
+  ],
+  "procedure_detailed_es": [
+    "Saltear hongos, cebolla y poblano.",
+    "Agregar elote.",
+    "Agregar queso crema y crema agria.",
+    "Agregar crema espesa y queso blanco.",
+    "Sazonar y hervir.",
+    "Agregar tequila.",
+    "Mantener caliente."
+  ],
+  "image": "images/tequila_cream.jpg"
+},
+{
+  "name_en": "Mild Salsa",
+  "name_es": "Salsa Suave",
+  "yield_en": "1 Full Cambro",
+  "yield_es": "1 Cambro Completo",
+  "time_en": "Prep: 20 min",
+  "time_es": "Preparación: 20 min",
+  "holding_en": "Cold hold 48 hr.",
+  "holding_es": "Mantener frío 48 horas.",
+  "ingredients_en": [
+    "Tomatoes – 5 lb",
+    "Onion – 1/2 lb",
+    "Whole Tomato Pouch – 1",
+    "Garlic Powder – 1 Tbsp",
+    "Salt – 2 Tbsp",
+    "Cilantro – 1 cup"
+  ],
+  "ingredients_es": [
+    "Tomate – 5 lb",
+    "Cebolla – 1/2 lb",
+    "Bolsa tomate entero – 1",
+    "Ajo en polvo – 1 cda",
+    "Sal – 2 cdas",
+    "Cilantro – 1 taza"
+  ],
+  "procedure_quick_en": ["Blend ingredients.", "Adjust salt.", "Chill."],
+  "procedure_quick_es": ["Licuar ingredientes.", "Ajustar sal.", "Refrigerar."],
+  "procedure_detailed_en": [
+    "Combine all ingredients in blender.",
+    "Blend smooth.",
+    "Taste and adjust salt.",
+    "Refrigerate."
+  ],
+  "procedure_detailed_es": [
+    "Combinar ingredientes en licuadora.",
+    "Licuar hasta suave.",
+    "Ajustar sal.",
+    "Refrigerar."
+  ],
+  "image": "images/mild_salsa.jpg"
+},
+{
+  "name_en": "Honey Chipotle Glaze",
+  "name_es": "Glaseado Miel Chipotle",
+  "yield_en": "1 Sauce Pan Batch",
+  "yield_es": "1 Lote Salsa",
+  "time_en": "Cook: 15 min",
+  "time_es": "Cocción: 15 min",
+  "holding_en": "Cold hold 5 days.",
+  "holding_es": "Mantener frío 5 días.",
+  "ingredients_en": [
+    "Sugar – 16 oz",
+    "Honey – 10 oz",
+    "Chipotle Adobo – 1 can",
+    "Cumin – 2 Tbsp",
+    "Lime Juice – 1/4 cup",
+    "Soy Sauce – 1/4 cup"
+  ],
+  "ingredients_es": [
+    "Azúcar – 16 oz",
+    "Miel – 10 oz",
+    "Chipotle adobo – 1 lata",
+    "Comino – 2 cdas",
+    "Jugo limón – 1/4 taza",
+    "Salsa soya – 1/4 taza"
+  ],
+  "procedure_quick_en": ["Combine ingredients.", "Simmer.", "Cool."],
+  "procedure_quick_es": ["Combinar ingredientes.", "Hervir.", "Enfriar."],
+  "procedure_detailed_en": [
+    "Combine all ingredients in sauce pot.",
+    "Simmer 5–10 minutes.",
+    "Cool and store."
+  ],
+  "procedure_detailed_es": [
+    "Combinar ingredientes.",
+    "Hervir 5–10 minutos.",
+    "Enfriar y guardar."
+  ],
+  "image": "images/honey_chipotle.jpg"
+},
+{
+  "name_en": "Korean BBQ Marinade",
+  "name_es": "Marinada BBQ Coreana",
+  "yield_en": "1 Cambro",
+  "yield_es": "1 Cambro",
+  "time_en": "Prep: 20 min",
+  "time_es": "Preparación: 20 min",
+  "holding_en": "Cold hold 7 days.",
+  "holding_es": "Mantener frío 7 días.",
+  "ingredients_en": [
+    "Onion – 1 ea",
+    "Garlic – 32 cloves",
+    "Chipotle – 1 can",
+    "Pears – 3 ea",
+    "Black Pepper – 1 Tbsp",
+    "Soy Sauce – 2 cups",
+    "Vegetable Oil – 1 cup",
+    "Sugar – 3/4 cup"
+  ],
+  "ingredients_es": [
+    "Cebolla – 1",
+    "Ajo – 32 dientes",
+    "Chipotle – 1 lata",
+    "Peras – 3",
+    "Pimienta negra – 1 cda",
+    "Salsa soya – 2 tazas",
+    "Aceite vegetal – 1 taza",
+    "Azúcar – 3/4 taza"
+  ],
+  "procedure_quick_en": ["Blend all ingredients.", "Store cold."],
+  "procedure_quick_es": ["Licuar ingredientes.", "Guardar frío."],
+  "procedure_detailed_en": [
+    "Blend onion, garlic and pears.",
+    "Add chipotle and spices.",
+    "Add soy, oil and sugar.",
+    "Blend smooth and refrigerate."
+  ],
+  "procedure_detailed_es": [
+    "Licuar cebolla, ajo y pera.",
+    "Agregar chipotle y especias.",
+    "Agregar soya, aceite y azúcar.",
+    "Refrigerar."
+  ],
+  "image": "images/korean_bbq.jpg"
+},
+{
+  "name_en": "Habanero Salsa",
+  "name_es": "Salsa Habanero",
+  "yield_en": "1 Full Cambro",
+  "yield_es": "1 Cambro Completo",
+  "time_en": "Cook: 30 min",
+  "time_es": "Cocción: 30 min",
+  "holding_en": "Cold hold 5 days.",
+  "holding_es": "Mantener frío 5 días.",
+  "ingredients_en": [
+    "Tomatillos – 5 lb",
+    "Habanero – 5 lb",
+    "Garlic – 32 cloves",
+    "Guajillo – 32 ea",
+    "Chile de Árbol – 1 oz",
+    "Beef Base – 3/4 tsp",
+    "Salt – 1 Tbsp",
+    "Water – 2 qt"
+  ],
+  "ingredients_es": [
+    "Tomatillo – 5 lb",
+    "Habanero – 5 lb",
+    "Ajo – 32",
+    "Guajillo – 32",
+    "Chile de árbol – 1 oz",
+    "Base res – 3/4 cdta",
+    "Sal – 1 cda",
+    "Agua – 2 qt"
+  ],
+  "procedure_quick_en": ["Roast peppers.", "Blend with remaining ingredients.", "Chill."],
+  "procedure_quick_es": ["Asar chiles.", "Licuar con ingredientes.", "Refrigerar."],
+  "procedure_detailed_en": [
+    "Roast tomatillos and peppers.",
+    "Blend with garlic and spices.",
+    "Add water and base.",
+    "Adjust salt and cool."
+  ],
+  "procedure_detailed_es": [
+    "Asar tomatillo y chiles.",
+    "Licuar con ajo y especias.",
+    "Agregar agua y base.",
+    "Ajustar sal y enfriar."
+  ],
+  "image": "images/habanero.jpg"
+}
+  ,
+{
+  "name_en": "Ranchero Sauce",
+  "name_es": "Salsa Ranchera",
+  "yield_en": "1 Steam Kettle Batch",
+  "yield_es": "1 Lote Marmita",
+  "time_en": "Cook: 45 min",
+  "time_es": "Cocción: 45 min",
+  "holding_en": "Hot hold 135°F.",
+  "holding_es": "Mantener caliente 135°F.",
+  "ingredients_en": [
+    "Tomato Pouches – 4",
+    "Tomatoes – 20 lb",
+    "Poblano (diced) – 2 qt",
+    "Onion (diced) – 2 qt",
+    "Tex-Mex Spice – 3 cups",
+    "Flour – 3 cups",
+    "Oil – 4 cups",
+    "Water – 12 qt"
+  ],
+  "ingredients_es": [
+    "Bolsa tomate – 4",
+    "Tomate – 20 lb",
+    "Poblano picado – 2 qt",
+    "Cebolla picada – 2 qt",
+    "Sazón Tex-Mex – 3 tazas",
+    "Harina – 3 tazas",
+    "Aceite – 4 tazas",
+    "Agua – 12 qt"
+  ],
+  "procedure_quick_en": ["Sauté vegetables.", "Add spices and liquid.", "Simmer until thick."],
+  "procedure_quick_es": ["Saltear vegetales.", "Agregar especias y líquido.", "Hervir hasta espesar."],
+  "procedure_detailed_en": [
+    "Heat oil and sauté poblano and onion.",
+    "Add flour and cook lightly.",
+    "Add tomatoes and water.",
+    "Add Tex-Mex spice.",
+    "Simmer until thick.",
+    "Hold hot."
+  ],
+  "procedure_detailed_es": [
+    "Calentar aceite y saltear vegetales.",
+    "Agregar harina y cocinar.",
+    "Agregar tomate y agua.",
+    "Agregar sazón.",
+    "Hervir hasta espesar.",
+    "Mantener caliente."
+  ],
+  "image": "images/ranchero.jpg"
+},
+{
+  "name_en": "Chicken Brine",
+  "name_es": "Salmuera de Pollo",
+  "yield_en": "5 Gallon Batch",
+  "yield_es": "Lote 5 Galones",
+  "time_en": "Prep: 15 min",
+  "time_es": "Preparación: 15 min",
+  "holding_en": "Cold hold 48 hr.",
+  "holding_es": "Mantener frío 48 horas.",
+  "ingredients_en": [
+    "Water – 5 gal",
+    "Salt – 2 cups",
+    "Fuego Spice Mix – 2 cups",
+    "Dried Oregano – 1/2 cup",
+    "White Onion – 5 ea",
+    "Cilantro – 5 bunches",
+    "Garlic Cloves – 2 cups",
+    "Jalapeños – 5 ea",
+    "Lime Juice – 1 qt"
+  ],
+  "ingredients_es": [
+    "Agua – 5 gal",
+    "Sal – 2 tazas",
+    "Mezcla Fuego – 2 tazas",
+    "Orégano seco – 1/2 taza",
+    "Cebolla blanca – 5",
+    "Cilantro – 5 manojos",
+    "Ajo – 2 tazas",
+    "Jalapeños – 5",
+    "Jugo limón – 1 qt"
+  ],
+  "procedure_quick_en": ["Combine all ingredients.", "Chill.", "Submerge chicken."],
+  "procedure_quick_es": ["Combinar ingredientes.", "Refrigerar.", "Sumergir pollo."],
+  "procedure_detailed_en": [
+    "Combine water and salt until dissolved.",
+    "Add remaining ingredients.",
+    "Chill completely.",
+    "Submerge chicken fully."
+  ],
+  "procedure_detailed_es": [
+    "Disolver sal en agua.",
+    "Agregar ingredientes.",
+    "Refrigerar.",
+    "Sumergir pollo completamente."
+  ],
+  "image": "images/chicken_brine.jpg"
+},
+{
+  "name_en": "Chicken Marinade",
+  "name_es": "Marinada de Pollo",
+  "yield_en": "Large Batch",
+  "yield_es": "Lote Grande",
+  "time_en": "Prep: 30 min",
+  "time_es": "Preparación: 30 min",
+  "holding_en": "Cold hold 5 days.",
+  "holding_es": "Mantener frío 5 días.",
+  "ingredients_en": [
+    "Guajillo Peppers – 100 ea",
+    "Cilantro – 4 bunches",
+    "Cumin – 1 cup",
+    "Black Pepper – 1 cup",
+    "Oregano – 1 cup",
+    "Lawry's Seasoning – 4.5 cups",
+    "Garlic Cloves – 3 lb",
+    "Fresh Orange Juice – 3 qt",
+    "Tropicana Orange Juice – 2 qt",
+    "Canola Oil – 3 qt",
+    "White Vinegar – 2.5 qt",
+    "Pineapple Juice – 2 qt"
+  ],
+  "ingredients_es": [
+    "Guajillo – 100",
+    "Cilantro – 4 manojos",
+    "Comino – 1 taza",
+    "Pimienta negra – 1 taza",
+    "Orégano – 1 taza",
+    "Sazón Lawry's – 4.5 tazas",
+    "Ajo – 3 lb",
+    "Jugo naranja fresco – 3 qt",
+    "Jugo naranja Tropicana – 2 qt",
+    "Aceite canola – 3 qt",
+    "Vinagre blanco – 2.5 qt",
+    "Jugo piña – 2 qt"
+  ],
+  "procedure_quick_en": ["Blend ingredients.", "Chill.", "Marinate protein."],
+  "procedure_quick_es": ["Licuar ingredientes.", "Refrigerar.", "Marinar proteína."],
+  "procedure_detailed_en": [
+    "Hydrate guajillo peppers.",
+    "Blend all ingredients smooth.",
+    "Strain if needed.",
+    "Chill before use."
+  ],
+  "procedure_detailed_es": [
+    "Hidratar guajillo.",
+    "Licuar ingredientes.",
+    "Colar si necesario.",
+    "Refrigerar."
+  ],
+  "image": "images/chicken_marinade.jpg"
+},
+{
+  "name_en": "Huey Luey Salsa",
+  "name_es": "Salsa Huey Luey",
+  "yield_en": "Bulk Batch",
+  "yield_es": "Lote Grande",
+  "time_en": "Prep: 20 min",
+  "time_es": "Preparación: 20 min",
+  "holding_en": "Cold hold 72 hr.",
+  "holding_es": "Mantener frío 72 horas.",
+  "ingredients_en": [
+    "Whole Peeled Tomatoes – 18 bags",
+    "Whole Pickled Jalapeños – 2 cans",
+    "Chopped White Onion – 4 lb",
+    "Garlic Powder – 1 cup",
+    "Salt – 1 cup",
+    "Cilantro – 6 cups"
+  ],
+  "ingredients_es": [
+    "Tomate entero pelado – 18 bolsas",
+    "Jalapeño encurtido entero – 2 latas",
+    "Cebolla blanca picada – 4 lb",
+    "Ajo en polvo – 1 taza",
+    "Sal – 1 taza",
+    "Cilantro – 6 tazas"
+  ],
+  "procedure_quick_en": ["Blend ingredients.", "Adjust salt.", "Chill."],
+  "procedure_quick_es": ["Licuar ingredientes.", "Ajustar sal.", "Refrigerar."],
+  "procedure_detailed_en": [
+    "Blend tomatoes and jalapeños.",
+    "Add onion, garlic, salt.",
+    "Fold in cilantro.",
+    "Chill before service."
+  ],
+  "procedure_detailed_es": [
+    "Licuar tomate y jalapeño.",
+    "Agregar cebolla, ajo y sal.",
+    "Agregar cilantro.",
+    "Refrigerar."
+  ],
+  "image": "images/huey_salsa.jpg"
+},
+{
+  "name_en": "Salsa Verde",
+  "name_es": "Salsa Verde",
+  "yield_en": "1 Cambro",
+  "yield_es": "1 Cambro",
+  "time_en": "Cook: 25 min",
+  "time_es": "Cocción: 25 min",
+  "holding_en": "Cold hold 5 days.",
+  "holding_es": "Mantener frío 5 días.",
+  "ingredients_en": [
+    "Tomatillos – 10 lb",
+    "Onion – 1 lb",
+    "Jalapeño – 2 ea",
+    "Cilantro – 1 bunch",
+    "Garlic Purée – 1 Tbsp",
+    "Salt – 2 Tbsp",
+    "Oil – 1/4 cup",
+    "Water – 1 qt"
+  ],
+  "ingredients_es": [
+    "Tomatillo – 10 lb",
+    "Cebolla – 1 lb",
+    "Jalapeño – 2",
+    "Cilantro – 1 manojo",
+    "Ajo puré – 1 cda",
+    "Sal – 2 cdas",
+    "Aceite – 1/4 taza",
+    "Agua – 1 qt"
+  ],
+  "procedure_quick_en": ["Roast tomatillos.", "Blend ingredients.", "Chill."],
+  "procedure_quick_es": ["Asar tomatillo.", "Licuar ingredientes.", "Refrigerar."],
+  "procedure_detailed_en": [
+    "Roast tomatillos and jalapeños.",
+    "Blend with onion and garlic.",
+    "Add salt and oil.",
+    "Adjust consistency with water.",
+    "Chill."
+  ],
+  "procedure_detailed_es": [
+    "Asar tomatillo y jalapeño.",
+    "Licuar con cebolla y ajo.",
+    "Agregar sal y aceite.",
+    "Ajustar con agua.",
+    "Refrigerar."
+  ],
+  "image": "images/salsa_verde.jpg"
+}
 ]
