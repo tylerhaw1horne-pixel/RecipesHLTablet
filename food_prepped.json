@@ -2,6 +2,12 @@
   {
     "name_en": "Bacon Wrapped Shrimp",
     "name_es": "Camarón Envuelto en Tocino",
+    "yield_en": "Per Order Prep",
+    "yield_es": "Preparación por Orden",
+    "time_en": "Prep: 15 min",
+    "time_es": "Preparación: 15 min",
+    "holding_en": "Hold refrigerated raw. Use within 24 hrs.",
+    "holding_es": "Mantener crudo en frío. Usar en 24 hrs.",
     "ingredients_en": [
       "Shrimp 16/20 (tail off)",
       "Full Slice Bacon",
@@ -13,11 +19,42 @@
       "Tocino entero",
       "Queso blanco",
       "Rodaja jalapeño"
-    ]
+    ],
+    "procedure_quick_en": [
+      "Stuff shrimp with cheese and jalapeño.",
+      "Wrap tightly with bacon.",
+      "Secure with skewer."
+    ],
+    "procedure_quick_es": [
+      "Rellenar camarón con queso y jalapeño.",
+      "Envolver con tocino.",
+      "Asegurar con palillo."
+    ],
+    "procedure_detailed_en": [
+      "Lay shrimp flat.",
+      "Add small piece of cheese and jalapeño.",
+      "Wrap fully with bacon.",
+      "Secure with toothpick.",
+      "Store cold until cooking."
+    ],
+    "procedure_detailed_es": [
+      "Colocar camarón plano.",
+      "Agregar queso y jalapeño.",
+      "Envolver con tocino.",
+      "Asegurar con palillo.",
+      "Mantener en frío."
+    ],
+    "image": "images/bacon_wrapped_shrimp.jpg"
   },
   {
     "name_en": "Poached Chicken",
     "name_es": "Pollo Hervido",
+    "yield_en": "20 lb Batch",
+    "yield_es": "Lote 20 lb",
+    "time_en": "Cook: 45–60 min",
+    "time_es": "Cocción: 45–60 min",
+    "holding_en": "Hot hold 135°F or chill immediately.",
+    "holding_es": "Mantener caliente 135°F o enfriar rápido.",
     "ingredients_en": [
       "Chicken Thigh – 20 lb",
       "Water – 20 qt",
@@ -29,281 +66,666 @@
       "Agua – 20 qt",
       "Sal – 2 oz",
       "Ajo en polvo – 1 oz"
-    ]
-  },
-  {
-    "name_en": "Ground Beef",
-    "name_es": "Carne Molida",
-    "ingredients_en": [
-      "Ground Beef – 10 lb",
-      "Tomato – 2 qt",
-      "Onion – 3 qt",
-      "Bell Pepper – 2 qt",
-      "Mixto Seasoning – 2 cups",
-      "Splash Water"
     ],
-    "ingredients_es": [
-      "Carne molida – 10 lb",
-      "Tomate – 2 qt",
-      "Cebolla – 3 qt",
-      "Chile dulce – 2 qt",
-      "Sazón Mixto – 2 tazas",
-      "Agua (poco)"
-    ]
-  },
-  {
-    "name_en": "Regular Brisket",
-    "name_es": "Brisket Regular",
-    "ingredients_en": [
-      "Beef – 40 lb",
-      "Water – 16 qt",
-      "Beef Base – 2 cups",
-      "Oregano – 1 cup",
-      "Paprika – 1 cup",
-      "Flour – 3 cups",
-      "Chili Powder – 1.5 cups",
-      "Cumin – 1.5 cups",
-      "Garlic Powder – 1/4 cup",
-      "Salt – 1/4 cup",
-      "Onion – 2 qt",
-      "Bell Pepper – 2 qt",
-      "Oil – 4 cups"
+    "procedure_quick_en": [
+      "Bring water and seasoning to boil.",
+      "Add chicken.",
+      "Cook until 165°F internal."
     ],
-    "ingredients_es": [
-      "Res – 40 lb",
-      "Agua – 16 qt",
-      "Base res – 2 tazas",
-      "Orégano – 1 taza",
-      "Paprika – 1 taza",
-      "Harina – 3 tazas",
-      "Chile en polvo – 1.5 tazas",
-      "Comino – 1.5 tazas",
-      "Ajo en polvo – 1/4 taza",
-      "Sal – 1/4 taza",
-      "Cebolla – 2 qt",
-      "Chile dulce – 2 qt",
-      "Aceite – 4 tazas"
-    ]
-  },
-  {
-    "name_en": "Coconut Shrimp",
-    "name_es": "Camarón Coco",
-    "ingredients_en": [
-      "Panko – 2 qt",
-      "Shredded Coconut – 2 cups",
-      "Lawry’s – 2 Tbsp",
-      "Chipotle Powder – 4 Tbsp",
-      "Coco Lopez – 2 cups",
-      "Lime Juice – 2 Tbsp",
-      "Eggs – 4",
-      "Milk – 1 cup",
-      "Shrimp – 4 lb"
+    "procedure_quick_es": [
+      "Hervir agua con sazón.",
+      "Agregar pollo.",
+      "Cocinar a 165°F interno."
     ],
-    "ingredients_es": [
-      "Panko – 2 qt",
-      "Coco rallado – 2 tazas",
-      "Sazonador – 2 cdas",
-      "Chipotle polvo – 4 cdas",
-      "Coco López – 2 tazas",
-      "Jugo limón – 2 cdas",
-      "Huevos – 4",
-      "Leche – 1 taza",
-      "Camarón – 4 lb"
-    ]
-  },
-  {
-    "name_en": "Stuffed Chorizo Chicken",
-    "name_es": "Pollo Relleno de Chorizo",
-    "ingredients_en": [
-      "Chicken Breast – 36 ea",
-      "Chorizo – 4 lb",
-      "Shredded Cheese – 2 lb",
-      "Panko – 1 qt",
-      "Lawry’s – 1 Tbsp",
-      "Eggs – 9",
-      "Water – 2 cups"
+    "procedure_detailed_en": [
+      "Bring water, salt and garlic to boil.",
+      "Add chicken thighs.",
+      "Reduce to simmer.",
+      "Cook until internal temp reaches 165°F.",
+      "Cool or hold hot."
     ],
-    "ingredients_es": [
-      "Pechtuga pollo – 36",
-      "Chorizo – 4 lb",
-      "Queso rallado – 2 lb",
-      "Panko – 1 qt",
-      "Lawry’s – 1 cda",
-      "Huevos – 9",
-      "Agua – 2 tazas"
-    ]
-  },
-  {
-    "name_en": "Avocado Rolls",
-    "name_es": "Rollos de Aguacate",
-    "ingredients_en": [
-      "Avocado – 40 ea",
-      "Sundried Tomatoes – 10 oz",
-      "Red Onion – 6 oz",
-      "Cilantro – 1 cup",
-      "Black Pepper – 1 Tbsp",
-      "Salt – 2 Tbsp",
-      "Oil – 1/4 cup",
-      "Eggroll Wrappers – 45 ea"
+    "procedure_detailed_es": [
+      "Hervir agua con sal y ajo.",
+      "Agregar pollo.",
+      "Bajar a fuego lento.",
+      "Cocinar hasta 165°F interno.",
+      "Enfriar o mantener caliente."
     ],
-    "ingredients_es": [
-      "Aguacate – 40",
-      "Tomate seco – 10 oz",
-      "Cebolla roja – 6 oz",
-      "Cilantro – 1 taza",
-      "Pimienta – 1 cda",
-      "Sal – 2 cdas",
-      "Aceite – 1/4 taza",
-      "Envoltura eggroll – 45"
-    ]
-  },
-  {
-    "name_en": "Birria Brisket",
-    "name_es": "Birria de Res",
-    "ingredients_en": [
-      "Beef Chuck – 20 lb",
-      "Tomato – 8 lb",
-      "Onion – 4 lb",
-      "Oregano – 4 Tbsp",
-      "Cumin – 4 Tbsp",
-      "Salt – 4 Tbsp",
-      "Chicken Base – 4 Tbsp",
-      "Black Pepper – 4 Tbsp",
-      "Guajillo – 32 ea",
-      "Ancho – 12 ea",
-      "Arbol – 10 ea",
-      "Vinegar – 8 Tbsp",
-      "Garlic – 40 cloves",
-      "Cinnamon – 1",
-      "Bay Leaf – 8 ea"
-    ],
-    "ingredients_es": [
-      "Res – 20 lb",
-      "Tomate – 8 lb",
-      "Cebolla – 4 lb",
-      "Orégano – 4 cdas",
-      "Comino – 4 cdas",
-      "Sal – 4 cdas",
-      "Base pollo – 4 cdas",
-      "Pimienta – 4 cdas",
-      "Guajillo – 32",
-      "Ancho – 12",
-      "Árbol – 10",
-      "Vinagre – 8 cdas",
-      "Ajo – 40",
-      "Canela – 1",
-      "Laurel – 8"
-    ]
-  },
-  {
-    "name_en": "Salsa Chicken",
-    "name_es": "Pollo en Salsa",
-    "ingredients_en": [
-      "Chicken Thigh – 20 lb",
-      "Poblano – 2 qt",
-      "Onion – 2 qt",
-      "Oil – 3 cups",
-      "Huey Salsa – 4 qt",
-      "Fuego Mix – 1 cup"
-    ],
-    "ingredients_es": [
-      "Muslo pollo – 20 lb",
-      "Poblano – 2 qt",
-      "Cebolla – 2 qt",
-      "Aceite – 3 tazas",
-      "Salsa Huey – 4 qt",
-      "Mezcla Fuego – 1 taza"
-    ]
-  },
-  {
-    "name_en": "Fried Breading",
-    "name_es": "Empanizado Frito",
-    "ingredients_en": [
-      "Panko – 1 cup",
-      "Huey Seasoning – 2 Tbsp"
-    ],
-    "ingredients_es": [
-      "Panko – 1 taza",
-      "Sazón Huey – 2 cdas"
-    ]
-  },
-  {
-    "name_en": "Fire Roasted Veggies",
-    "name_es": "Vegetales Asados",
-    "ingredients_en": [
-      "Squash – 6 ea",
-      "Zucchini – 6 ea",
-      "Poblano – 4 ea",
-      "Steak Marinade – 2 cups",
-      "Mushrooms (add to order)"
-    ],
-    "ingredients_es": [
-      "Calabacín – 6",
-      "Zucchini – 6",
-      "Poblano – 4",
-      "Marinada bistec – 2 tazas",
-      "Hongos (agregar al ordenar)"
-    ]
-  },
-  {
-    "name_en": "Salad Mix",
-    "name_es": "Mezcla de Ensalada",
-    "ingredients_en": [
-      "Squash – 6 ea",
-      "Zucchini – 6 ea",
-      "Poblano – 4 ea",
-      "Bell Pepper – 4 ea",
-      "Steak Marinade – 2 cups",
-      "Mushrooms (add to order)"
-    ],
-    "ingredients_es": [
-      "Calabacín – 6",
-      "Zucchini – 6",
-      "Poblano – 4",
-      "Chile dulce – 4",
-      "Marinada bistec – 2 tazas",
-      "Hongos (agregar al ordenar)"
-    ]
-  },
-  {
-    "name_en": "Poblano Fry Batter",
-    "name_es": "Mezcla para Poblanos Fritos",
-    "ingredients_en": [
-      "Eggs – 15 ea",
-      "Flour – 0.25 cup",
-      "Egg Yolks – 15 ea"
-    ],
-    "ingredients_es": [
-      "Huevos – 15",
-      "Harina – 0.25 taza",
-      "Yemas – 15"
-    ]
-  },
-  {
-    "name_en": "Mexican Turnip Greens",
-    "name_es": "Hojas de Nabo Mexicanas",
-    "ingredients_en": [
-      "Turnip Greens – 2.5 lb",
-      "Cumin – 1 Tbsp",
-      "Garlic Purée – 1 Tbsp",
-      "Huey Luey’s Hot Sauce – 3 Tbsp",
-      "Diced Tomatoes – 2 cups",
-      "Diced White Onion – 1 cup",
-      "Chicken Broth – 4 qt"
-    ],
-    "ingredients_es": [
-      "Hojas de nabo – 2.5 lb",
-      "Comino – 1 cda",
-      "Ajo puré – 1 cda",
-      "Salsa picante Huey Luey’s – 3 cdas",
-      "Tomate picado – 2 tazas",
-      "Cebolla blanca picada – 1 taza",
-      "Caldo de pollo – 4 qt"
-    ]
-  },
+    "image": "images/poached_chicken.jpg"
+  }
+  ,
+{
+  "name_en": "Ground Beef",
+  "name_es": "Carne Molida",
+  "yield_en": "10 lb Batch",
+  "yield_es": "Lote 10 lb",
+  "time_en": "Cook: 30 min",
+  "time_es": "Cocción: 30 min",
+  "holding_en": "Hot hold 135°F or chill 72 hrs.",
+  "holding_es": "Mantener caliente 135°F o enfriar 72 hrs.",
+  "ingredients_en": [
+    "Ground Beef – 10 lb",
+    "Tomato – 2 qt",
+    "Onion – 3 qt",
+    "Bell Pepper – 2 qt",
+    "Mixto Seasoning – 2 cups",
+    "Splash Water"
+  ],
+  "ingredients_es": [
+    "Carne molida – 10 lb",
+    "Tomate – 2 qt",
+    "Cebolla – 3 qt",
+    "Chile dulce – 2 qt",
+    "Sazón Mixto – 2 tazas",
+    "Agua (poco)"
+  ],
+  "procedure_quick_en": [
+    "Brown beef.",
+    "Add vegetables and seasoning.",
+    "Simmer until thick."
+  ],
+  "procedure_quick_es": [
+    "Dorar carne.",
+    "Agregar vegetales y sazón.",
+    "Hervir hasta espesar."
+  ],
+  "procedure_detailed_en": [
+    "Brown ground beef fully.",
+    "Drain excess fat.",
+    "Add tomato, onion and bell pepper.",
+    "Add Mixto seasoning.",
+    "Add splash of water if needed.",
+    "Simmer until thick."
+  ],
+  "procedure_detailed_es": [
+    "Dorar carne completamente.",
+    "Escurrir grasa.",
+    "Agregar vegetales.",
+    "Agregar sazón.",
+    "Agregar poca agua si necesario.",
+    "Hervir hasta espesar."
+  ],
+  "image": "images/ground_beef.jpg"
+},
+{
+  "name_en": "Regular Brisket",
+  "name_es": "Brisket Regular",
+  "yield_en": "40 lb Batch",
+  "yield_es": "Lote 40 lb",
+  "time_en": "Cook: 3–4 hours",
+  "time_es": "Cocción: 3–4 horas",
+  "holding_en": "Hot hold 135°F.",
+  "holding_es": "Mantener caliente 135°F.",
+  "ingredients_en": [
+    "Beef – 40 lb",
+    "Water – 16 qt",
+    "Beef Base – 2 cups",
+    "Oregano – 1 cup",
+    "Paprika – 1 cup",
+    "Flour – 3 cups",
+    "Chili Powder – 1.5 cups",
+    "Cumin – 1.5 cups",
+    "Garlic Powder – 1/4 cup",
+    "Salt – 1/4 cup",
+    "Onion – 2 qt",
+    "Bell Pepper – 2 qt",
+    "Oil – 4 cups"
+  ],
+  "ingredients_es": [
+    "Res – 40 lb",
+    "Agua – 16 qt",
+    "Base res – 2 tazas",
+    "Orégano – 1 taza",
+    "Paprika – 1 taza",
+    "Harina – 3 tazas",
+    "Chile en polvo – 1.5 tazas",
+    "Comino – 1.5 tazas",
+    "Ajo en polvo – 1/4 taza",
+    "Sal – 1/4 taza",
+    "Cebolla – 2 qt",
+    "Chile dulce – 2 qt",
+    "Aceite – 4 tazas"
+  ],
+  "procedure_quick_en": [
+    "Sear beef.",
+    "Add liquid and seasoning.",
+    "Slow cook until tender."
+  ],
+  "procedure_quick_es": [
+    "Sellar carne.",
+    "Agregar líquido y sazón.",
+    "Cocinar lento hasta suave."
+  ],
+  "procedure_detailed_en": [
+    "Heat oil and sear beef.",
+    "Add onions and peppers.",
+    "Add spices and flour.",
+    "Add water and beef base.",
+    "Cover and slow cook until fork tender.",
+    "Hold hot."
+  ],
+  "procedure_detailed_es": [
+    "Sellar carne en aceite.",
+    "Agregar vegetales.",
+    "Agregar especias y harina.",
+    "Agregar agua y base.",
+    "Cocinar lento hasta suave.",
+    "Mantener caliente."
+  ],
+  "image": "images/regular_brisket.jpg"
+},
+{
+  "name_en": "Coconut Shrimp",
+  "name_es": "Camarón Coco",
+  "yield_en": "4 lb Batch",
+  "yield_es": "Lote 4 lb",
+  "time_en": "Prep: 20 min",
+  "time_es": "Preparación: 20 min",
+  "holding_en": "Hold raw cold 24 hrs.",
+  "holding_es": "Mantener crudo en frío 24 hrs.",
+  "ingredients_en": [
+    "Panko – 2 qt",
+    "Shredded Coconut – 2 cups",
+    "Lawry’s – 2 Tbsp",
+    "Chipotle Powder – 4 Tbsp",
+    "Coco Lopez – 2 cups",
+    "Lime Juice – 2 Tbsp",
+    "Eggs – 4",
+    "Milk – 1 cup",
+    "Shrimp – 4 lb"
+  ],
+  "ingredients_es": [
+    "Panko – 2 qt",
+    "Coco rallado – 2 tazas",
+    "Sazonador – 2 cdas",
+    "Chipotle polvo – 4 cdas",
+    "Coco López – 2 tazas",
+    "Jugo limón – 2 cdas",
+    "Huevos – 4",
+    "Leche – 1 taza",
+    "Camarón – 4 lb"
+  ],
+  "procedure_quick_en": [
+    "Mix breading.",
+    "Prepare egg wash.",
+    "Bread shrimp."
+  ],
+  "procedure_quick_es": [
+    "Mezclar empanizado.",
+    "Preparar mezcla huevo.",
+    "Empanizar camarón."
+  ],
+  "procedure_detailed_en": [
+    "Mix panko, coconut and seasoning.",
+    "Whisk eggs and milk.",
+    "Dip shrimp in egg wash.",
+    "Coat in breading.",
+    "Store cold until frying."
+  ],
+  "procedure_detailed_es": [
+    "Mezclar panko, coco y sazón.",
+    "Batir huevo y leche.",
+    "Pasar camarón por huevo.",
+    "Empanizar.",
+    "Guardar frío."
+  ],
+  "image": "images/coconut_shrimp.jpg"
+},
+{
+  "name_en": "Stuffed Chorizo Chicken",
+  "name_es": "Pollo Relleno de Chorizo",
+  "yield_en": "36 Portions",
+  "yield_es": "36 Porciones",
+  "time_en": "Prep: 45 min",
+  "time_es": "Preparación: 45 min",
+  "holding_en": "Hold raw 24 hrs.",
+  "holding_es": "Mantener crudo 24 hrs.",
+  "ingredients_en": [
+    "Chicken Breast – 36 ea",
+    "Chorizo – 4 lb",
+    "Shredded Cheese – 2 lb",
+    "Panko – 1 qt",
+    "Lawry’s – 1 Tbsp",
+    "Eggs – 9",
+    "Water – 2 cups"
+  ],
+  "ingredients_es": [
+    "Pechuga pollo – 36",
+    "Chorizo – 4 lb",
+    "Queso rallado – 2 lb",
+    "Panko – 1 qt",
+    "Lawry’s – 1 cda",
+    "Huevos – 9",
+    "Agua – 2 tazas"
+  ],
+  "procedure_quick_en": [
+    "Mix chorizo and cheese.",
+    "Stuff chicken.",
+    "Bread and store."
+  ],
+  "procedure_quick_es": [
+    "Mezclar chorizo y queso.",
+    "Rellenar pollo.",
+    "Empanizar."
+  ],
+  "procedure_detailed_en": [
+    "Cook chorizo fully.",
+    "Mix with cheese.",
+    "Butterfly chicken breasts.",
+    "Stuff and close.",
+    "Dip in egg wash.",
+    "Coat in panko.",
+    "Store cold."
+  ],
+  "procedure_detailed_es": [
+    "Cocinar chorizo.",
+    "Mezclar con queso.",
+    "Abrir pechuga.",
+    "Rellenar y cerrar.",
+    "Pasar por huevo.",
+    "Empanizar.",
+    "Guardar frío."
+  ],
+  "image": "images/stuffed_chorizo_chicken.jpg"
+}
+,
+{
+  "name_en": "Avocado Rolls",
+  "name_es": "Rollos de Aguacate",
+  "yield_en": "45 Rolls",
+  "yield_es": "45 Rollos",
+  "time_en": "Prep: 40 min",
+  "time_es": "Preparación: 40 min",
+  "holding_en": "Hold wrapped 24 hrs refrigerated.",
+  "holding_es": "Mantener envueltos 24 hrs en frío.",
+  "ingredients_en": [
+    "Avocado – 40 ea",
+    "Sundried Tomatoes – 10 oz",
+    "Red Onion – 6 oz",
+    "Cilantro – 1 cup",
+    "Black Pepper – 1 Tbsp",
+    "Salt – 2 Tbsp",
+    "Oil – 1/4 cup",
+    "Eggroll Wrappers – 45 ea"
+  ],
+  "ingredients_es": [
+    "Aguacate – 40",
+    "Tomate seco – 10 oz",
+    "Cebolla roja – 6 oz",
+    "Cilantro – 1 taza",
+    "Pimienta – 1 cda",
+    "Sal – 2 cdas",
+    "Aceite – 1/4 taza",
+    "Envoltura eggroll – 45"
+  ],
+  "procedure_quick_en": [
+    "Mix filling.",
+    "Roll tightly.",
+    "Seal and store."
+  ],
+  "procedure_quick_es": [
+    "Mezclar relleno.",
+    "Enrollar firme.",
+    "Sellar y guardar."
+  ],
+  "procedure_detailed_en": [
+    "Dice avocado and mix with remaining ingredients.",
+    "Place filling into wrapper.",
+    "Roll tightly and seal with water.",
+    "Store refrigerated."
+  ],
+  "procedure_detailed_es": [
+    "Picar aguacate y mezclar.",
+    "Colocar relleno en envoltura.",
+    "Enrollar firme y sellar con agua.",
+    "Guardar en frío."
+  ],
+  "image": "images/avocado_rolls.jpg"
+},
+{
+  "name_en": "Birria Brisket",
+  "name_es": "Birria de Res",
+  "yield_en": "20 lb Batch",
+  "yield_es": "Lote 20 lb",
+  "time_en": "Cook: 4–5 hours",
+  "time_es": "Cocción: 4–5 horas",
+  "holding_en": "Hot hold 135°F.",
+  "holding_es": "Mantener caliente 135°F.",
+  "ingredients_en": [
+    "Beef Chuck – 20 lb",
+    "Tomato – 8 lb",
+    "Onion – 4 lb",
+    "Oregano – 4 Tbsp",
+    "Cumin – 4 Tbsp",
+    "Salt – 4 Tbsp",
+    "Chicken Base – 4 Tbsp",
+    "Black Pepper – 4 Tbsp",
+    "Guajillo – 32 ea",
+    "Ancho – 12 ea",
+    "Arbol – 10 ea",
+    "Vinegar – 8 Tbsp",
+    "Garlic – 40 cloves",
+    "Cinnamon – 1 stick",
+    "Bay Leaf – 8 ea"
+  ],
+  "ingredients_es": [
+    "Res – 20 lb",
+    "Tomate – 8 lb",
+    "Cebolla – 4 lb",
+    "Orégano – 4 cdas",
+    "Comino – 4 cdas",
+    "Sal – 4 cdas",
+    "Base pollo – 4 cdas",
+    "Pimienta – 4 cdas",
+    "Guajillo – 32",
+    "Ancho – 12",
+    "Árbol – 10",
+    "Vinagre – 8 cdas",
+    "Ajo – 40",
+    "Canela – 1",
+    "Laurel – 8"
+  ],
+  "procedure_quick_en": [
+    "Blend chile base.",
+    "Slow cook beef.",
+    "Shred and hold."
+  ],
+  "procedure_quick_es": [
+    "Licuar chiles.",
+    "Cocinar lento carne.",
+    "Deshebrar."
+  ],
+  "procedure_detailed_en": [
+    "Toast and hydrate dried chiles.",
+    "Blend with spices and vinegar.",
+    "Sear beef.",
+    "Add sauce and aromatics.",
+    "Slow cook until tender.",
+    "Shred and hold hot."
+  ],
+  "procedure_detailed_es": [
+    "Tostar e hidratar chiles.",
+    "Licuar con especias.",
+    "Sellar carne.",
+    "Agregar salsa y aromáticos.",
+    "Cocinar lento.",
+    "Deshebrar y mantener caliente."
+  ],
+  "image": "images/birria_brisket.jpg"
+},
+{
+  "name_en": "Salsa Chicken",
+  "name_es": "Pollo en Salsa",
+  "yield_en": "20 lb Batch",
+  "yield_es": "Lote 20 lb",
+  "time_en": "Cook: 45 min",
+  "time_es": "Cocción: 45 min",
+  "holding_en": "Hot hold 135°F.",
+  "holding_es": "Mantener caliente 135°F.",
+  "ingredients_en": [
+    "Chicken Thigh – 20 lb",
+    "Poblano – 2 qt",
+    "Onion – 2 qt",
+    "Oil – 3 cups",
+    "Huey Salsa – 4 qt",
+    "Fuego Mix – 1 cup"
+  ],
+  "ingredients_es": [
+    "Muslo pollo – 20 lb",
+    "Poblano – 2 qt",
+    "Cebolla – 2 qt",
+    "Aceite – 3 tazas",
+    "Salsa Huey – 4 qt",
+    "Mezcla Fuego – 1 taza"
+  ],
+  "procedure_quick_en": [
+    "Sear chicken.",
+    "Add vegetables.",
+    "Add salsa and simmer."
+  ],
+  "procedure_quick_es": [
+    "Sellar pollo.",
+    "Agregar vegetales.",
+    "Agregar salsa y hervir."
+  ],
+  "procedure_detailed_en": [
+    "Heat oil and sear chicken.",
+    "Add poblano and onion.",
+    "Add Huey Salsa and Fuego Mix.",
+    "Simmer until chicken reaches 165°F.",
+    "Hold hot."
+  ],
+  "procedure_detailed_es": [
+    "Calentar aceite y sellar pollo.",
+    "Agregar vegetales.",
+    "Agregar salsa y sazón.",
+    "Cocinar hasta 165°F interno.",
+    "Mantener caliente."
+  ],
+  "image": "images/salsa_chicken.jpg"
+},
+{
+  "name_en": "Fried Breading",
+  "name_es": "Empanizado Frito",
+  "yield_en": "Small Batch",
+  "yield_es": "Lote Pequeño",
+  "time_en": "Prep: 5 min",
+  "time_es": "Preparación: 5 min",
+  "holding_en": "Store dry sealed.",
+  "holding_es": "Guardar seco sellado.",
+  "ingredients_en": [
+    "Panko – 1 cup",
+    "Huey Seasoning – 2 Tbsp"
+  ],
+  "ingredients_es": [
+    "Panko – 1 taza",
+    "Sazón Huey – 2 cdas"
+  ],
+  "procedure_quick_en": [
+    "Mix ingredients.",
+    "Store dry."
+  ],
+  "procedure_quick_es": [
+    "Mezclar ingredientes.",
+    "Guardar seco."
+  ],
+  "procedure_detailed_en": [
+    "Combine panko and seasoning evenly.",
+    "Store in airtight container."
+  ],
+  "procedure_detailed_es": [
+    "Mezclar panko y sazón.",
+    "Guardar en recipiente hermético."
+  ],
+  "image": "images/fried_breading.jpg"
+},
+{
+  "name_en": "Fire Roasted Veggies",
+  "name_es": "Vegetales Asados",
+  "yield_en": "Full Sheet Pan",
+  "yield_es": "Charola Completa",
+  "time_en": "Cook: 20 min",
+  "time_es": "Cocción: 20 min",
+  "holding_en": "Hot hold 135°F.",
+  "holding_es": "Mantener caliente 135°F.",
+  "ingredients_en": [
+    "Squash – 6 ea",
+    "Zucchini – 6 ea",
+    "Poblano – 4 ea",
+    "Steak Marinade – 2 cups",
+    "Mushrooms (add to order)"
+  ],
+  "ingredients_es": [
+    "Calabacín – 6",
+    "Zucchini – 6",
+    "Poblano – 4",
+    "Marinada bistec – 2 tazas",
+    "Hongos (agregar al ordenar)"
+  ],
+  "procedure_quick_en": [
+    "Toss vegetables.",
+    "Roast until tender."
+  ],
+  "procedure_quick_es": [
+    "Mezclar vegetales.",
+    "Asar hasta suave."
+  ],
+  "procedure_detailed_en": [
+    "Slice vegetables evenly.",
+    "Toss with marinade.",
+    "Roast at high heat until tender and slightly charred."
+  ],
+  "procedure_detailed_es": [
+    "Cortar vegetales.",
+    "Mezclar con marinada.",
+    "Asar hasta suave y dorado."
+  ],
+  "image": "images/fire_roasted_veggies.jpg"
+},
+{
+  "name_en": "Salad Mix",
+  "name_es": "Mezcla de Ensalada",
+  "yield_en": "Prep Batch",
+  "yield_es": "Lote Preparación",
+  "time_en": "Prep: 15 min",
+  "time_es": "Preparación: 15 min",
+  "holding_en": "Cold hold 48 hrs.",
+  "holding_es": "Mantener frío 48 hrs.",
+  "ingredients_en": [
+    "Squash – 6 ea",
+    "Zucchini – 6 ea",
+    "Poblano – 4 ea",
+    "Bell Pepper – 4 ea",
+    "Steak Marinade – 2 cups",
+    "Mushrooms (add to order)"
+  ],
+  "ingredients_es": [
+    "Calabacín – 6",
+    "Zucchini – 6",
+    "Poblano – 4",
+    "Chile dulce – 4",
+    "Marinada bistec – 2 tazas",
+    "Hongos (agregar al ordenar)"
+  ],
+  "procedure_quick_en": [
+    "Slice vegetables.",
+    "Toss lightly."
+  ],
+  "procedure_quick_es": [
+    "Cortar vegetales.",
+    "Mezclar ligero."
+  ],
+  "procedure_detailed_en": [
+    "Cut vegetables evenly.",
+    "Toss lightly in marinade.",
+    "Store chilled."
+  ],
+  "procedure_detailed_es": [
+    "Cortar vegetales.",
+    "Mezclar ligeramente.",
+    "Guardar en frío."
+  ],
+  "image": "images/salad_mix.jpg"
+},
+{
+  "name_en": "Poblano Fry Batter",
+  "name_es": "Mezcla para Poblanos Fritos",
+  "yield_en": "16 Poblanos",
+  "yield_es": "16 Poblanos",
+  "time_en": "Prep: 10 min",
+  "time_es": "Preparación: 10 min",
+  "holding_en": "Use immediately.",
+  "holding_es": "Usar inmediatamente.",
+  "ingredients_en": [
+    "Eggs – 15 ea",
+    "Flour – 0.25 cup",
+    "Egg Yolks – 15 ea"
+  ],
+  "ingredients_es": [
+    "Huevos – 15",
+    "Harina – 0.25 taza",
+    "Yemas – 15"
+  ],
+  "procedure_quick_en": [
+    "Whip eggs.",
+    "Fold in flour."
+  ],
+  "procedure_quick_es": [
+    "Batir huevos.",
+    "Agregar harina."
+  ],
+  "procedure_detailed_en": [
+    "Whip egg whites until fluffy.",
+    "Fold in yolks and flour gently.",
+    "Use immediately for frying."
+  ],
+  "procedure_detailed_es": [
+    "Batir claras.",
+    "Agregar yemas y harina.",
+    "Usar inmediatamente."
+  ],
+  "image": "images/poblano_batter.jpg"
+},
+{
+  "name_en": "Mexican Turnip Greens",
+  "name_es": "Hojas de Nabo Mexicanas",
+  "yield_en": "8 Quarts",
+  "yield_es": "8 Cuartos",
+  "time_en": "Cook: 30 min",
+  "time_es": "Cocción: 30 min",
+  "holding_en": "Hot hold 135°F.",
+  "holding_es": "Mantener caliente 135°F.",
+  "ingredients_en": [
+    "Turnip Greens – 2.5 lb",
+    "Cumin – 1 Tbsp",
+    "Garlic Purée – 1 Tbsp",
+    "Huey Luey’s Hot Sauce – 3 Tbsp",
+    "Diced Tomatoes – 2 cups",
+    "Diced White Onion – 1 cup",
+    "Chicken Broth – 4 qt"
+  ],
+  "ingredients_es": [
+    "Hojas de nabo – 2.5 lb",
+    "Comino – 1 cda",
+    "Ajo puré – 1 cda",
+    "Salsa picante Huey – 3 cdas",
+    "Tomate picado – 2 tazas",
+    "Cebolla blanca – 1 taza",
+    "Caldo pollo – 4 qt"
+  ],
+  "procedure_quick_en": [
+    "Sauté onions.",
+    "Add greens and broth.",
+    "Simmer."
+  ],
+  "procedure_quick_es": [
+    "Saltear cebolla.",
+    "Agregar hojas y caldo.",
+    "Hervir."
+  ],
+  "procedure_detailed_en": [
+    "Sauté onion and garlic.",
+    "Add turnip greens.",
+    "Add broth and seasoning.",
+    "Simmer until tender."
+  ],
+  "procedure_detailed_es": [
+    "Saltear cebolla y ajo.",
+    "Agregar hojas.",
+    "Agregar caldo y sazón.",
+    "Hervir hasta suave."
+  ],
+  "image": "images/turnip_greens.jpg"
+},
 {
   "name_en": "Stuffed Chicken Chorizo Mix",
   "name_es": "Mezcla de Chorizo para Pollo Relleno",
+  "yield_en": "36 Portions",
+  "yield_es": "36 Porciones",
+  "time_en": "Cook: 15 min",
+  "time_es": "Cocción: 15 min",
+  "holding_en": "Cold hold 48 hrs.",
+  "holding_es": "Mantener frío 48 hrs.",
   "ingredients_en": [
     "Chorizo – 4 lb",
     "Shredded Cheese – 2 lb"
@@ -311,6 +733,27 @@
   "ingredients_es": [
     "Chorizo – 4 lb",
     "Queso rallado – 2 lb"
-  ]
+  ],
+  "procedure_quick_en": [
+    "Cook chorizo.",
+    "Mix with cheese."
+  ],
+  "procedure_quick_es": [
+    "Cocinar chorizo.",
+    "Mezclar con queso."
+  ],
+  "procedure_detailed_en": [
+    "Cook chorizo fully and drain grease.",
+    "Cool slightly.",
+    "Mix evenly with shredded cheese.",
+    "Use for stuffing."
+  ],
+  "procedure_detailed_es": [
+    "Cocinar chorizo y escurrir grasa.",
+    "Enfriar.",
+    "Mezclar con queso.",
+    "Usar para rellenar."
+  ],
+  "image": "images/chorizo_mix.jpg"
 }
 ]
