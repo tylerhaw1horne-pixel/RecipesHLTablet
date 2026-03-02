@@ -6,16 +6,19 @@
 <title>Huey Luey’s Kitchen</title>
 
 <style>
+
+/* ===== BASE ===== */
+
 body{
   margin:0;
-  font-family:'Segoe UI', sans-serif;
-  background:#f8fafc;
-  color:#111;
+  font-family:Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  background:#f3f4f6;
+  color:#111827;
+  transition:all .25s ease;
 }
 
 body.kitchen-mode{
   background:white;
-  color:black;
   font-size:20px;
 }
 
@@ -27,84 +30,142 @@ header{
   justify-content:space-between;
   align-items:center;
   font-weight:600;
+  box-shadow:0 3px 12px rgba(0,0,0,.15);
 }
 
-.header-controls button{
+.controls button{
   background:white;
   color:#f37021;
   border:none;
   padding:6px 10px;
-  margin-left:8px;
   border-radius:6px;
-  font-weight:600;
+  margin-left:8px;
   cursor:pointer;
+  font-weight:600;
 }
 
 .container{
-  padding:20px;
   max-width:900px;
   margin:auto;
+  padding:20px;
 }
+
+/* ===== CARDS ===== */
 
 .card{
   background:white;
   padding:18px;
   margin:12px 0;
-  border-radius:12px;
-  box-shadow:0 4px 12px rgba(0,0,0,.08);
+  border-radius:14px;
+  box-shadow:0 4px 16px rgba(0,0,0,.08);
   cursor:pointer;
+  transition:.2s;
 }
 
-.back-btn{
+.card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.back{
+  display:inline-block;
   background:#1e7f3f;
   color:white;
   padding:8px 14px;
   border-radius:8px;
-  display:inline-block;
   margin-bottom:15px;
   cursor:pointer;
 }
 
-.section-title{
-  font-weight:700;
-  margin-top:20px;
-  color:#f37021;
-}
-
 .search{
   width:100%;
-  padding:10px;
+  padding:12px;
   border-radius:8px;
-  border:1px solid #ddd;
+  border:1px solid #d1d5db;
   margin-bottom:15px;
+  font-size:16px;
 }
 
-.scale-controls button{
-  margin-right:5px;
+.recipe-title{
+  font-size:28px;
+  font-weight:700;
+  margin-bottom:10px;
 }
 
-input, textarea{
-  width:100%;
-  padding:8px;
+.section{
+  margin-top:20px;
+}
+
+.section h4{
+  color:#f37021;
   margin-bottom:8px;
 }
 
+.scale-row{
+  margin-top:15px;
+}
+
+.scale-row button{
+  margin-right:6px;
+}
+
+button{
+  padding:6px 10px;
+  border-radius:6px;
+  border:none;
+  background:#f37021;
+  color:white;
+  cursor:pointer;
+}
+
+input[type="number"]{
+  width:80px;
+  padding:6px;
+  margin-left:5px;
+}
+
+.edit-panel{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.6);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.edit-box{
+  background:white;
+  padding:20px;
+  width:90%;
+  max-width:500px;
+  border-radius:12px;
+}
+
+.edit-box input{
+  width:100%;
+  margin-bottom:10px;
+  padding:8px;
+}
+
 @media print {
-  header, .back-btn, .search, .scale-controls, .edit-btn {
+  header, .back, .scale-row, .search, .controls {
     display:none;
   }
 }
+
 </style>
 </head>
-
 <body>
 
 <header>
   Huey Luey’s Kitchen
-  <div class="header-controls">
-    <button id="langBtn">ES</button>
-    <button id="kitchenBtn">Kitchen</button>
-    <button id="editBtn">Edit</button>
+  <div class="controls">
+    <button id="langToggle">ES</button>
+    <button id="kitchenToggle">Kitchen</button>
+    <button id="editToggle">Edit</button>
   </div>
 </header>
 
@@ -112,261 +173,253 @@ input, textarea{
 
 <script>
 
-/* ================= STATE ================= */
+/* ===== STATE ===== */
 
 let currentLanguage="en"
-let currentView="categories"
 let currentCategory=null
 let currentRecipe=null
-let loadedData=[]
-let scaleMultiplier=1
+let dataCache={}
+let scaleFactor=1
 let editUnlocked=false
-const PASSWORD="hueys2026"
-
-/* ================= CATEGORIES ================= */
+const PASSWORD="hueys2026"   // THIS IS YOUR PASSWORD
 
 const categories=[
-  {name_en:"Items & Sides",name_es:"Acompañamientos",file:"items_sides.json"},
-  {name_en:"Dressings",name_es:"Aderezos",file:"dressings.json"},
-  {name_en:"Sauces & Spices",name_es:"Salsas y Especias",file:"sauces_spices.json"},
-  {name_en:"Food Prepped",name_es:"Producción",file:"food_prepped.json"},
-  {name_en:"Desserts",name_es:"Postres",file:"desserts.json"},
-  {name_en:"Brunch",name_es:"Brunch",file:"brunch.json"}
+  {en:"Items & Sides", es:"Acompañamientos", file:"items_sides.json"},
+  {en:"Dressings", es:"Aderezos", file:"dressings.json"},
+  {en:"Sauces & Spices", es:"Salsas y Especias", file:"sauces_spices.json"},
+  {en:"Food Prepped", es:"Producción", file:"food_prepped.json"},
+  {en:"Desserts", es:"Postres", file:"desserts.json"},
+  {en:"Brunch", es:"Brunch", file:"brunch.json"}
 ]
 
-/* ================= TOGGLES ================= */
+/* ===== TOGGLES ===== */
 
-document.getElementById("langBtn").onclick=()=>{
+document.getElementById("langToggle").onclick=()=>{
   currentLanguage=currentLanguage==="en"?"es":"en"
-  document.getElementById("langBtn").innerText=currentLanguage==="en"?"ES":"EN"
-  refreshView()
+  document.getElementById("langToggle").innerText=currentLanguage==="en"?"ES":"EN"
+  if(currentRecipe) renderRecipe(currentRecipe)
+  else renderCategories()
 }
 
-document.getElementById("kitchenBtn").onclick=()=>{
+document.getElementById("kitchenToggle").onclick=()=>{
   document.body.classList.toggle("kitchen-mode")
 }
 
-document.getElementById("editBtn").onclick=()=>{
+document.getElementById("editToggle").onclick=()=>{
   if(editUnlocked){
     editUnlocked=false
     alert("Edit Locked")
-  } else {
-    const input=prompt("Password")
-    if(input===PASSWORD){
+  }else{
+    const p=prompt("Enter Password")
+    if(p===PASSWORD){
       editUnlocked=true
       alert("Edit Mode Enabled")
     }
   }
 }
 
-/* ================= VIEW CONTROL ================= */
-
-function refreshView(){
-  if(currentView==="categories") renderCategories()
-  if(currentView==="recipe") showRecipe(currentRecipe)
-}
-
-/* ================= CATEGORY PAGE ================= */
+/* ===== RENDER CATEGORIES ===== */
 
 function renderCategories(){
-  currentView="categories"
+  currentRecipe=null
   const app=document.getElementById("app")
   app.innerHTML=""
 
   const search=document.createElement("input")
   search.className="search"
-  search.placeholder=currentLanguage==="en"?"Search All Recipes":"Buscar Recetas"
-  search.oninput=()=>searchAll(search.value)
+  search.placeholder=currentLanguage==="en"?"Search recipes":"Buscar recetas"
+  search.addEventListener("input",()=>searchAll(search.value))
   app.appendChild(search)
 
   categories.forEach(cat=>{
     const div=document.createElement("div")
     div.className="card"
-    div.innerText=cat["name_"+currentLanguage]
+    div.innerText=currentLanguage==="en"?cat.en:cat.es
     div.onclick=()=>loadCategory(cat)
     app.appendChild(div)
   })
 }
 
-/* ================= SEARCH GLOBAL ================= */
+/* ===== SEARCH ===== */
 
 async function searchAll(text){
   if(text.length<2){ renderCategories(); return }
   const app=document.getElementById("app")
   app.innerHTML=""
-
   for(const cat of categories){
-    const res=await fetch(cat.file)
-    const data=await res.json()
-    const filtered=data.filter(r=>
-      r["name_"+currentLanguage].toLowerCase().includes(text.toLowerCase())
-    )
-    filtered.forEach(r=>{
-      const div=document.createElement("div")
-      div.className="card"
-      div.innerText=r["name_"+currentLanguage]
-      div.onclick=()=>{
-        currentCategory=cat
-        loadedData=data
-        showRecipe(r)
+    const data=await loadData(cat)
+    data.forEach(r=>{
+      if(r["name_"+currentLanguage].toLowerCase().includes(text.toLowerCase())){
+        const div=document.createElement("div")
+        div.className="card"
+        div.innerText=r["name_"+currentLanguage]
+        div.onclick=()=>renderRecipe(r,cat)
+        app.appendChild(div)
       }
-      app.appendChild(div)
     })
   }
 }
 
-/* ================= LOAD CATEGORY ================= */
+/* ===== LOAD CATEGORY ===== */
 
-async function loadCategory(category){
-  currentCategory=category
-  const res=await fetch(category.file)
-  const original=await res.json()
-  const stored=localStorage.getItem(category.file)
-  loadedData=stored?JSON.parse(stored):original
-  renderCategoryRecipes()
-}
-
-function renderCategoryRecipes(){
+async function loadCategory(cat){
+  currentCategory=cat
+  const data=await loadData(cat)
   const app=document.getElementById("app")
   app.innerHTML=""
 
   const back=document.createElement("div")
-  back.className="back-btn"
+  back.className="back"
   back.innerText="←"
   back.onclick=renderCategories
   app.appendChild(back)
 
-  loadedData.forEach(recipe=>{
+  data.forEach(r=>{
     const div=document.createElement("div")
     div.className="card"
-    div.innerText=recipe["name_"+currentLanguage]
-    div.onclick=()=>showRecipe(recipe)
+    div.innerText=r["name_"+currentLanguage]
+    div.onclick=()=>renderRecipe(r,cat)
     app.appendChild(div)
   })
-
-  if(editUnlocked){
-    const addBtn=document.createElement("div")
-    addBtn.className="card"
-    addBtn.innerText="+ Add New Recipe"
-    addBtn.onclick=addNewRecipe
-    app.appendChild(addBtn)
-  }
 }
 
-/* ================= RECIPE VIEW ================= */
+/* ===== LOAD JSON ===== */
 
-function showRecipe(recipe){
-  currentView="recipe"
+async function loadData(cat){
+  if(dataCache[cat.file]) return dataCache[cat.file]
+  const res=await fetch(cat.file)
+  const data=await res.json()
+  dataCache[cat.file]=data
+  return data
+}
+
+/* ===== RENDER RECIPE ===== */
+
+function renderRecipe(recipe,cat){
   currentRecipe=recipe
-  scaleMultiplier=1
+  scaleFactor=1
+  if(cat) currentCategory=cat
 
   const app=document.getElementById("app")
   app.innerHTML=""
 
   const back=document.createElement("div")
-  back.className="back-btn"
+  back.className="back"
   back.innerText="←"
-  back.onclick=renderCategoryRecipes
+  back.onclick=()=>loadCategory(currentCategory)
   app.appendChild(back)
 
-  const title=document.createElement("h2")
+  const title=document.createElement("div")
+  title.className="recipe-title"
   title.innerText=recipe["name_"+currentLanguage]
   app.appendChild(title)
 
   renderIngredients(recipe)
 
   if(editUnlocked){
-    const edit=document.createElement("button")
-    edit.innerText="Edit Recipe"
-    edit.onclick=()=>editRecipe(recipe)
-    app.appendChild(edit)
+    const editBtn=document.createElement("button")
+    editBtn.innerText="Edit Recipe"
+    editBtn.onclick=()=>openEdit(recipe)
+    app.appendChild(editBtn)
   }
 }
 
-/* ================= SCALING ================= */
+/* ===== SCALE ===== */
 
 function renderIngredients(recipe){
   const app=document.getElementById("app")
 
   const section=document.createElement("div")
-  section.className="section-title"
-  section.innerText=currentLanguage==="en"?"Ingredients":"Ingredientes"
-  app.appendChild(section)
-
+  section.className="section"
+  section.innerHTML="<h4>"+(currentLanguage==="en"?"Ingredients":"Ingredientes")+"</h4>"
   const ul=document.createElement("ul")
 
   recipe["ingredients_"+currentLanguage].forEach(line=>{
-    ul.appendChild(createScaledItem(line))
+    const li=document.createElement("li")
+    li.innerText=scaleLine(line)
+    ul.appendChild(li)
   })
 
-  app.appendChild(ul)
+  section.appendChild(ul)
+  app.appendChild(section)
 
-  const scaleDiv=document.createElement("div")
-  scaleDiv.className="scale-controls"
-  scaleDiv.innerHTML=`
-    <button onclick="setScale(0.5)">0.5x</button>
-    <button onclick="setScale(2)">2x</button>
-    <button onclick="setScale(3)">3x</button>
-    <input id="customScale" type="number" step="0.1" placeholder="x">
-    <button onclick="customScale()">Go</button>
-  `
-  app.appendChild(scaleDiv)
+  const scaleRow=document.createElement("div")
+  scaleRow.className="scale-row"
+
+  const half=document.createElement("button")
+  half.innerText="0.5x"
+  half.onclick=()=>setScale(0.5)
+
+  const two=document.createElement("button")
+  two.innerText="2x"
+  two.onclick=()=>setScale(2)
+
+  const three=document.createElement("button")
+  three.innerText="3x"
+  three.onclick=()=>setScale(3)
+
+  const custom=document.createElement("input")
+  custom.type="number"
+  custom.step="0.1"
+
+  const go=document.createElement("button")
+  go.innerText="Go"
+  go.onclick=()=>{
+    if(custom.value>0) setScale(parseFloat(custom.value))
+  }
+
+  scaleRow.appendChild(half)
+  scaleRow.appendChild(two)
+  scaleRow.appendChild(three)
+  scaleRow.appendChild(custom)
+  scaleRow.appendChild(go)
+
+  app.appendChild(scaleRow)
 }
 
-function createScaledItem(line){
-  const li=document.createElement("li")
+function scaleLine(line){
   const match=line.match(/(.*?–\s*)([\d.]+)/)
-  if(match){
-    const base=parseFloat(match[2])
-    const scaled=(base*scaleMultiplier).toFixed(2).replace(/\.00$/,'')
-    li.innerText=line.replace(match[2],scaled)
-  } else {
-    li.innerText=line
+  if(!match) return line
+  const base=parseFloat(match[2])
+  const scaled=(base*scaleFactor).toFixed(2).replace(/\.00$/,'')
+  return line.replace(match[2],scaled)
+}
+
+function setScale(f){
+  scaleFactor=f
+  renderRecipe(currentRecipe)
+}
+
+/* ===== EDIT ===== */
+
+function openEdit(recipe){
+  const overlay=document.createElement("div")
+  overlay.className="edit-panel"
+
+  const box=document.createElement("div")
+  box.className="edit-box"
+
+  const nameInput=document.createElement("input")
+  nameInput.value=recipe.name_en
+
+  const save=document.createElement("button")
+  save.innerText="Save"
+  save.onclick=()=>{
+    recipe.name_en=nameInput.value
+    overlay.remove()
+    renderRecipe(recipe)
   }
-  return li
+
+  box.appendChild(nameInput)
+  box.appendChild(save)
+  overlay.appendChild(box)
+  document.body.appendChild(overlay)
 }
 
-function setScale(mult){
-  scaleMultiplier=mult
-  showRecipe(currentRecipe)
-}
-
-function customScale(){
-  const val=parseFloat(document.getElementById("customScale").value)
-  if(val>0){
-    scaleMultiplier=val
-    showRecipe(currentRecipe)
-  }
-}
-
-/* ================= EDIT ================= */
-
-function editRecipe(recipe){
-  const name=prompt("Name EN",recipe.name_en)
-  if(name) recipe.name_en=name
-  localStorage.setItem(currentCategory.file,JSON.stringify(loadedData))
-  showRecipe(recipe)
-}
-
-function addNewRecipe(){
-  const name=prompt("Recipe Name")
-  if(!name) return
-  const newRecipe={
-    name_en:name,
-    name_es:name,
-    ingredients_en:["Ingredient – 1 cup"],
-    ingredients_es:["Ingrediente – 1 taza"]
-  }
-  loadedData.push(newRecipe)
-  localStorage.setItem(currentCategory.file,JSON.stringify(loadedData))
-  renderCategoryRecipes()
-}
-
-/* ================= INIT ================= */
+/* ===== INIT ===== */
 
 renderCategories()
 
 </script>
-
 </body>
 </html>
