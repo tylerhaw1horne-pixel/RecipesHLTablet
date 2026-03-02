@@ -3,18 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Huey Luey’s Kitchen Pro</title>
+<title>Huey Luey’s Kitchen</title>
 
 <style>
-
-/* ===== GLOBAL ===== */
-
 body{
   margin:0;
   font-family:'Segoe UI', sans-serif;
   background:#f8fafc;
   color:#111;
-  transition:.3s;
 }
 
 body.kitchen-mode{
@@ -57,16 +53,6 @@ header{
   border-radius:12px;
   box-shadow:0 4px 12px rgba(0,0,0,.08);
   cursor:pointer;
-  transition:.2s;
-}
-
-body.kitchen-mode .card{
-  box-shadow:none;
-  border:2px solid #ddd;
-}
-
-.card:hover{
-  transform:translateY(-2px);
 }
 
 .back-btn{
@@ -79,21 +65,10 @@ body.kitchen-mode .card{
   cursor:pointer;
 }
 
-.recipe-title{
-  font-size:28px;
-  font-weight:700;
-  margin-bottom:15px;
-}
-
 .section-title{
   font-weight:700;
-  margin-top:22px;
+  margin-top:20px;
   color:#f37021;
-}
-
-ul{
-  padding-left:20px;
-  line-height:1.6;
 }
 
 .search{
@@ -104,41 +79,32 @@ ul{
   margin-bottom:15px;
 }
 
-.scale-controls{
-  margin-top:20px;
+.scale-controls button{
+  margin-right:5px;
 }
 
-.scale-controls input{
-  width:80px;
-  padding:6px;
-}
-
-.print-btn{
-  background:#f37021;
-  color:white;
-  padding:10px;
-  border:none;
-  border-radius:8px;
-  margin-top:20px;
-  cursor:pointer;
+input, textarea{
+  width:100%;
+  padding:8px;
+  margin-bottom:8px;
 }
 
 @media print {
-  header, .back-btn, .search, .scale-controls, .print-btn {
+  header, .back-btn, .search, .scale-controls, .edit-btn {
     display:none;
   }
 }
-
 </style>
 </head>
 
 <body>
 
 <header>
-  Huey Luey’s Kitchen Pro
+  Huey Luey’s Kitchen
   <div class="header-controls">
     <button id="langBtn">ES</button>
     <button id="kitchenBtn">Kitchen</button>
+    <button id="editBtn">Edit</button>
   </div>
 </header>
 
@@ -146,7 +112,7 @@ ul{
 
 <script>
 
-/* ===== STATE ===== */
+/* ================= STATE ================= */
 
 let currentLanguage="en"
 let currentView="categories"
@@ -154,6 +120,10 @@ let currentCategory=null
 let currentRecipe=null
 let loadedData=[]
 let scaleMultiplier=1
+let editUnlocked=false
+const PASSWORD="hueys2026"
+
+/* ================= CATEGORIES ================= */
 
 const categories=[
   {name_en:"Items & Sides",name_es:"Acompañamientos",file:"items_sides.json"},
@@ -164,7 +134,7 @@ const categories=[
   {name_en:"Brunch",name_es:"Brunch",file:"brunch.json"}
 ]
 
-/* ===== TOGGLES ===== */
+/* ================= TOGGLES ================= */
 
 document.getElementById("langBtn").onclick=()=>{
   currentLanguage=currentLanguage==="en"?"es":"en"
@@ -176,20 +146,39 @@ document.getElementById("kitchenBtn").onclick=()=>{
   document.body.classList.toggle("kitchen-mode")
 }
 
-/* ===== VIEW CONTROL ===== */
+document.getElementById("editBtn").onclick=()=>{
+  if(editUnlocked){
+    editUnlocked=false
+    alert("Edit Locked")
+  } else {
+    const input=prompt("Password")
+    if(input===PASSWORD){
+      editUnlocked=true
+      alert("Edit Mode Enabled")
+    }
+  }
+}
+
+/* ================= VIEW CONTROL ================= */
 
 function refreshView(){
   if(currentView==="categories") renderCategories()
-  if(currentView==="recipes") renderRecipeList()
   if(currentView==="recipe") showRecipe(currentRecipe)
 }
 
-/* ===== CATEGORY ===== */
+/* ================= CATEGORY PAGE ================= */
 
 function renderCategories(){
   currentView="categories"
   const app=document.getElementById("app")
   app.innerHTML=""
+
+  const search=document.createElement("input")
+  search.className="search"
+  search.placeholder=currentLanguage==="en"?"Search All Recipes":"Buscar Recetas"
+  search.oninput=()=>searchAll(search.value)
+  app.appendChild(search)
+
   categories.forEach(cat=>{
     const div=document.createElement("div")
     div.className="card"
@@ -199,19 +188,45 @@ function renderCategories(){
   })
 }
 
-/* ===== LOAD CATEGORY ===== */
+/* ================= SEARCH GLOBAL ================= */
+
+async function searchAll(text){
+  if(text.length<2){ renderCategories(); return }
+  const app=document.getElementById("app")
+  app.innerHTML=""
+
+  for(const cat of categories){
+    const res=await fetch(cat.file)
+    const data=await res.json()
+    const filtered=data.filter(r=>
+      r["name_"+currentLanguage].toLowerCase().includes(text.toLowerCase())
+    )
+    filtered.forEach(r=>{
+      const div=document.createElement("div")
+      div.className="card"
+      div.innerText=r["name_"+currentLanguage]
+      div.onclick=()=>{
+        currentCategory=cat
+        loadedData=data
+        showRecipe(r)
+      }
+      app.appendChild(div)
+    })
+  }
+}
+
+/* ================= LOAD CATEGORY ================= */
 
 async function loadCategory(category){
   currentCategory=category
-  currentView="recipes"
-  const response=await fetch(category.file)
-  loadedData=await response.json()
-  renderRecipeList()
+  const res=await fetch(category.file)
+  const original=await res.json()
+  const stored=localStorage.getItem(category.file)
+  loadedData=stored?JSON.parse(stored):original
+  renderCategoryRecipes()
 }
 
-/* ===== RECIPE LIST ===== */
-
-function renderRecipeList(){
+function renderCategoryRecipes(){
   const app=document.getElementById("app")
   app.innerHTML=""
 
@@ -221,38 +236,28 @@ function renderRecipeList(){
   back.onclick=renderCategories
   app.appendChild(back)
 
-  const search=document.createElement("input")
-  search.className="search"
-  search.placeholder=currentLanguage==="en"?"Search...":"Buscar..."
-  search.oninput=()=>filterRecipes(search.value)
-  app.appendChild(search)
-
-  displayRecipes(loadedData)
-}
-
-function filterRecipes(text){
-  const filtered=loadedData.filter(r=>
-    r["name_"+currentLanguage].toLowerCase().includes(text.toLowerCase())
-  )
-  displayRecipes(filtered)
-}
-
-function displayRecipes(data){
-  const app=document.getElementById("app")
-  data.forEach(recipe=>{
+  loadedData.forEach(recipe=>{
     const div=document.createElement("div")
     div.className="card"
     div.innerText=recipe["name_"+currentLanguage]
     div.onclick=()=>showRecipe(recipe)
     app.appendChild(div)
   })
+
+  if(editUnlocked){
+    const addBtn=document.createElement("div")
+    addBtn.className="card"
+    addBtn.innerText="+ Add New Recipe"
+    addBtn.onclick=addNewRecipe
+    app.appendChild(addBtn)
+  }
 }
 
-/* ===== RECIPE VIEW ===== */
+/* ================= RECIPE VIEW ================= */
 
 function showRecipe(recipe){
-  currentRecipe=recipe
   currentView="recipe"
+  currentRecipe=recipe
   scaleMultiplier=1
 
   const app=document.getElementById("app")
@@ -261,30 +266,24 @@ function showRecipe(recipe){
   const back=document.createElement("div")
   back.className="back-btn"
   back.innerText="←"
-  back.onclick=renderRecipeList
+  back.onclick=renderCategoryRecipes
   app.appendChild(back)
 
-  const title=document.createElement("div")
-  title.className="recipe-title"
+  const title=document.createElement("h2")
   title.innerText=recipe["name_"+currentLanguage]
   app.appendChild(title)
 
-  addSection("Yield",recipe["yield_"+currentLanguage])
-  addSection("Time",recipe["time_"+currentLanguage])
-  addSection("Holding",recipe["holding_"+currentLanguage])
-
   renderIngredients(recipe)
 
-  addListSection("Procedure",recipe["procedure_detailed_"+currentLanguage])
-
-  addScaleControls(recipe)
-
-  const printBtn=document.createElement("button")
-  printBtn.className="print-btn"
-  printBtn.innerText=currentLanguage==="en"?"Print Recipe":"Imprimir Receta"
-  printBtn.onclick=()=>window.print()
-  app.appendChild(printBtn)
+  if(editUnlocked){
+    const edit=document.createElement("button")
+    edit.innerText="Edit Recipe"
+    edit.onclick=()=>editRecipe(recipe)
+    app.appendChild(edit)
+  }
 }
+
+/* ================= SCALING ================= */
 
 function renderIngredients(recipe){
   const app=document.getElementById("app")
@@ -295,80 +294,75 @@ function renderIngredients(recipe){
   app.appendChild(section)
 
   const ul=document.createElement("ul")
-  recipe["ingredients_"+currentLanguage].forEach(item=>{
-    const li=document.createElement("li")
-    li.innerText=item+"  x"+scaleMultiplier
-    ul.appendChild(li)
+
+  recipe["ingredients_"+currentLanguage].forEach(line=>{
+    ul.appendChild(createScaledItem(line))
   })
+
   app.appendChild(ul)
-}
 
-function addScaleControls(recipe){
-  const app=document.getElementById("app")
-  const div=document.createElement("div")
-  div.className="scale-controls"
-
-  div.innerHTML=`
-    <strong>${currentLanguage==="en"?"Scale Recipe":"Escalar Receta"}:</strong><br>
-    <button onclick="scale(0.5)">0.5x</button>
-    <button onclick="scale(2)">2x</button>
-    <button onclick="scale(3)">3x</button>
-    <input type="number" id="customScale" placeholder="x">
+  const scaleDiv=document.createElement("div")
+  scaleDiv.className="scale-controls"
+  scaleDiv.innerHTML=`
+    <button onclick="setScale(0.5)">0.5x</button>
+    <button onclick="setScale(2)">2x</button>
+    <button onclick="setScale(3)">3x</button>
+    <input id="customScale" type="number" step="0.1" placeholder="x">
     <button onclick="customScale()">Go</button>
   `
-
-  app.appendChild(div)
+  app.appendChild(scaleDiv)
 }
 
-function scale(mult){
+function createScaledItem(line){
+  const li=document.createElement("li")
+  const match=line.match(/(.*?–\s*)([\d.]+)/)
+  if(match){
+    const base=parseFloat(match[2])
+    const scaled=(base*scaleMultiplier).toFixed(2).replace(/\.00$/,'')
+    li.innerText=line.replace(match[2],scaled)
+  } else {
+    li.innerText=line
+  }
+  return li
+}
+
+function setScale(mult){
   scaleMultiplier=mult
   showRecipe(currentRecipe)
 }
 
 function customScale(){
-  const val=document.getElementById("customScale").value
+  const val=parseFloat(document.getElementById("customScale").value)
   if(val>0){
-    scaleMultiplier=parseFloat(val)
+    scaleMultiplier=val
     showRecipe(currentRecipe)
   }
 }
 
-/* ===== HELPERS ===== */
+/* ================= EDIT ================= */
 
-function addSection(title,content){
-  if(!content) return
-  const app=document.getElementById("app")
-  const sec=document.createElement("div")
-  sec.className="section-title"
-  sec.innerText=currentLanguage==="en"?title:
-    title==="Yield"?"Rinde":
-    title==="Time"?"Tiempo":
-    title==="Holding"?"Conservación":title
-  app.appendChild(sec)
-
-  const p=document.createElement("div")
-  p.innerText=content
-  app.appendChild(p)
+function editRecipe(recipe){
+  const name=prompt("Name EN",recipe.name_en)
+  if(name) recipe.name_en=name
+  localStorage.setItem(currentCategory.file,JSON.stringify(loadedData))
+  showRecipe(recipe)
 }
 
-function addListSection(title,items){
-  if(!items) return
-  const app=document.getElementById("app")
-  const sec=document.createElement("div")
-  sec.className="section-title"
-  sec.innerText=currentLanguage==="en"?title:"Procedimiento"
-  app.appendChild(sec)
-
-  const ul=document.createElement("ul")
-  items.forEach(item=>{
-    const li=document.createElement("li")
-    li.innerText=item
-    ul.appendChild(li)
-  })
-  app.appendChild(ul)
+function addNewRecipe(){
+  const name=prompt("Recipe Name")
+  if(!name) return
+  const newRecipe={
+    name_en:name,
+    name_es:name,
+    ingredients_en:["Ingredient – 1 cup"],
+    ingredients_es:["Ingrediente – 1 taza"]
+  }
+  loadedData.push(newRecipe)
+  localStorage.setItem(currentCategory.file,JSON.stringify(loadedData))
+  renderCategoryRecipes()
 }
 
-/* ===== INIT ===== */
+/* ================= INIT ================= */
 
 renderCategories()
 
