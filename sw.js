@@ -1,7 +1,9 @@
 const CACHE_NAME = "huey-kitchen-v1";
+
 const urlsToCache = [
   "./",
-  "./index.html"
+  "./index.html",
+  "./recipes.json"
 ];
 
 self.addEventListener("install", event => {
