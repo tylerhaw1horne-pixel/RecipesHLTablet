@@ -1,0 +1,215 @@
+[
+  {
+    "category": "Items & Sides",
+    "items": [
+      {
+        "name_en": "Pico de Gallo",
+        "name_es": "Pico de Gallo",
+        "ingredients_en": [
+          "Diced Tomato – 20 lbs",
+          "Onion – 6 lbs",
+          "Lime Juice – 1 cup",
+          "Salt – 8 Tbsp",
+          "Cilantro – 8 cups",
+          "Fresh Jalapeño – 1 cup"
+        ],
+        "ingredients_es": [
+          "Tomate en cubos – 20 lbs",
+          "Cebolla – 6 lbs",
+          "Jugo de limón – 1 taza",
+          "Sal – 8 cdas",
+          "Cilantro – 8 tazas",
+          "Jalapeño fresco – 1 taza"
+        ]
+      },
+      {
+        "name_en": "Guacamole",
+        "name_es": "Guacamole",
+        "ingredients_en": [
+          "Avocado – 35 ea",
+          "Cilantro – 2 cups",
+          "Onion – 3 cups",
+          "Jalapeño – 1/4 cup",
+          "Salt – 2 Tbsp",
+          "Lime Juice – 1/4 cup"
+        ],
+        "ingredients_es": [
+          "Aguacate – 35",
+          "Cilantro – 2 tazas",
+          "Cebolla – 3 tazas",
+          "Jalapeño – 1/4 taza",
+          "Sal – 2 cdas",
+          "Limón – 1/4 taza"
+        ]
+      },
+      {
+        "name_en": "Mexican Rice",
+        "name_es": "Arroz Mexicano",
+        "ingredients_en": [
+          "Long Grain Rice – 9 qt",
+          "Salt – 18 Tbsp",
+          "Garlic Powder – 18 Tbsp",
+          "Water – 18 qt",
+          "Frozen Vegetables – 5 qt",
+          "Fajita Butter – 18 oz",
+          "Tomato Purée – 9 cups",
+          "Chicken Base – 4.5 Tbsp"
+        ],
+        "ingredients_es": [
+          "Arroz grano largo – 9 qt",
+          "Sal – 18 cdas",
+          "Ajo en polvo – 18 cdas",
+          "Agua – 18 qt",
+          "Vegetales congelados – 5 qt",
+          "Mantequilla fajita – 18 oz",
+          "Puré tomate – 9 tazas",
+          "Base pollo – 4.5 cdas"
+        ]
+      }
+    ]
+  },
+
+  {
+    "category": "Sauces & Spices",
+    "items": [
+      {
+        "name_en": "Chili Gravy",
+        "name_es": "Chili Gravy",
+        "ingredients_en": [
+          "Chorizo – 5 lbs",
+          "Ground Beef – 10 lbs",
+          "Salt – 1 Tbsp",
+          "Black Pepper – 1 Tbsp",
+          "Garlic Powder – 2.5 cups",
+          "Onion – 4 qt",
+          "Tomato – 4 qt",
+          "Jalapeño – 1",
+          "Water – 12 qt",
+          "Beef Base – 2 cups",
+          "Chili Powder – 1.5 cups",
+          "Cumin – 1.5 cups",
+          "Oregano – 1 cup",
+          "Paprika – 1.5 cups",
+          "Flour – 3 cups"
+        ],
+        "ingredients_es": [
+          "Chorizo – 5 lb",
+          "Carne molida – 10 lb",
+          "Sal – 1 cda",
+          "Pimienta – 1 cda",
+          "Ajo polvo – 2.5 tazas",
+          "Cebolla – 4 qt",
+          "Tomate – 4 qt",
+          "Jalapeño – 1",
+          "Agua – 12 qt",
+          "Base res – 2 tazas",
+          "Chile polvo – 1.5 tazas",
+          "Comino – 1.5 tazas",
+          "Orégano – 1 taza",
+          "Paprika – 1.5 tazas",
+          "Harina – 3 tazas"
+        ]
+      }
+    ]
+  },
+
+  {
+    "category": "Dressings",
+    "items": [
+      {
+        "name_en": "Chipotle Ranch",
+        "name_es": "Ranch Chipotle",
+        "ingredients_en": [
+          "Ranch Dressing – 1 gal",
+          "Chipotle Adobo – 1 can"
+        ],
+        "ingredients_es": [
+          "Aderezo ranch – 1 gal",
+          "Chipotle adobo – 1 lata"
+        ]
+      }
+    ]
+  },
+
+  {
+    "category": "Food Prepped",
+    "items": [
+      {
+        "name_en": "Ground Beef",
+        "name_es": "Carne Molida",
+        "ingredients_en": [
+          "Ground Beef – 10 lb",
+          "Tomato – 2 qt",
+          "Onion – 3 qt",
+          "Bell Pepper – 2 qt",
+          "Mixto Seasoning – 2 cups"
+        ],
+        "ingredients_es": [
+          "Carne molida – 10 lb",
+          "Tomate – 2 qt",
+          "Cebolla – 3 qt",
+          "Chile dulce – 2 qt",
+          "Sazón Mixto – 2 tazas"
+        ]
+      }
+    ]
+  },
+
+  {
+    "category": "Desserts",
+    "items": [
+      {
+        "name_en": "Tres Leches Cake",
+        "name_es": "Pastel Tres Leches",
+        "ingredients_en": [
+          "Sugar – 1.5 cup",
+          "Vanilla – 1 Tbsp",
+          "Flour – 2.5 cup",
+          "Baking Soda – 1.5 Tbsp",
+          "Eggs – 8",
+          "Milk – 2.5 cup"
+        ],
+        "ingredients_es": [
+          "Azúcar – 1.5 taza",
+          "Vainilla – 1 cda",
+          "Harina – 2.5 taza",
+          "Bicarbonato – 1.5 cda",
+          "Huevos – 8",
+          "Leche – 2.5 taza"
+        ]
+      }
+    ]
+  },
+
+  {
+    "category": "Brunch",
+    "items": [
+      {
+        "name_en": "Pancakes",
+        "name_es": "Panqueques",
+        "ingredients_en": [
+          "Flour – 4.5 qt",
+          "Baking Powder – 3/4 cup",
+          "Salt – 1/2 Tbsp",
+          "Sugar – 2.25 cup",
+          "Cinnamon – 2 Tbsp",
+          "Eggs – 11",
+          "Milk – 3.75 qt",
+          "Butter – 3 cups",
+          "Vanilla – 2 Tbsp"
+        ],
+        "ingredients_es": [
+          "Harina – 4.5 qt",
+          "Polvo hornear – 3/4 taza",
+          "Sal – 1/2 cda",
+          "Azúcar – 2.25 taza",
+          "Canela – 2 cdas",
+          "Huevos – 11",
+          "Leche – 3.75 qt",
+          "Mantequilla – 3 tazas",
+          "Vainilla – 2 cdas"
+        ]
+      }
+    ]
+  }
+]
