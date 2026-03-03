@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Huey Luey Kitchen</title>
+<title>Huey Luey’s Recipe Tablet</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -11,47 +13,65 @@
   --orange:#f37021;
   --green:#2e6b3a;
   --light:#ffffff;
-  --soft:#f6f6f6;
+  --soft:#f9f9f9;
 }
+
+/* ===== BASE ===== */
 
 body{
   margin:0;
-  font-family:Garamond, serif;
   background:white;
-  color:#222;
+  font-family:'EB Garamond', serif;
+  color:#1e1e1e;
 }
 
+/* ===== GREEN BORDER FRAME ===== */
+
+.frame{
+  border:6px solid var(--green);
+  min-height:100vh;
+  box-sizing:border-box;
+}
+
+/* ===== HEADER ===== */
+
 header{
-  background:var(--orange);
-  color:white;
-  padding:20px 40px;
+  background:white;
+  border-bottom:3px solid var(--orange);
+  padding:18px 40px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  font-family:Arial, sans-serif;
 }
 
 header h1{
+  font-family:'Cinzel', serif;
+  font-size:22px;
+  letter-spacing:1px;
   margin:0;
-  font-size:20px;
-  letter-spacing:.5px;
+  color:var(--green);
 }
 
 button{
-  background:white;
-  color:var(--orange);
+  background:var(--orange);
+  color:white;
   border:none;
-  padding:8px 14px;
+  padding:8px 16px;
   font-weight:bold;
-  border-radius:6px;
+  border-radius:4px;
   cursor:pointer;
+  font-family:Arial, sans-serif;
 }
 
+/* ===== MAIN CONTAINER ===== */
+
 #app{
-  max-width:1100px;
-  margin:50px auto;
-  padding:0 30px;
+  max-width:1050px;
+  margin:40px auto;
+  padding:0 40px 60px 40px;
 }
+
+/* ===== SEARCH ===== */
 
 .search-wrapper{
   position:relative;
@@ -60,45 +80,50 @@ button{
 
 .search{
   width:100%;
-  padding:14px;
-  border:1px solid #ddd;
-  border-radius:8px;
-  font-size:16px;
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:4px;
+  font-size:15px;
+  font-family:Arial, sans-serif;
 }
 
 .dropdown{
   position:absolute;
   width:100%;
   background:white;
-  border:1px solid #ddd;
-  border-radius:8px;
-  max-height:300px;
+  border:1px solid #ccc;
+  max-height:250px;
   overflow-y:auto;
   display:none;
   z-index:10;
 }
 
 .dropdown div{
-  padding:12px;
+  padding:10px;
   cursor:pointer;
+  font-family:Arial, sans-serif;
 }
 
 .dropdown div:hover{
   background:#fff3ea;
 }
 
+/* ===== CATEGORY GRID ===== */
+
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
-  gap:25px;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:18px;
 }
 
 .card{
-  border:1px solid #eee;
-  padding:25px;
+  border:1px solid #e2e2e2;
+  padding:20px;
   text-align:center;
-  font-family:Arial, sans-serif;
   cursor:pointer;
+  font-family:Arial, sans-serif;
+  font-weight:600;
+  background:var(--soft);
   transition:.2s;
 }
 
@@ -107,10 +132,12 @@ button{
   border-color:var(--orange);
 }
 
+/* ===== BACK BUTTON ===== */
+
 .back{
   color:var(--orange);
-  font-weight:bold;
-  margin-bottom:25px;
+  font-weight:600;
+  margin-bottom:20px;
   cursor:pointer;
   font-family:Arial, sans-serif;
 }
@@ -118,69 +145,82 @@ button{
 /* ===== RECIPE CARD STYLE ===== */
 
 .recipe-card{
+  padding:40px 50px;
   background:white;
-  padding:60px 70px;
-  border:1px solid #eee;
 }
 
 .recipe-title{
   text-align:center;
-  font-size:38px;
-  font-weight:bold;
-  margin-bottom:10px;
+  font-family:'Cinzel', serif;
+  font-size:36px;
+  margin-bottom:8px;
+  color:var(--green);
 }
 
-.recipe-sub{
-  text-align:center;
-  font-style:italic;
-  margin-bottom:40px;
-  color:#666;
+.title-underline{
+  width:120px;
+  height:3px;
+  background:var(--orange);
+  margin:0 auto 25px auto;
 }
 
-.meta{
+.recipe-meta{
   text-align:center;
-  margin-bottom:30px;
+  margin-bottom:20px;
   font-size:15px;
+  color:#555;
+}
+
+.columns{
+  display:flex;
+  gap:60px;
+  margin-top:25px;
+  flex-wrap:wrap;
 }
 
 .section-header{
   font-family:Arial, sans-serif;
   font-weight:bold;
-  margin-top:40px;
-  margin-bottom:15px;
-  border-bottom:2px solid var(--orange);
-  padding-bottom:6px;
+  margin-bottom:10px;
+  border-bottom:2px solid var(--green);
+  padding-bottom:5px;
+  color:var(--green);
 }
 
-.columns{
-  display:flex;
-  gap:70px;
-  flex-wrap:wrap;
-}
-
-.columns ul,
-.columns ol{
+ul, ol{
   padding-left:20px;
-  line-height:1.6;
+  line-height:1.5;
 }
 
-.plating-box{
-  margin-top:50px;
-  padding:20px;
-  background:var(--soft);
-  border-left:4px solid var(--orange);
+/* ===== TABLET RESPONSIVE ===== */
+
+@media(max-width:900px){
+  #app{
+    padding:0 25px 50px 25px;
+  }
+  .columns{
+    flex-direction:column;
+    gap:30px;
+  }
+  .recipe-title{
+    font-size:28px;
+  }
 }
 
 </style>
 </head>
+
 <body>
+<div class="frame">
 
 <header>
-  <h1>Huey Luey Kitchen</h1>
+  <h1>Huey Luey’s Recipe Tablet</h1>
   <button id="langBtn">EN / ES</button>
 </header>
 
 <div id="app">Loading...</div>
+
+</div>
 
 <script>
 
@@ -215,18 +255,11 @@ for(const f of files){
 
 const app=document.getElementById("app")
 
-function getCategories(){
-  return [...new Map(RECIPES.map(r=>[r.category_en,r])).values()]
-}
-
 function renderHome(){
   view="home"
-  currentCategory=null
-  currentRecipe=null
   app.innerHTML=""
 
-  const searchWrapper=createSearch()
-  app.appendChild(searchWrapper)
+  app.appendChild(createSearch())
 
   const grid=document.createElement("div")
   grid.className="grid"
@@ -247,7 +280,6 @@ function renderHome(){
 function renderCategory(cat){
   view="category"
   currentCategory=cat
-  currentRecipe=null
   app.innerHTML=""
 
   const back=document.createElement("div")
@@ -289,10 +321,11 @@ function renderRecipe(recipe){
 
   card.innerHTML=`
     <div class="recipe-title">${recipe["name_"+language]}</div>
-    <div class="recipe-sub">${recipe["yield_"+language]}</div>
+    <div class="title-underline"></div>
 
-    <div class="meta">${recipe["time_"+language]}</div>
-    <div class="meta"><em>${recipe["holding_"+language]}</em></div>
+    <div class="recipe-meta">${recipe["yield_"+language]}</div>
+    <div class="recipe-meta"><em>${recipe["time_"+language]}</em></div>
+    <div class="recipe-meta"><em>${recipe["holding_"+language]}</em></div>
 
     <div class="columns">
       <div>
