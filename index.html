@@ -1,3 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huey Luey’s Recipe Tablet</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --orange:#f37021;
+  --green:#2e6b3a;
+  --light:#ffffff;
+  --soft:#f4f4f4;
+}
+
+body{
+  margin:0;
+  background:white;
+  font-family:'Poppins', sans-serif;
+  color:#1e1e1e;
+}
+
+/* ===== GREEN FRAME ===== */
+
+.frame{
+  border:8px solid var(--green);
+  min-height:100vh;
+  box-sizing:border-box;
+}
+
+/* ===== HEADER ===== */
+
+header{
+  padding:20px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:4px solid var(--orange);
+}
+
+header h1{
+  margin:0;
+  font-size:20px;
+  font-weight:700;
+  letter-spacing:.5px;
+  color:var(--green);
+}
+
+button{
+  background:var(--orange);
+  color:white;
+  border:none;
+  padding:8px 16px;
+  font-weight:600;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+#app{
+  max-width:1100px;
+  margin:40px auto;
+  padding:0 40px 60px 40px;
+}
+
+/* ===== SEARCH ===== */
+
+.search-wrapper{
+  position:relative;
+  margin-bottom:25px;
+}
+
+.search{
+  width:100%;
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  font-size:15px;
+}
+
+.dropdown{
+  position:absolute;
+  width:100%;
+  background:white;
+  border:1px solid #ccc;
+  border-radius:6px;
+  max-height:250px;
+  overflow-y:auto;
+  display:none;
+  z-index:10;
+}
+
+.dropdown div{
+  padding:10px;
+  cursor:pointer;
+}
+
+.dropdown div:hover{
+  background:#fff3ea;
+}
+
+/* ===== CATEGORY CARDS ===== */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:var(--soft);
+  border:2px solid #eee;
+  padding:20px;
+  text-align:center;
+  font-weight:600;
+  border-radius:8px;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.card:hover{
+  border-color:var(--orange);
+  background:#fff3ea;
+}
+
+/* ===== BACK BUTTON ===== */
+
+.back{
+  color:var(--orange);
+  font-weight:600;
+  margin-bottom:20px;
+  cursor:pointer;
+}
+
+/* ===== RECIPE CARD ===== */
+
+.recipe-card{
+  background:white;
+  border:3px solid var(--green);
+  border-radius:12px;
+  padding:35px 40px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.recipe-title{
+  text-align:center;
+  font-size:30px;
+  font-weight:700;
+  margin-bottom:8px;
+  color:var(--green);
+}
+
+.orange-line{
+  width:80px;
+  height:4px;
+  background:var(--orange);
+  margin:0 auto 25px auto;
+  border-radius:2px;
+}
+
+/* ===== META BOX ===== */
+
+.meta-box{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:15px;
+  margin-bottom:30px;
+}
+
+.meta-item{
+  background:var(--soft);
+  padding:12px 18px;
+  border-radius:8px;
+  font-size:14px;
+  font-weight:500;
+}
+
+/* ===== CONTENT ===== */
+
+.columns{
+  display:flex;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+.section-header{
+  font-weight:700;
+  margin-bottom:10px;
+  color:var(--green);
+  border-bottom:2px solid var(--orange);
+  padding-bottom:4px;
+}
+
+ul, ol{
+  padding-left:20px;
+  line-height:1.6;
+  font-size:14px;
+}
+
+/* ===== TABLET RESPONSIVE ===== */
+
+@media(max-width:900px){
+  #app{
+    padding:0 20px 50px 20px;
+  }
+  .columns{
+    flex-direction:column;
+    gap:30px;
+  }
+  .meta-box{
+    flex-direction:column;
+  }
+  .recipe-title{
+    font-size:24px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+<div class="frame">
+
+<header>
+  <h1>Huey Luey’s Recipe Tablet</h1>
+  <button id="langBtn">EN / ES</button>
+</header>
+
+<div id="app">Loading...</div>
+
+</div>
+
 <script>
 
 document.addEventListener("DOMContentLoaded", async function(){
@@ -9,34 +244,120 @@ let currentRecipe=null
 let RECIPES=[]
 
 const files=[
-  {file:"items_sides.json", category:"items_sides", category_en:"Items & Sides", category_es:"Artículos y Acompañantes"},
-  {file:"sauces_spices.json", category:"sauces_spices", category_en:"Sauces & Spices", category_es:"Salsas y Especias"},
-  {file:"dressings.json", category:"dressings", category_en:"Dressings", category_es:"Aderezos"},
-  {file:"food_prepped.json", category:"food_prepped", category_en:"Food Prepped", category_es:"Preparación"},
-  {file:"desserts.json", category:"desserts", category_en:"Desserts", category_es:"Postres"},
-  {file:"brunch.json", category:"brunch", category_en:"Brunch", category_es:"Brunch"}
+  {file:"items_sides.json", key:"items"},
+  {file:"sauces_spices.json", key:"sauces"},
+  {file:"dressings.json", key:"dressings"},
+  {file:"food_prepped.json", key:"prep"},
+  {file:"desserts.json", key:"desserts"},
+  {file:"brunch.json", key:"brunch"}
 ]
 
-/* ===== LOAD JSON FILES ===== */
-
 for(const f of files){
-  const res=await fetch(f.file)
-  const data=await res.json()
-
-  data.forEach(r=>{
-    r.category=f.category                // stable internal key
-    r.category_en=f.category_en          // display EN
-    r.category_es=f.category_es          // display ES
-    r.procedure_en=r.procedure_detailed_en
-    r.procedure_es=r.procedure_detailed_es
-  })
-
-  RECIPES=RECIPES.concat(data)
+  try{
+    const res=await fetch(f.file)
+    const data=await res.json()
+    data.forEach(r=>{
+      r.category=f.key
+      r.procedure_en=r.procedure_detailed_en
+      r.procedure_es=r.procedure_detailed_es
+    })
+    RECIPES=RECIPES.concat(data)
+  }catch(err){
+    console.error("Error loading",f.file)
+  }
 }
 
 const app=document.getElementById("app")
 
-/* ===== SEARCH ===== */
+function getCategories(){
+  return [...new Set(RECIPES.map(r=>r.category))]
+}
+
+function renderHome(){
+  view="home"
+  app.innerHTML=""
+  app.appendChild(createSearch())
+
+  const grid=document.createElement("div")
+  grid.className="grid"
+
+  getCategories().forEach(cat=>{
+    const card=document.createElement("div")
+    card.className="card"
+    card.innerText=cat.toUpperCase()
+    card.onclick=()=>renderCategory(cat)
+    grid.appendChild(card)
+  })
+
+  app.appendChild(grid)
+}
+
+function renderCategory(cat){
+  view="category"
+  currentCategory=cat
+  app.innerHTML=""
+
+  const back=document.createElement("div")
+  back.className="back"
+  back.innerText="← Back"
+  back.onclick=renderHome
+  app.appendChild(back)
+
+  app.appendChild(createSearch())
+
+  const grid=document.createElement("div")
+  grid.className="grid"
+
+  RECIPES.filter(r=>r.category===cat)
+    .forEach(r=>{
+      const card=document.createElement("div")
+      card.className="card"
+      card.innerText=r["name_"+language]
+      card.onclick=()=>renderRecipe(r)
+      grid.appendChild(card)
+    })
+
+  app.appendChild(grid)
+}
+
+function renderRecipe(recipe){
+  view="recipe"
+  currentRecipe=recipe
+  app.innerHTML=""
+
+  const back=document.createElement("div")
+  back.className="back"
+  back.innerText="← Back"
+  back.onclick=()=>renderCategory(recipe.category)
+  app.appendChild(back)
+
+  const card=document.createElement("div")
+  card.className="recipe-card"
+
+  card.innerHTML=`
+    <div class="recipe-title">${recipe["name_"+language]}</div>
+    <div class="orange-line"></div>
+
+    <div class="meta-box">
+      <div class="meta-item">${recipe["yield_"+language] || ""}</div>
+      <div class="meta-item">${recipe["time_"+language] || ""}</div>
+      <div class="meta-item">${recipe["holding_"+language] || ""}</div>
+    </div>
+
+    <div class="columns">
+      <div style="flex:1">
+        <div class="section-header">INGREDIENTS</div>
+        <ul>${(recipe["ingredients_"+language]||[]).map(i=>"<li>"+i+"</li>").join("")}</ul>
+      </div>
+      <div style="flex:1">
+        <div class="section-header">PROCEDURE</div>
+        <ol>${(recipe["procedure_"+language]||[]).map(p=>"<li>"+p+"</li>").join("")}</ol>
+      </div>
+    </div>
+  `
+
+  app.appendChild(card)
+}
 
 function createSearch(){
   const wrapper=document.createElement("div")
@@ -73,107 +394,6 @@ function createSearch(){
   return wrapper
 }
 
-/* ===== HOME ===== */
-
-function renderHome(){
-  view="home"
-  currentCategory=null
-  currentRecipe=null
-  app.innerHTML=""
-
-  app.appendChild(createSearch())
-
-  const grid=document.createElement("div")
-  grid.className="grid"
-
-  const uniqueCategories=[...new Set(RECIPES.map(r=>r.category))]
-
-  uniqueCategories.forEach(catKey=>{
-    const sample=RECIPES.find(r=>r.category===catKey)
-    const displayName=sample["category_"+language]
-
-    const card=document.createElement("div")
-    card.className="card"
-    card.innerText=displayName
-    card.onclick=()=>renderCategory(catKey)
-    grid.appendChild(card)
-  })
-
-  app.appendChild(grid)
-}
-
-/* ===== CATEGORY ===== */
-
-function renderCategory(catKey){
-  view="category"
-  currentCategory=catKey
-  currentRecipe=null
-  app.innerHTML=""
-
-  const back=document.createElement("div")
-  back.className="back"
-  back.innerText="← Back"
-  back.onclick=renderHome
-  app.appendChild(back)
-
-  app.appendChild(createSearch())
-
-  const grid=document.createElement("div")
-  grid.className="grid"
-
-  RECIPES.filter(r=>r.category===catKey)
-    .forEach(r=>{
-      const card=document.createElement("div")
-      card.className="card"
-      card.innerText=r["name_"+language]
-      card.onclick=()=>renderRecipe(r)
-      grid.appendChild(card)
-    })
-
-  app.appendChild(grid)
-}
-
-/* ===== RECIPE ===== */
-
-function renderRecipe(recipe){
-  view="recipe"
-  currentRecipe=recipe
-  app.innerHTML=""
-
-  const back=document.createElement("div")
-  back.className="back"
-  back.innerText="← Back"
-  back.onclick=()=>renderCategory(recipe.category)
-  app.appendChild(back)
-
-  const card=document.createElement("div")
-  card.className="recipe-card"
-
-  card.innerHTML=`
-    <div class="recipe-title">${recipe["name_"+language]}</div>
-    <div class="title-underline"></div>
-
-    <div class="recipe-meta">${recipe["yield_"+language]}</div>
-    <div class="recipe-meta">${recipe["time_"+language]}</div>
-    <div class="recipe-meta"><em>${recipe["holding_"+language]}</em></div>
-
-    <div class="columns">
-      <div>
-        <div class="section-header">INGREDIENTS</div>
-        <ul>${recipe["ingredients_"+language].map(i=>"<li>"+i+"</li>").join("")}</ul>
-      </div>
-      <div>
-        <div class="section-header">PROCEDURE</div>
-        <ol>${recipe["procedure_"+language].map(p=>"<li>"+p+"</li>").join("")}</ol>
-      </div>
-    </div>
-  `
-
-  app.appendChild(card)
-}
-
-/* ===== TOGGLE (FIXED FOREVER) ===== */
-
 document.getElementById("langBtn").onclick=function(){
   language=language==="en"?"es":"en"
 
@@ -182,9 +402,11 @@ document.getElementById("langBtn").onclick=function(){
   if(view==="recipe") renderRecipe(currentRecipe)
 }
 
-/* ===== START ===== */
-
 renderHome()
 
 })
+
 </script>
+
+</body>
+</html>
