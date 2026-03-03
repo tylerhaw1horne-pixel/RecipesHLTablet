@@ -6,30 +6,40 @@
 <title>Huey Luey Kitchen</title>
 
 <style>
+
+:root{
+  --orange:#f37021;
+  --green:#2e6b3a;
+  --light:#ffffff;
+  --soft:#f6f6f6;
+}
+
 body{
   margin:0;
-  font-family:Arial, sans-serif;
-  background:#ffffff;
+  font-family:Garamond, serif;
+  background:white;
   color:#222;
 }
 
 header{
-  background:#f37021;
+  background:var(--orange);
   color:white;
-  padding:20px 30px;
+  padding:20px 40px;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  font-family:Arial, sans-serif;
 }
 
 header h1{
   margin:0;
-  font-size:22px;
+  font-size:20px;
+  letter-spacing:.5px;
 }
 
 button{
   background:white;
-  color:#f37021;
+  color:var(--orange);
   border:none;
   padding:8px 14px;
   font-weight:bold;
@@ -38,35 +48,38 @@ button{
 }
 
 #app{
-  padding:30px;
+  max-width:1100px;
+  margin:50px auto;
+  padding:0 30px;
 }
 
 .search-wrapper{
   position:relative;
-  margin-bottom:25px;
+  margin-bottom:30px;
 }
 
 .search{
   width:100%;
-  padding:12px;
+  padding:14px;
   border:1px solid #ddd;
-  border-radius:6px;
+  border-radius:8px;
+  font-size:16px;
 }
 
 .dropdown{
   position:absolute;
-  top:45px;
   width:100%;
   background:white;
   border:1px solid #ddd;
-  border-radius:6px;
-  max-height:250px;
+  border-radius:8px;
+  max-height:300px;
   overflow-y:auto;
+  display:none;
   z-index:10;
 }
 
 .dropdown div{
-  padding:10px;
+  padding:12px;
   cursor:pointer;
 }
 
@@ -76,56 +89,90 @@ button{
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:25px;
 }
 
 .card{
   border:1px solid #eee;
-  padding:20px;
-  border-radius:8px;
-  cursor:pointer;
-  background:#fafafa;
-  font-weight:bold;
+  padding:25px;
   text-align:center;
+  font-family:Arial, sans-serif;
+  cursor:pointer;
+  transition:.2s;
 }
 
 .card:hover{
   background:#fff3ea;
-  border-color:#f37021;
+  border-color:var(--orange);
 }
 
 .back{
-  color:#f37021;
+  color:var(--orange);
   font-weight:bold;
-  margin-bottom:20px;
+  margin-bottom:25px;
   cursor:pointer;
+  font-family:Arial, sans-serif;
+}
+
+/* ===== RECIPE CARD STYLE ===== */
+
+.recipe-card{
+  background:white;
+  padding:60px 70px;
+  border:1px solid #eee;
 }
 
 .recipe-title{
-  font-size:26px;
+  text-align:center;
+  font-size:38px;
+  font-weight:bold;
   margin-bottom:10px;
 }
 
-.meta{
+.recipe-sub{
+  text-align:center;
+  font-style:italic;
+  margin-bottom:40px;
   color:#666;
-  margin-bottom:8px;
+}
+
+.meta{
+  text-align:center;
+  margin-bottom:30px;
+  font-size:15px;
+}
+
+.section-header{
+  font-family:Arial, sans-serif;
+  font-weight:bold;
+  margin-top:40px;
+  margin-bottom:15px;
+  border-bottom:2px solid var(--orange);
+  padding-bottom:6px;
 }
 
 .columns{
   display:flex;
-  gap:50px;
+  gap:70px;
   flex-wrap:wrap;
 }
 
-.section-title{
-  font-weight:bold;
-  margin-bottom:10px;
-  color:#f37021;
+.columns ul,
+.columns ol{
+  padding-left:20px;
+  line-height:1.6;
 }
+
+.plating-box{
+  margin-top:50px;
+  padding:20px;
+  background:var(--soft);
+  border-left:4px solid var(--orange);
+}
+
 </style>
 </head>
-
 <body>
 
 <header>
@@ -136,6 +183,7 @@ button{
 <div id="app">Loading...</div>
 
 <script>
+
 document.addEventListener("DOMContentLoaded", async function(){
 
 let language="en"
@@ -145,19 +193,20 @@ let currentRecipe=null
 let RECIPES=[]
 
 const files=[
-  {file:"items_sides.json", category:"Sides"},
-  {file:"sauces_spices.json", category:"Sauces"},
-  {file:"dressings.json", category:"Dressings"},
-  {file:"food_prepped.json", category:"Prepped Food"},
-  {file:"desserts.json", category:"Desserts"},
-  {file:"brunch.json", category:"Brunch"}
+  {file:"items_sides.json", category_en:"Items & Sides", category_es:"Artículos y Acompañantes"},
+  {file:"sauces_spices.json", category_en:"Sauces & Spices", category_es:"Salsas y Especias"},
+  {file:"dressings.json", category_en:"Dressings", category_es:"Aderezos"},
+  {file:"food_prepped.json", category_en:"Food Prepped", category_es:"Preparación"},
+  {file:"desserts.json", category_en:"Desserts", category_es:"Postres"},
+  {file:"brunch.json", category_en:"Brunch", category_es:"Brunch"}
 ]
 
 for(const f of files){
   const res=await fetch(f.file)
   const data=await res.json()
   data.forEach(r=>{
-    r.category=f.category
+    r.category_en=f.category_en
+    r.category_es=f.category_es
     r.procedure_en=r.procedure_detailed_en
     r.procedure_es=r.procedure_detailed_es
   })
@@ -166,50 +215,8 @@ for(const f of files){
 
 const app=document.getElementById("app")
 
-function renderSearchBar(){
-  const wrapper=document.createElement("div")
-  wrapper.className="search-wrapper"
-
-  const input=document.createElement("input")
-  input.className="search"
-  input.placeholder="Search recipes..."
-
-  const dropdown=document.createElement("div")
-  dropdown.className="dropdown"
-  dropdown.style.display="none"
-
-  input.oninput=()=>{
-    const val=input.value.toLowerCase()
-    dropdown.innerHTML=""
-    if(!val){
-      dropdown.style.display="none"
-      return
-    }
-
-    const matches=RECIPES.filter(r =>
-      r["name_"+language].toLowerCase().includes(val)
-    )
-
-    matches.forEach(r=>{
-      const item=document.createElement("div")
-      item.innerText=r["name_"+language]
-      item.onclick=()=>{
-        dropdown.style.display="none"
-        renderRecipe(r)
-      }
-      dropdown.appendChild(item)
-    })
-
-    dropdown.style.display=matches.length?"block":"none"
-  }
-
-  wrapper.appendChild(input)
-  wrapper.appendChild(dropdown)
-  return wrapper
-}
-
 function getCategories(){
-  return [...new Set(RECIPES.map(r=>r.category))]
+  return [...new Map(RECIPES.map(r=>[r.category_en,r])).values()]
 }
 
 function renderHome(){
@@ -218,12 +225,15 @@ function renderHome(){
   currentRecipe=null
   app.innerHTML=""
 
-  app.appendChild(renderSearchBar())
+  const searchWrapper=createSearch()
+  app.appendChild(searchWrapper)
 
   const grid=document.createElement("div")
   grid.className="grid"
 
-  getCategories().forEach(cat=>{
+  const cats=[...new Set(RECIPES.map(r=>r["category_"+language]))]
+
+  cats.forEach(cat=>{
     const card=document.createElement("div")
     card.className="card"
     card.innerText=cat
@@ -246,18 +256,19 @@ function renderCategory(cat){
   back.onclick=renderHome
   app.appendChild(back)
 
-  app.appendChild(renderSearchBar())
+  app.appendChild(createSearch())
 
   const grid=document.createElement("div")
   grid.className="grid"
 
-  RECIPES.filter(r=>r.category===cat).forEach(r=>{
-    const card=document.createElement("div")
-    card.className="card"
-    card.innerText=r["name_"+language]
-    card.onclick=()=>renderRecipe(r)
-    grid.appendChild(card)
-  })
+  RECIPES.filter(r=>r["category_"+language]===cat)
+    .forEach(r=>{
+      const card=document.createElement("div")
+      card.className="card"
+      card.innerText=r["name_"+language]
+      card.onclick=()=>renderRecipe(r)
+      grid.appendChild(card)
+    })
 
   app.appendChild(grid)
 }
@@ -270,29 +281,67 @@ function renderRecipe(recipe){
   const back=document.createElement("div")
   back.className="back"
   back.innerText="← Back"
-  back.onclick=()=>renderCategory(recipe.category)
+  back.onclick=()=>renderCategory(recipe["category_"+language])
   app.appendChild(back)
 
-  app.appendChild(renderSearchBar())
+  const card=document.createElement("div")
+  card.className="recipe-card"
 
-  const page=document.createElement("div")
-  page.innerHTML=`
+  card.innerHTML=`
     <div class="recipe-title">${recipe["name_"+language]}</div>
-    <div class="meta">${recipe["yield_"+language]} | ${recipe["time_"+language]}</div>
+    <div class="recipe-sub">${recipe["yield_"+language]}</div>
+
+    <div class="meta">${recipe["time_"+language]}</div>
     <div class="meta"><em>${recipe["holding_"+language]}</em></div>
 
     <div class="columns">
       <div>
-        <div class="section-title">Ingredients</div>
+        <div class="section-header">INGREDIENTS</div>
         <ul>${recipe["ingredients_"+language].map(i=>"<li>"+i+"</li>").join("")}</ul>
       </div>
       <div>
-        <div class="section-title">Procedure</div>
+        <div class="section-header">PROCEDURE</div>
         <ol>${recipe["procedure_"+language].map(p=>"<li>"+p+"</li>").join("")}</ol>
       </div>
     </div>
   `
-  app.appendChild(page)
+
+  app.appendChild(card)
+}
+
+function createSearch(){
+  const wrapper=document.createElement("div")
+  wrapper.className="search-wrapper"
+
+  const input=document.createElement("input")
+  input.className="search"
+  input.placeholder="Search recipes..."
+
+  const dropdown=document.createElement("div")
+  dropdown.className="dropdown"
+
+  input.oninput=()=>{
+    const val=input.value.toLowerCase()
+    dropdown.innerHTML=""
+    if(!val){dropdown.style.display="none";return}
+
+    const matches=RECIPES.filter(r =>
+      r["name_"+language].toLowerCase().includes(val)
+    )
+
+    matches.forEach(r=>{
+      const div=document.createElement("div")
+      div.innerText=r["name_"+language]
+      div.onclick=()=>renderRecipe(r)
+      dropdown.appendChild(div)
+    })
+
+    dropdown.style.display=matches.length?"block":"none"
+  }
+
+  wrapper.appendChild(input)
+  wrapper.appendChild(dropdown)
+  return wrapper
 }
 
 document.getElementById("langBtn").onclick=function(){
