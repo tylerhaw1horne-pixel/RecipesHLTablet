@@ -5,10 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Huey Luey’s Recipe Tablet</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+<style>
 :root{
   --orange:#f37021;
   --green:#2e6b3a;
@@ -24,16 +23,14 @@ body{
   color:#1e1e1e;
 }
 
-/* ===== FRAME ===== */
-
+/* FRAME */
 .frame{
   border:6px solid var(--green);
   min-height:100vh;
   box-sizing:border-box;
 }
 
-/* ===== HEADER ===== */
-
+/* HEADER */
 header{
   padding:20px 40px;
   display:flex;
@@ -44,7 +41,7 @@ header{
 
 header h1{
   margin:0;
-  font-size:20px;
+  font-size:18px;
   font-weight:800;
   letter-spacing:1px;
   color:var(--green);
@@ -55,28 +52,20 @@ button{
   background:var(--orange);
   color:white;
   border:none;
-  padding:8px 18px;
+  padding:8px 16px;
   font-weight:600;
   border-radius:6px;
   cursor:pointer;
-  transition:.2s;
 }
 
-button:hover{
-  transform:translateY(-2px);
-  box-shadow:0 6px 14px rgba(0,0,0,.15);
-}
-
-/* ===== MAIN ===== */
-
+/* MAIN */
 #app{
   max-width:1000px;
   margin:40px auto;
   padding:0 35px 60px 35px;
 }
 
-/* ===== SEARCH ===== */
-
+/* SEARCH */
 .search-wrapper{
   position:relative;
   margin-bottom:25px;
@@ -89,12 +78,6 @@ button:hover{
   border-radius:8px;
   font-size:14px;
   outline:none;
-  transition:.2s;
-}
-
-.search:focus{
-  border-color:var(--orange);
-  box-shadow:0 0 0 3px rgba(243,112,33,.15);
 }
 
 .dropdown{
@@ -108,21 +91,18 @@ button:hover{
   display:none;
   z-index:10;
   box-shadow:0 12px 30px rgba(0,0,0,.08);
-  animation:fadeIn .2s ease-out;
 }
 
 .dropdown div{
   padding:10px 16px;
   cursor:pointer;
-  font-size:14px;
 }
 
 .dropdown div:hover{
   background:#fff4ec;
 }
 
-/* ===== CATEGORY GRID ===== */
-
+/* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
@@ -137,43 +117,28 @@ button:hover{
   font-weight:700;
   border-radius:10px;
   cursor:pointer;
-  transition:.2s;
-  font-size:14px;
 }
 
-.card:hover{
-  border-color:var(--orange);
-  background:#fff3ea;
-  transform:translateY(-3px);
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-/* ===== BACK ===== */
-
+/* BACK */
 .back{
   color:var(--orange);
   font-weight:700;
   margin-bottom:20px;
   cursor:pointer;
-  font-size:14px;
 }
 
-/* ===== RECIPE CARD ===== */
-
+/* RECIPE CARD */
 .recipe-card{
   background:white;
   border:3px solid var(--green);
   border-radius:16px;
   padding:35px 40px;
   box-shadow:0 15px 40px rgba(0,0,0,.07);
-  animation:fadeUp .3s ease-out;
 }
-
-/* ===== TITLE ===== */
 
 .recipe-title{
   text-align:center;
-  font-size:30px;
+  font-size:28px;
   font-weight:800;
   color:var(--green);
   margin-bottom:6px;
@@ -184,10 +149,7 @@ button:hover{
   height:4px;
   background:var(--orange);
   margin:0 auto 20px auto;
-  border-radius:2px;
 }
-
-/* ===== IMAGE BLOCK ===== */
 
 .recipe-image{
   width:100%;
@@ -195,10 +157,7 @@ button:hover{
   object-fit:cover;
   border-radius:14px;
   margin-bottom:25px;
-  box-shadow:0 12px 25px rgba(0,0,0,.15);
 }
-
-/* ===== META ===== */
 
 .meta-box{
   display:flex;
@@ -210,14 +169,12 @@ button:hover{
 
 .meta-item{
   background:var(--soft);
-  padding:10px 18px;
-  border-radius:25px;
+  padding:8px 16px;
+  border-radius:20px;
   font-size:12px;
   font-weight:600;
   border:2px solid var(--border);
 }
-
-/* ===== CONTENT ===== */
 
 .columns{
   display:flex;
@@ -228,7 +185,7 @@ button:hover{
 .section-header{
   font-weight:800;
   font-size:14px;
-  margin-bottom:12px;
+  margin-bottom:10px;
   color:var(--green);
   border-bottom:3px solid var(--orange);
   padding-bottom:5px;
@@ -238,14 +195,7 @@ ul, ol{
   padding-left:18px;
   line-height:1.6;
   font-size:13px;
-  margin:0;
 }
-
-li{
-  margin-bottom:6px;
-}
-
-/* ===== PLATING BOX ===== */
 
 .plating-box{
   margin-top:35px;
@@ -254,42 +204,22 @@ li{
   border-left:6px solid var(--orange);
   border-radius:8px;
 }
+</style>
+</head>
 
-.plating-box h3{
-  margin-top:0;
-  font-size:14px;
-  font-weight:800;
-  color:var(--green);
-}
+<body>
+<div class="frame">
 
-/* ===== ANIMATIONS ===== */
+<header>
+  <h1>Huey Luey’s Recipe Tablet</h1>
+  <button id="langBtn">ES</button>
+</header>
 
-@keyframes fadeUp{
-  from{opacity:0; transform:translateY(10px);}
-  to{opacity:1; transform:translateY(0);}
-}
+<div id="app"></div>
 
-@keyframes fadeIn{
-  from{opacity:0;}
-  to{opacity:1;}
-}
+</div>
 
-/* ===== RESPONSIVE ===== */
-
-@media(max-width:900px){
-  #app{
-    padding:0 20px 50px 20px;
-  }
-  .columns{
-    flex-direction:column;
-    gap:28px;
-  }
-  .recipe-title{
-    font-size:24px;
-  }
-}
 <script>
-
 document.addEventListener("DOMContentLoaded", async function(){
 
 let language="en"
@@ -419,7 +349,6 @@ function renderRecipe(recipe){
     </div>
   ` : ""}
 `
-
   app.appendChild(card)
 }
 
@@ -469,7 +398,6 @@ document.getElementById("langBtn").onclick=function(){
 renderHome()
 
 })
-
 </script>
 
 </body>
