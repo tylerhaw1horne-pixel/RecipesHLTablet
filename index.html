@@ -6,14 +6,15 @@
 <title>Huey Luey’s Recipe Tablet</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
+<script>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
 :root{
   --orange:#f37021;
   --green:#2e6b3a;
   --light:#ffffff;
-  --soft:#f4f4f4;
+  --soft:#f5f5f5;
+  --border:#e5e5e5;
 }
 
 body{
@@ -23,10 +24,10 @@ body{
   color:#1e1e1e;
 }
 
-/* ===== GREEN FRAME ===== */
+/* ===== FRAME ===== */
 
 .frame{
-  border:8px solid var(--green);
+  border:6px solid var(--green);
   min-height:100vh;
   box-sizing:border-box;
 }
@@ -44,25 +45,34 @@ header{
 header h1{
   margin:0;
   font-size:20px;
-  font-weight:700;
-  letter-spacing:.5px;
+  font-weight:800;
+  letter-spacing:1px;
   color:var(--green);
+  text-transform:uppercase;
 }
 
 button{
   background:var(--orange);
   color:white;
   border:none;
-  padding:8px 16px;
+  padding:8px 18px;
   font-weight:600;
   border-radius:6px;
   cursor:pointer;
+  transition:.2s;
 }
 
+button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 14px rgba(0,0,0,.15);
+}
+
+/* ===== MAIN ===== */
+
 #app{
-  max-width:1100px;
+  max-width:1000px;
   margin:40px auto;
-  padding:0 40px 60px 40px;
+  padding:0 35px 60px 35px;
 }
 
 /* ===== SEARCH ===== */
@@ -74,64 +84,78 @@ button{
 
 .search{
   width:100%;
-  padding:12px;
-  border:1px solid #ccc;
-  border-radius:6px;
-  font-size:15px;
+  padding:12px 16px;
+  border:2px solid var(--border);
+  border-radius:8px;
+  font-size:14px;
+  outline:none;
+  transition:.2s;
+}
+
+.search:focus{
+  border-color:var(--orange);
+  box-shadow:0 0 0 3px rgba(243,112,33,.15);
 }
 
 .dropdown{
   position:absolute;
   width:100%;
   background:white;
-  border:1px solid #ccc;
-  border-radius:6px;
-  max-height:250px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  max-height:240px;
   overflow-y:auto;
   display:none;
   z-index:10;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+  animation:fadeIn .2s ease-out;
 }
 
 .dropdown div{
-  padding:10px;
+  padding:10px 16px;
   cursor:pointer;
+  font-size:14px;
 }
 
 .dropdown div:hover{
-  background:#fff3ea;
+  background:#fff4ec;
 }
 
-/* ===== CATEGORY CARDS ===== */
+/* ===== CATEGORY GRID ===== */
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:18px;
 }
 
 .card{
   background:var(--soft);
-  border:2px solid #eee;
+  border:2px solid var(--border);
   padding:20px;
   text-align:center;
-  font-weight:600;
-  border-radius:8px;
+  font-weight:700;
+  border-radius:10px;
   cursor:pointer;
   transition:.2s;
+  font-size:14px;
 }
 
 .card:hover{
   border-color:var(--orange);
   background:#fff3ea;
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
-/* ===== BACK BUTTON ===== */
+/* ===== BACK ===== */
 
 .back{
   color:var(--orange);
-  font-weight:600;
+  font-weight:700;
   margin-bottom:20px;
   cursor:pointer;
+  font-size:14px;
 }
 
 /* ===== RECIPE CARD ===== */
@@ -139,68 +163,118 @@ button{
 .recipe-card{
   background:white;
   border:3px solid var(--green);
-  border-radius:12px;
+  border-radius:16px;
   padding:35px 40px;
-  box-shadow:0 8px 25px rgba(0,0,0,.08);
+  box-shadow:0 15px 40px rgba(0,0,0,.07);
+  animation:fadeUp .3s ease-out;
 }
+
+/* ===== TITLE ===== */
 
 .recipe-title{
   text-align:center;
   font-size:30px;
-  font-weight:700;
-  margin-bottom:8px;
+  font-weight:800;
   color:var(--green);
+  margin-bottom:6px;
 }
 
 .orange-line{
-  width:80px;
+  width:70px;
   height:4px;
   background:var(--orange);
-  margin:0 auto 25px auto;
+  margin:0 auto 20px auto;
   border-radius:2px;
 }
 
-/* ===== META BOX ===== */
+/* ===== IMAGE BLOCK ===== */
+
+.recipe-image{
+  width:100%;
+  max-height:350px;
+  object-fit:cover;
+  border-radius:14px;
+  margin-bottom:25px;
+  box-shadow:0 12px 25px rgba(0,0,0,.15);
+}
+
+/* ===== META ===== */
 
 .meta-box{
   display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
+  justify-content:center;
   gap:15px;
+  flex-wrap:wrap;
   margin-bottom:30px;
 }
 
 .meta-item{
   background:var(--soft);
-  padding:12px 18px;
-  border-radius:8px;
-  font-size:14px;
-  font-weight:500;
+  padding:10px 18px;
+  border-radius:25px;
+  font-size:12px;
+  font-weight:600;
+  border:2px solid var(--border);
 }
 
 /* ===== CONTENT ===== */
 
 .columns{
   display:flex;
-  gap:50px;
+  gap:40px;
   flex-wrap:wrap;
 }
 
 .section-header{
-  font-weight:700;
-  margin-bottom:10px;
+  font-weight:800;
+  font-size:14px;
+  margin-bottom:12px;
   color:var(--green);
-  border-bottom:2px solid var(--orange);
-  padding-bottom:4px;
+  border-bottom:3px solid var(--orange);
+  padding-bottom:5px;
 }
 
 ul, ol{
-  padding-left:20px;
+  padding-left:18px;
   line-height:1.6;
-  font-size:14px;
+  font-size:13px;
+  margin:0;
 }
 
-/* ===== TABLET RESPONSIVE ===== */
+li{
+  margin-bottom:6px;
+}
+
+/* ===== PLATING BOX ===== */
+
+.plating-box{
+  margin-top:35px;
+  padding:18px 20px;
+  background:#fff7f2;
+  border-left:6px solid var(--orange);
+  border-radius:8px;
+}
+
+.plating-box h3{
+  margin-top:0;
+  font-size:14px;
+  font-weight:800;
+  color:var(--green);
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(10px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+/* ===== RESPONSIVE ===== */
 
 @media(max-width:900px){
   #app{
@@ -208,31 +282,12 @@ ul, ol{
   }
   .columns{
     flex-direction:column;
-    gap:30px;
-  }
-  .meta-box{
-    flex-direction:column;
+    gap:28px;
   }
   .recipe-title{
     font-size:24px;
   }
 }
-
-</style>
-</head>
-
-<body>
-<div class="frame">
-
-<header>
-  <h1>Huey Luey’s Recipe Tablet</h1>
-  <button id="langBtn">EN / ES</button>
-</header>
-
-<div id="app">Loading...</div>
-
-</div>
-
 <script>
 
 document.addEventListener("DOMContentLoaded", async function(){
@@ -335,26 +390,35 @@ function renderRecipe(recipe){
   card.className="recipe-card"
 
   card.innerHTML=`
-    <div class="recipe-title">${recipe["name_"+language]}</div>
-    <div class="orange-line"></div>
+  <div class="recipe-title">${recipe["name_"+language]}</div>
+  <div class="orange-line"></div>
 
-    <div class="meta-box">
-      <div class="meta-item">${recipe["yield_"+language] || ""}</div>
-      <div class="meta-item">${recipe["time_"+language] || ""}</div>
-      <div class="meta-item">${recipe["holding_"+language] || ""}</div>
-    </div>
+  ${recipe.image ? `<img src="${recipe.image}" class="recipe-image">` : ""}
 
-    <div class="columns">
-      <div style="flex:1">
-        <div class="section-header">INGREDIENTS</div>
-        <ul>${(recipe["ingredients_"+language]||[]).map(i=>"<li>"+i+"</li>").join("")}</ul>
-      </div>
-      <div style="flex:1">
-        <div class="section-header">PROCEDURE</div>
-        <ol>${(recipe["procedure_"+language]||[]).map(p=>"<li>"+p+"</li>").join("")}</ol>
-      </div>
+  <div class="meta-box">
+    <div class="meta-item">${recipe["yield_"+language] || ""}</div>
+    <div class="meta-item">${recipe["time_"+language] || ""}</div>
+    <div class="meta-item">${recipe["holding_"+language] || ""}</div>
+  </div>
+
+  <div class="columns">
+    <div style="flex:1">
+      <div class="section-header">INGREDIENTS</div>
+      <ul>${(recipe["ingredients_"+language]||[]).map(i=>"<li>"+i+"</li>").join("")}</ul>
     </div>
-  `
+    <div style="flex:1">
+      <div class="section-header">PROCEDURE</div>
+      <ol>${(recipe["procedure_"+language]||[]).map(p=>"<li>"+p+"</li>").join("")}</ol>
+    </div>
+  </div>
+
+  ${recipe.plating ? `
+    <div class="plating-box">
+      <h3>PLATING</h3>
+      <p>${recipe["plating_"+language] || recipe.plating}</p>
+    </div>
+  ` : ""}
+`
 
   app.appendChild(card)
 }
