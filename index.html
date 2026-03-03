@@ -16,7 +16,7 @@ body{
 header{
   background:#f37021;
   color:white;
-  padding:20px;
+  padding:20px 30px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -31,7 +31,7 @@ button{
   background:white;
   color:#f37021;
   border:none;
-  padding:10px 18px;
+  padding:8px 14px;
   font-weight:bold;
   border-radius:6px;
   cursor:pointer;
@@ -41,12 +41,37 @@ button{
   padding:30px;
 }
 
+.search-wrapper{
+  position:relative;
+  margin-bottom:25px;
+}
+
 .search{
   width:100%;
   padding:12px;
-  margin-bottom:25px;
   border:1px solid #ddd;
   border-radius:6px;
+}
+
+.dropdown{
+  position:absolute;
+  top:45px;
+  width:100%;
+  background:white;
+  border:1px solid #ddd;
+  border-radius:6px;
+  max-height:250px;
+  overflow-y:auto;
+  z-index:10;
+}
+
+.dropdown div{
+  padding:10px;
+  cursor:pointer;
+}
+
+.dropdown div:hover{
+  background:#fff3ea;
 }
 
 .grid{
@@ -111,7 +136,6 @@ button{
 <div id="app">Loading...</div>
 
 <script>
-
 document.addEventListener("DOMContentLoaded", async function(){
 
 let language="en"
@@ -120,7 +144,7 @@ let currentCategory=null
 let currentRecipe=null
 let RECIPES=[]
 
-const files = [
+const files=[
   {file:"items_sides.json", category:"Sides"},
   {file:"sauces_spices.json", category:"Sauces"},
   {file:"dressings.json", category:"Dressings"},
@@ -129,26 +153,60 @@ const files = [
   {file:"brunch.json", category:"Brunch"}
 ]
 
-/* ================= LOAD ALL JSON FILES ================= */
-
 for(const f of files){
-  try{
-    const res = await fetch(f.file)
-    const data = await res.json()
-    data.forEach(r=>{
-      r.category=f.category
-      r.procedure_en=r.procedure_detailed_en
-      r.procedure_es=r.procedure_detailed_es
-    })
-    RECIPES=RECIPES.concat(data)
-  }catch(err){
-    console.error("Error loading", f.file, err)
-  }
+  const res=await fetch(f.file)
+  const data=await res.json()
+  data.forEach(r=>{
+    r.category=f.category
+    r.procedure_en=r.procedure_detailed_en
+    r.procedure_es=r.procedure_detailed_es
+  })
+  RECIPES=RECIPES.concat(data)
 }
 
-/* ================= RENDER FUNCTIONS ================= */
-
 const app=document.getElementById("app")
+
+function renderSearchBar(){
+  const wrapper=document.createElement("div")
+  wrapper.className="search-wrapper"
+
+  const input=document.createElement("input")
+  input.className="search"
+  input.placeholder="Search recipes..."
+
+  const dropdown=document.createElement("div")
+  dropdown.className="dropdown"
+  dropdown.style.display="none"
+
+  input.oninput=()=>{
+    const val=input.value.toLowerCase()
+    dropdown.innerHTML=""
+    if(!val){
+      dropdown.style.display="none"
+      return
+    }
+
+    const matches=RECIPES.filter(r =>
+      r["name_"+language].toLowerCase().includes(val)
+    )
+
+    matches.forEach(r=>{
+      const item=document.createElement("div")
+      item.innerText=r["name_"+language]
+      item.onclick=()=>{
+        dropdown.style.display="none"
+        renderRecipe(r)
+      }
+      dropdown.appendChild(item)
+    })
+
+    dropdown.style.display=matches.length?"block":"none"
+  }
+
+  wrapper.appendChild(input)
+  wrapper.appendChild(dropdown)
+  return wrapper
+}
 
 function getCategories(){
   return [...new Set(RECIPES.map(r=>r.category))]
@@ -160,11 +218,7 @@ function renderHome(){
   currentRecipe=null
   app.innerHTML=""
 
-  const search=document.createElement("input")
-  search.className="search"
-  search.placeholder="Search..."
-  search.oninput=()=>renderSearch(search.value)
-  app.appendChild(search)
+  app.appendChild(renderSearchBar())
 
   const grid=document.createElement("div")
   grid.className="grid"
@@ -192,6 +246,8 @@ function renderCategory(cat){
   back.onclick=renderHome
   app.appendChild(back)
 
+  app.appendChild(renderSearchBar())
+
   const grid=document.createElement("div")
   grid.className="grid"
 
@@ -217,8 +273,9 @@ function renderRecipe(recipe){
   back.onclick=()=>renderCategory(recipe.category)
   app.appendChild(back)
 
-  const page=document.createElement("div")
+  app.appendChild(renderSearchBar())
 
+  const page=document.createElement("div")
   page.innerHTML=`
     <div class="recipe-title">${recipe["name_"+language]}</div>
     <div class="meta">${recipe["yield_"+language]} | ${recipe["time_"+language]}</div>
@@ -238,35 +295,6 @@ function renderRecipe(recipe){
   app.appendChild(page)
 }
 
-function renderSearch(text){
-  view="search"
-  app.innerHTML=""
-
-  const back=document.createElement("div")
-  back.className="back"
-  back.innerText="← Back"
-  back.onclick=renderHome
-  app.appendChild(back)
-
-  const grid=document.createElement("div")
-  grid.className="grid"
-
-  RECIPES.forEach(r=>{
-    const name=r["name_"+language]
-    if(name.toLowerCase().includes(text.toLowerCase())){
-      const card=document.createElement("div")
-      card.className="card"
-      card.innerText=name
-      card.onclick=()=>renderRecipe(r)
-      grid.appendChild(card)
-    }
-  })
-
-  app.appendChild(grid)
-}
-
-/* ================= LANGUAGE TOGGLE FIXED ================= */
-
 document.getElementById("langBtn").onclick=function(){
   language=language==="en"?"es":"en"
 
@@ -275,12 +303,9 @@ document.getElementById("langBtn").onclick=function(){
   if(view==="recipe") renderRecipe(currentRecipe)
 }
 
-/* ================= START ================= */
-
 renderHome()
 
 })
-
 </script>
 
 </body>
