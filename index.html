@@ -1,132 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huey Luey Recipes</title>
+
+<style>
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#111;
+  color:white;
+}
+
+header {
+  padding:20px;
+  background:#1c1c1c;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+button {
+  padding:10px 18px;
+  background:#ff6600;
+  border:none;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  border-radius:6px;
+}
+
+#app {
+  padding:30px;
+}
+
+.search {
+  width:100%;
+  padding:12px;
+  margin-bottom:20px;
+  border-radius:6px;
+  border:none;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:20px;
+}
+
+.card {
+  background:#222;
+  padding:20px;
+  border-radius:10px;
+  cursor:pointer;
+  text-align:center;
+  font-weight:bold;
+}
+
+.card:hover {
+  background:#333;
+}
+
+.back {
+  margin-bottom:20px;
+  cursor:pointer;
+  font-weight:bold;
+  color:#ff6600;
+}
+
+.recipe-title {
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.meta {
+  opacity:0.8;
+  margin-bottom:10px;
+}
+
+.columns {
+  display:flex;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.section-title {
+  font-size:18px;
+  margin-bottom:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>Huey Luey Kitchen</h2>
+  <button id="langBtn">EN / ES</button>
+</header>
+
+<div id="app"></div>
+
 <script>
 
-/* ============================
-   MASTER DATA – ALL RECIPES
-   ============================ */
+document.addEventListener("DOMContentLoaded", function(){
+
+/* =====================
+   MASTER DATA
+===================== */
 
 const RECIPES = [
 
-/* ===== SIDES ===== */
 {
-  category: "Sides",
-  name_en: "Pico de Gallo",
-  name_es: "Pico de Gallo",
-  yield_en: "4 – 1/3 Pans",
-  yield_es: "4 – 1/3 Charolas",
-  time_en: "Prep: 20 min",
-  time_es: "Preparación: 20 min",
-  holding_en: "Cold hold below 41°F. 48 hr max.",
-  holding_es: "Mantener frío bajo 41°F. Máximo 48 horas.",
-  ingredients_en: [
-    "Diced Tomato – 20 lbs",
-    "Onion – 6 lbs",
+  category:"Sides",
+  name_en:"Pico de Gallo",
+  name_es:"Pico de Gallo",
+  yield_en:"4 – 1/3 Pans",
+  yield_es:"4 – 1/3 Charolas",
+  time_en:"Prep: 20 min",
+  time_es:"Preparación: 20 min",
+  holding_en:"Cold hold below 41°F. 48 hr max.",
+  holding_es:"Mantener frío bajo 41°F. Máximo 48 horas.",
+  ingredients_en:[
+    "Tomato – 20 lb",
+    "Onion – 6 lb",
     "Lime Juice – 1 cup",
     "Salt – 8 Tbsp",
-    "Cilantro – 8 cups",
-    "Fresh Jalapeño – 1 cup"
+    "Cilantro – 8 cups"
   ],
-  ingredients_es: [
-    "Tomate en cubos – 20 lbs",
-    "Cebolla – 6 lbs",
-    "Jugo limón – 1 taza",
+  ingredients_es:[
+    "Tomate – 20 lb",
+    "Cebolla – 6 lb",
+    "Limón – 1 taza",
     "Sal – 8 cdas",
-    "Cilantro picado – 8 tazas",
-    "Jalapeño fresco – 1 taza"
+    "Cilantro – 8 tazas"
   ],
-  procedure_en: [
-    "Dice tomatoes uniform.",
+  procedure_en:[
+    "Dice tomatoes.",
     "Combine all ingredients.",
-    "Adjust lime and salt.",
-    "Label and refrigerate."
+    "Adjust seasoning.",
+    "Refrigerate."
   ],
-  procedure_es: [
+  procedure_es:[
     "Picar tomate parejo.",
-    "Mezclar todo bien.",
-    "Ajustar limón y sal al gusto.",
-    "Etiquetar y pa'l frío."
-  ],
-  image: "images/pico.jpg"
+    "Mezclar todo.",
+    "Ajustar sazón al gusto.",
+    "Pa'l frío."
+  ]
 },
 
-/* ADD THE REST OF YOUR RECIPES BELOW
-   JUST COPY THEM AND ADD:
-   category: "Sides" OR "Sauces" OR "Brunch" etc.
-*/
-
-/* Example from Brunch */
 {
-  category: "Brunch",
-  name_en: "Pancakes",
-  name_es: "Panqueques",
-  yield_en: "Full Brunch Batch",
-  yield_es: "Lote Completo Brunch",
-  time_en: "Cook: 2–3 min per side",
-  time_es: "Cocción: 2–3 min por lado",
-  holding_en: "Hot hold 135°F max 30 min.",
-  holding_es: "Mantener caliente 135°F máximo 30 min.",
-  ingredients_en: [
+  category:"Brunch",
+  name_en:"Pancakes",
+  name_es:"Panqueques",
+  yield_en:"Full Brunch Batch",
+  yield_es:"Lote Completo",
+  time_en:"Cook: 2–3 min per side",
+  time_es:"Cocción: 2–3 min por lado",
+  holding_en:"Hot hold 135°F max 30 min.",
+  holding_es:"Mantener caliente 135°F máximo 30 min.",
+  ingredients_en:[
     "Flour – 4.5 qt",
-    "Baking Powder – 3/4 cup",
-    "Salt – 1/2 Tbsp",
-    "Sugar – 2.25 cups",
-    "Cinnamon – 2 Tbsp",
     "Eggs – 11",
     "Milk – 3.75 qt",
     "Butter – 3 cups",
     "Vanilla – 2 Tbsp"
   ],
-  ingredients_es: [
+  ingredients_es:[
     "Harina – 4.5 qt",
-    "Polvo hornear – 3/4 taza",
-    "Sal – 1/2 cda",
-    "Azúcar – 2.25 tazas",
-    "Canela – 2 cdas",
     "Huevos – 11",
     "Leche – 3.75 qt",
     "Mantequilla – 3 tazas",
     "Vainilla – 2 cdas"
   ],
-  procedure_en: [
+  procedure_en:[
     "Mix dry ingredients.",
     "Add wet ingredients.",
     "Cook on flat top."
   ],
-  procedure_es: [
+  procedure_es:[
     "Mezclar secos.",
     "Agregar líquidos.",
     "Cocinar en plancha bien caliente."
-  ],
-  image: "images/pancakes.jpg"
+  ]
 }
 
 ]
 
-/* ============================
+/* =====================
    SYSTEM
-   ============================ */
+===================== */
 
-let language = "en"
-let currentCategory = null
+let language="en"
+let currentCategory=null
+let app=document.getElementById("app")
 
 function getCategories(){
   return [...new Set(RECIPES.map(r=>r.category))]
 }
 
 function renderHome(){
-  const app=document.getElementById("app")
+  currentCategory=null
   app.innerHTML=""
 
-  const search=document.createElement("input")
+  let search=document.createElement("input")
   search.className="search"
   search.placeholder="Search Recipes..."
   search.oninput=()=>renderSearch(search.value)
   app.appendChild(search)
 
-  const grid=document.createElement("div")
+  let grid=document.createElement("div")
   grid.className="grid"
 
   getCategories().forEach(cat=>{
-    const card=document.createElement("div")
+    let card=document.createElement("div")
     card.className="card"
     card.innerText=cat
     card.onclick=()=>renderCategory(cat)
@@ -138,20 +225,19 @@ function renderHome(){
 
 function renderCategory(cat){
   currentCategory=cat
-  const app=document.getElementById("app")
   app.innerHTML=""
 
-  const back=document.createElement("div")
+  let back=document.createElement("div")
   back.className="back"
   back.innerText="← Back"
   back.onclick=renderHome
   app.appendChild(back)
 
-  const grid=document.createElement("div")
+  let grid=document.createElement("div")
   grid.className="grid"
 
   RECIPES.filter(r=>r.category===cat).forEach(r=>{
-    const card=document.createElement("div")
+    let card=document.createElement("div")
     card.className="card"
     card.innerText=r["name_"+language]
     card.onclick=()=>renderRecipe(r)
@@ -162,22 +248,21 @@ function renderCategory(cat){
 }
 
 function renderSearch(text){
-  const app=document.getElementById("app")
   app.innerHTML=""
 
-  const back=document.createElement("div")
+  let back=document.createElement("div")
   back.className="back"
   back.innerText="← Back"
   back.onclick=renderHome
   app.appendChild(back)
 
-  const grid=document.createElement("div")
+  let grid=document.createElement("div")
   grid.className="grid"
 
   RECIPES.forEach(r=>{
-    const name=r["name_"+language]
+    let name=r["name_"+language]
     if(name.toLowerCase().includes(text.toLowerCase())){
-      const card=document.createElement("div")
+      let card=document.createElement("div")
       card.className="card"
       card.innerText=name
       card.onclick=()=>renderRecipe(r)
@@ -189,39 +274,29 @@ function renderSearch(text){
 }
 
 function renderRecipe(recipe){
-  const app=document.getElementById("app")
   app.innerHTML=""
 
-  const back=document.createElement("div")
+  let back=document.createElement("div")
   back.className="back"
   back.innerText="← Back"
   back.onclick=()=>renderCategory(recipe.category)
   app.appendChild(back)
 
-  const page=document.createElement("div")
-  page.className="recipe-page"
+  let page=document.createElement("div")
 
   page.innerHTML=`
     <div class="recipe-title">${recipe["name_"+language]}</div>
-    <div class="meta">
-      ${recipe["yield_"+language]} | ${recipe["time_"+language]}
-    </div>
-    <div class="meta" style="font-style:italic;">
-      ${recipe["holding_"+language]}
-    </div>
-    ${recipe.image ? `<img src="${recipe.image}" style="max-width:100%;margin:25px 0;border-radius:12px;">`:""}
+    <div class="meta">${recipe["yield_"+language]} | ${recipe["time_"+language]}</div>
+    <div class="meta"><em>${recipe["holding_"+language]}</em></div>
+
     <div class="columns">
-      <div style="flex:1">
+      <div>
         <div class="section-title">Ingredients</div>
-        <ul>
-          ${recipe["ingredients_"+language].map(i=>"<li>"+i+"</li>").join("")}
-        </ul>
+        <ul>${recipe["ingredients_"+language].map(i=>"<li>"+i+"</li>").join("")}</ul>
       </div>
-      <div style="flex:1">
+      <div>
         <div class="section-title">Procedure</div>
-        <ol>
-          ${recipe["procedure_"+language].map(p=>"<li>"+p+"</li>").join("")}
-        </ol>
+        <ol>${recipe["procedure_"+language].map(p=>"<li>"+p+"</li>").join("")}</ol>
       </div>
     </div>
   `
@@ -229,7 +304,7 @@ function renderRecipe(recipe){
   app.appendChild(page)
 }
 
-document.getElementById("langBtn").onclick=()=>{
+document.getElementById("langBtn").onclick=function(){
   language=language==="en"?"es":"en"
   if(currentCategory) renderCategory(currentCategory)
   else renderHome()
@@ -237,4 +312,9 @@ document.getElementById("langBtn").onclick=()=>{
 
 renderHome()
 
+})
+
 </script>
+
+</body>
+</html>
